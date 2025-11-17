@@ -931,4 +931,38 @@ img {
   padding: 24px !important;
   box-shadow: 0 8px 24px rgba(0,0,0,.18) !important;
 }
+/* === Archive 読みやすさの上書き === */
+.archive-container .seminar {
+  /* カードの見た目（必要なら） */
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border, #233044);
+  border-radius: 12px;
+  background: var(--card, #0f172a);
+}
+
+/* 文字色＆不透明度を強制リセット（薄くならないように） */
+.archive-container .seminar h2,
+.archive-container .seminar p,
+.archive-container .seminar li,
+.archive-container .seminar strong,
+.archive-container .seminar span {
+  color: var(--text, #e9edf7) !important;
+  opacity: 1 !important;
+}
+
+/* 見出しを少し強めに */
+.archive-container .seminar h2 {
+  font-weight: 700;
+}
+
+/* ラベル（「講演者」「開催場所」など）を読みやすく */
+.archive-container .seminar strong {
+  font-weight: 600;
+}
+
+/* リンクは下線つけて見やすく */
+.archive-container .seminar a {
+  text-decoration: underline;
+}
 
