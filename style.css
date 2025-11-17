@@ -877,4 +877,58 @@ img {
     border-radius: 14px;
   }
 }
+/* ===== Archive(アーカイブ)の文字色を読みやすくする ===== */
+
+/* サイト共通の色（なければこの値が使われます） */
+:root{
+  --text: #E9EEF5;          /* 本文の色（明るめ） */
+  --heading: #FFFFFF;       /* 見出しの色（白） */
+  --muted: #C9D2DD;         /* 補助文字 */
+  --link: #8AB4FF;          /* リンク色 */
+  --link-hover: #B7CEFF;    /* リンクhover */
+  --border: rgba(255,255,255,.12);
+}
+
+/* アーカイブの薄さ・透過を完全に解除 */
+.archive-container,
+.archive-container * {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* 本文と見出しの色を強制 */
+.archive-container .seminar h2 { 
+  color: var(--heading) !important; 
+}
+.archive-container .seminar p,
+.archive-container .seminar li,
+.archive-container .seminar em,
+.archive-container .seminar strong {
+  color: var(--text) !important;
+}
+
+/* ラベル用 <strong> を少しだけ強調 */
+.archive-container .seminar p > strong {
+  color: var(--heading) !important;
+  font-weight: 600;
+}
+
+/* リンクの色とホバー */
+.archive-container .seminar a {
+  color: var(--link) !important;
+  text-decoration: underline;
+}
+.archive-container .seminar a:hover {
+  color: var(--link-hover) !important;
+}
+
+/* カードの見た目（読みやすさ重視） */
+.archive-container { display: grid; gap: 24px; }
+.archive-container .seminar{
+  background: rgba(255,255,255,.04) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18) !important;
+}
 
