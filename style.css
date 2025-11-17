@@ -965,4 +965,27 @@ img {
 .archive-container .seminar a {
   text-decoration: underline;
 }
+/* === アーカイブ文字の最終補正（強制上書き） === */
+.archive-container .seminar p,
+.archive-container .seminar p strong,
+.archive-container .seminar span,
+.archive-container .seminar li {
+  color: #E9EDF7 !important;     /* 明るく読みやすい文字色 */
+  opacity: 1 !important;         /* 半透明を無効化 */
+  filter: none !important;
+}
+
+/* ラベル（講演者・開催場所など）を少し濃く強調 */
+.archive-container .seminar p strong {
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+
+/* カード背景の色を少し落ち着いた色に調整（視認性アップ） */
+.archive-container .seminar {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
 
