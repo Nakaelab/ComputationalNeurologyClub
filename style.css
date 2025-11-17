@@ -751,4 +751,89 @@ img {
 .seminar strong {
   color: #fff;
 }
+/* ===== Archive page ===== */
+
+/* カード群の入れ物（幅や間隔はサイト合わせ） */
+.archive-container{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1.25rem;          /* カード間のすき間 */
+}
+
+/* 1枚ずつのカード（indexの info-card 風） */
+.archive-container .seminar{
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+/* ふわっとするホバー（PC向け） */
+@media (hover:hover){
+  .archive-container .seminar:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,.06);
+  }
+}
+
+/* 見出しやテキストの整え（トップとトーンを揃える） */
+.archive-container .seminar h2{
+  margin: 0 0 .5rem;
+  font-size: 1.1rem;         /* 過度に大きくしない */
+  line-height: 1.4;
+}
+
+.archive-container .seminar p{
+  margin: .5rem 0;
+  line-height: 1.8;
+  color: var(--text, #111827);
+}
+
+/* 太字ラベルを少しだけ強調 */
+.archive-container .seminar strong{
+  color: var(--heading, #111827);
+}
+
+/* リンクの見た目をサイトに合わせて控えめに */
+.archive-container a{
+  color: var(--accent, #2563eb);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.archive-container a:hover{
+  opacity: .9;
+}
+
+/* セクションヘッダ（「Update & Archive」周り）を中心寄せ＆余白感を揃える */
+.section .section-header{
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.section .section-header h2{
+  margin: 0 0 .25rem;
+}
+.section .section-header p{
+  margin: 0;
+  color: var(--muted, #6b7280);
+}
+
+/* 以前の update-list の見た目に寄せたい場合（任意） */
+.update-list{ list-style: none; margin: 0; padding: 0; }
+.update-list > li{ border-bottom: 1px solid var(--border, #e5e7eb); padding: .75rem 0; }
+
+/* スマホ余白調整（読みやすさ優先） */
+@media (max-width: 640px){
+  .archive-container{
+    padding: 0 .75rem;
+    gap: 1rem;
+  }
+  .archive-container .seminar{
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+  }
+}
 
