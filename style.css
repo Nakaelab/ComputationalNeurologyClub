@@ -722,3 +722,33 @@ img {
 /* 念のためボタン＆ナビにも前面指定 */
 .hero .btn{ position: relative; z-index: 2; }
 .nav a{ position: relative; z-index: 1001; }
+
+.archive-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.seminar {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.seminar h2 {
+  color: #b3d4ff;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.seminar p {
+  color: #ddd;
+  margin: 0.5rem 0;
+}
+
+.seminar strong {
+  color: #fff;
+}
+
