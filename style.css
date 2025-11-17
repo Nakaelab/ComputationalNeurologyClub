@@ -836,4 +836,45 @@ img {
     padding: 1rem 1.1rem;
   }
 }
+/* ===== Archive（アーカイブ）専用の見た目追加 ===== */
+
+/* カード一覧の並びと余白 */
+.archive-container {
+  display: grid;
+  gap: 24px;           /* カード同士の間隔 */
+  margin-top: 16px;
+}
+
+/* 1枚ずつのカード（サイトのトップと同じ雰囲気） */
+.archive-container .seminar {
+  background: rgba(255, 255, 255, 0.04);     /* うすい面の色 */
+  border: 1px solid rgba(255, 255, 255, 0.08);/* うすいボーダー */
+  border-radius: 16px;                        /* 角丸 */
+  padding: 24px;                               /* 余白 */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); /* ゆるい影 */
+}
+
+/* 見出しの余白調整（詰まり防止） */
+.archive-container .seminar h2 {
+  margin: 0 0 12px;
+  line-height: 1.35;
+}
+
+/* 段落の間隔を少しだけ */
+.archive-container .seminar p {
+  margin: 8px 0;
+}
+
+/* リンクの色は既存テーマに追従（必要なら） */
+.archive-container .seminar a {
+  text-decoration: underline;
+}
+
+/* スマホ時の余白を気持ち広めに */
+@media (max-width: 640px) {
+  .archive-container .seminar {
+    padding: 18px;
+    border-radius: 14px;
+  }
+}
 
