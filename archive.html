@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archive | Computational Neurology Club</title>
+
+  <!-- ファビコンとCSSの読み込み -->
+  <link rel="icon" type="image/png" href="image/brain-favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ページ専用の少しのカスタムスタイル -->
+  <style>
+    body {
+      background: #0d0f1a;
+      color: #e5e5e5;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    header, footer {
+      background: #101320;
+      color: #fff;
+    }
+    .archive-header {
+      text-align: center;
+      padding: 6rem 1rem 3rem;
+    }
+    .archive-header h1 {
+      font-size: 2rem;
+      color: #fff;
+    }
+    .archive-header p {
+      color: #aaa;
+    }
+    .archive-list {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 1rem;
+    }
+    .archive-list li {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1rem 0;
+    }
+    .archive-list li:last-child {
+      border-bottom: none;
+    }
+    .archive-list h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #b3d4ff;
+    }
+    .archive-list p {
+      margin: 0.2rem 0 0;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo-area">
+        <div class="logo-mark">CNC</div>
+        <div class="logo-text">
+          <span class="logo-title">Computational Neurology Club</span>
+          <span class="logo-subtitle">計算論的神経内科学 研究会</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#next">次回セミナー</a>
+        <a href="archive.html" class="active">アーカイブ</a>
+        <a href="#organizers">オーガナイザー</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="archive-header">
+      <h1>Archive</h1>
+      <p>これまでのセミナー一覧</p>
+    </div>
+
+    <ul class="archive-list">
+      <li>
+        <h3>第19回 Computational Neurology Club</h3>
+        <p>2025年10月21日 – Neural biomarkers of dementia progression</p>
+      </li>
+      <li>
+        <h3>第18回 Computational Neurology Club</h3>
+        <p>2025年7月4日 – Deep learning approaches for neurodegenerative disease</p>
+      </li>
+      <li>
+        <h3>第17回 Computational Neurology Club</h3>
+        <p>2025年7月9日 – Quantitative EEG analysis and cognitive decline</p>
+      </li>
+      <!-- 新しい履歴を追加したいときはここに<li>〜</li>をコピペして追記 -->
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-meta">© Computational Neurology Club</p>
+    </div>
+  </footer>
+</body>
+</html>
