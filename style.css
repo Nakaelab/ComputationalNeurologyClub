@@ -988,4 +988,19 @@ img {
   border-radius: 16px;
   padding: 1.5rem;
 }
+/* === セクションタイトルの配置を自然に左寄せ === */
+.section-header {
+  text-align: left;           /* 左寄せに戻す */
+  margin-left: 3rem;          /* 左に余白をとる（好みに応じて調整） */
+  margin-bottom: 2rem;
+  max-width: 800px;           /* 長いタイトルが広がりすぎないように制限 */
+}
 
+/* スマホなど小さい画面では中央寄せに自動で戻す */
+@media (max-width: 768px) {
+  .section-header {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
+  }
+}
