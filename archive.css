@@ -85,3 +85,18 @@
     font-size: 0.9rem;
   }
 }
+/* ===== Archive ページだけ「Update & Archive」を中央に ===== */
+
+/* 見出しブロック全体を中央寄せ＋幅をそろえる */
+.archive-page .section-header {
+  text-align: center;      /* 文字を中央揃え */
+  max-width: 960px;        /* 横幅をカードと合わせる */
+  margin: 0 auto 24px;     /* 左右は自動で中央に、下だけ少し余白 */
+}
+
+/* タイトルとサブタイトルも中央揃え */
+.archive-page .section-header h2,
+.archive-page .section-header p {
+  margin-left: auto;
+  margin-right: auto;
+}
