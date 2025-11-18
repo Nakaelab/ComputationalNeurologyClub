@@ -1,3 +1,4 @@
+/* ========= 共通：色や影などの変数 ========= */
 :root {
   --bg: #050816;
   --bg-alt: #0b1020;
@@ -13,7 +14,7 @@
   --shadow-subtle: 0 8px 20px rgba(15, 23, 42, 0.4);
 }
 
-/* Reset-ish */
+/* ========= リセットっぽいもの ========= */
 *,
 *::before,
 *::after {
@@ -47,12 +48,12 @@ img {
   padding: 0 16px;
 }
 
-/* Header */
+/* ========= ヘッダー & ナビ ========= */
 
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 40;
+  z-index: 1000;
   backdrop-filter: blur(16px);
   background: linear-gradient(
     to bottom,
@@ -107,6 +108,7 @@ img {
   color: var(--text-muted);
 }
 
+/* PC ナビ */
 .nav {
   display: flex;
   gap: 18px;
@@ -131,15 +133,17 @@ img {
   transition: width 0.18s ease-out;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a.active {
   color: var(--text);
 }
 
-.nav a:hover::after {
+.nav a:hover::after,
+.nav a.active::after {
   width: 100%;
 }
 
-/* Hero */
+/* ========= ヒーロー ========= */
 
 .hero {
   position: relative;
@@ -158,12 +162,18 @@ img {
   pointer-events: none;
 }
 
+/* ヒーローレイアウト（テキスト + 画像） */
 .hero-inner {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
-  gap: 32px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  z-index: 1;
+}
+
+.hero-text {
+  flex: 1;
 }
 
 .hero-text h1 {
@@ -190,6 +200,35 @@ img {
   gap: 10px;
   margin-top: 22px;
 }
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 90%;
+  max-width: 520px;
+  opacity: 0.95;
+  mask-image: radial-gradient(
+    circle,
+    white 0%,
+    white 50%,
+    rgba(255, 255, 255, 0.4) 70%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle,
+    white 0%,
+    white 50%,
+    rgba(255, 255, 255, 0.4) 70%,
+    transparent 100%
+  );
+  filter: drop-shadow(0 0 40px rgba(120, 50, 255, 0.35));
+}
+
+/* ========= ボタン ========= */
 
 .btn {
   display: inline-flex;
@@ -228,6 +267,8 @@ img {
   color: var(--text);
 }
 
+/* ========= ヒーロー右側のメタ情報 ========= */
+
 .hero-meta {
   display: flex;
   flex-direction: column;
@@ -255,7 +296,7 @@ img {
   font-size: 13px;
 }
 
-/* Sections */
+/* ========= 共通セクション ========= */
 
 .section {
   padding: 40px 0;
@@ -281,7 +322,7 @@ img {
   color: var(--text-muted);
 }
 
-/* Layout helpers */
+/* ========= レイアウト（2カラムなど） ========= */
 
 .two-column {
   display: grid;
@@ -337,7 +378,7 @@ img {
   margin-left: 6px;
 }
 
-/* Next event */
+/* ========= 次回セミナー（Next） ========= */
 
 .event-layout {
   display: grid;
@@ -419,7 +460,7 @@ img {
   color: var(--text-muted);
 }
 
-/* Sidebar cards */
+/* ========= 右側サイド情報 ========= */
 
 .event-side {
   display: flex;
@@ -452,7 +493,7 @@ img {
   margin-top: 4px;
 }
 
-/* Updates / Archive */
+/* ========= Updates (トップページのリスト) ========= */
 
 .updates h3 {
   margin: 0 0 8px;
@@ -488,7 +529,7 @@ img {
   color: var(--text-muted);
 }
 
-/* Organizers */
+/* ========= Organizers ========= */
 
 .organizer-grid {
   display: grid;
@@ -515,7 +556,7 @@ img {
   color: var(--text-muted);
 }
 
-/* Footer */
+/* ========= フッター ========= */
 
 .site-footer {
   border-top: 1px solid rgba(15, 23, 42, 0.9);
@@ -546,11 +587,44 @@ img {
   text-align: right;
 }
 
-/* Responsive */
+/* ========= ハンバーガーメニュー（見た目だけ。JSはHTML側） ========= */
+
+.nav-toggle {
+  display: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 6px 0;
+  background: #e5e7eb;
+  border-radius: 999px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle.is-open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.is-open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ========= レスポンシブ ========= */
 
 @media (max-width: 840px) {
   .hero-inner {
-    grid-template-columns: minmax(0, 1fr);
+    flex-direction: column;
   }
 
   .hero-meta {
@@ -572,12 +646,64 @@ img {
     gap: 10px;
   }
 
+  /* スマホでハンバーガー表示 & ドロップダウンナビ */
+  .nav-toggle {
+    display: block;
+  }
+
+  .header-inner {
+    position: relative;
+  }
+
   .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 12px 16px;
+    background: rgba(15, 23, 42, 0.98);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+    flex-direction: column;
+    gap: 12px;
     display: none;
+  }
+
+  .nav.is-open {
+    display: flex;
   }
 
   .hero {
     padding-top: 28px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .hero-image img {
+    width: 75%;
+    max-width: 360px;
+    margin: 0 auto;
+    mask-image: radial-gradient(
+      circle,
+      white 0%,
+      white 45%,
+      rgba(255, 255, 255, 0.3) 65%,
+      transparent 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      circle,
+      white 0%,
+      white 45%,
+      rgba(255, 255, 255, 0.3) 65%,
+      transparent 100%
+    );
   }
 
   .section {
@@ -598,409 +724,5 @@ img {
 
   .footer-meta {
     text-align: left;
-  }
-}
-/* --- Hero レイアウト変更（右側画像追加） --- */
-.hero-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.hero-text {
-  flex: 1;
-  z-index: 10;
-}
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  z-index: 5;
-}
-
-.hero-image img {
-  width: 90%;                 /* 少し拡大して四角い端を外に追い出す */
-  max-width: 520px;
-  opacity: 0.95;
-
-  /* 真ん中だけハッキリ見えて、外側ほど強く消えるマスク */
-  mask-image: radial-gradient(
-    circle,
-    white 0%,
-    white 50%,
-    rgba(255, 255, 255, 0.4) 70%,
-    transparent 100%
-  );
-  -webkit-mask-image: radial-gradient(
-    circle,
-    white 0%,
-    white 50%,
-    rgba(255, 255, 255, 0.4) 70%,
-    transparent 100%
-  );
-
-  /* 周りにふんわり紫の光を追加して背景となじませる */
-  filter: drop-shadow(0 0 40px rgba(120, 50, 255, 0.35));
-}
-
-
-@media (max-width: 900px) {
-
-  .hero-inner {
-    flex-direction: column;
-    text-align: center;
-    align-items: center; /* ← 中央揃えの肝 */
-  }
-
-  .hero-text {
-    width: 100%;
-    max-width: 600px; /* テキスト幅を適正化 */
-    margin: 0 auto;
-  }
-  .hero-actions {
-    justify-content: center;   /* ←これを追加 */
-  }
-
-  .hero-image {
-    width: 100%;
-    display: flex;
-    justify-content: center; /* ← 画像も中央 */
-    margin-top: 20px;
-  }
-
-  .hero-image img {
-    width: 75%; /* ← スマホでは控えめサイズに */
-    max-width: 360px;
-    margin: 0 auto;
-    opacity: 0.95;
-
-    /* スマホでは少し強めにフェードして自然に */
-    mask-image: radial-gradient(
-      circle,
-      white 0%,
-      white 45%,
-      rgba(255,255,255,0.3) 65%,
-      transparent 100%
-    );
-    -webkit-mask-image: radial-gradient(
-      circle,
-      white 0%,
-      white 45%,
-      rgba(255,255,255,0.3) 65%,
-      transparent 100%
-    );
-  }
-}
-/* ヒーロー周りの重なり順＆クリック透過 */
-.hero { position: relative; }
-.hero-overlay{
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;   /* ← クリックを邪魔しない */
-}
-.hero-inner{
-  position: relative;
-  z-index: 1;             /* テキスト＆ボタンを前面へ */
-}
-.hero-image img{
-  display:block;
-  max-width:100%;
-  height:auto;
-  position: relative;
-  z-index: 0;             /* 画像がリンクの上に来ないように */
-}
-
-/* ヘッダーを最前面にしてナビを押せるように */
-.site-header{
-  position: sticky; /* fixedでもOK */
-  top: 0;
-  z-index: 1000;
-}
-
-/* 念のためボタン＆ナビにも前面指定 */
-.hero .btn{ position: relative; z-index: 2; }
-.nav a{ position: relative; z-index: 1001; }
-
-.archive-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.seminar {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 1rem;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.8;
-}
-
-.seminar h2 {
-  color: #b3d4ff;
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-.seminar p {
-  color: #ddd;
-  margin: 0.5rem 0;
-}
-
-.seminar strong {
-  color: #fff;
-}
-/* ===== Archive page ===== */
-
-/* カード群の入れ物（幅や間隔はサイト合わせ） */
-.archive-container{
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: grid;
-  gap: 1.25rem;          /* カード間のすき間 */
-}
-
-/* 1枚ずつのカード（indexの info-card 風） */
-.archive-container .seminar{
-  background: var(--card-bg, #fff);
-  border: 1px solid var(--border, #e5e7eb);
-  border-radius: 14px;
-  padding: 1.25rem 1.5rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,.04);
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-
-/* ふわっとするホバー（PC向け） */
-@media (hover:hover){
-  .archive-container .seminar:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0,0,0,.06);
-  }
-}
-
-/* 見出しやテキストの整え（トップとトーンを揃える） */
-.archive-container .seminar h2{
-  margin: 0 0 .5rem;
-  font-size: 1.1rem;         /* 過度に大きくしない */
-  line-height: 1.4;
-}
-
-.archive-container .seminar p{
-  margin: .5rem 0;
-  line-height: 1.8;
-  color: var(--text, #111827);
-}
-
-/* 太字ラベルを少しだけ強調 */
-.archive-container .seminar strong{
-  color: var(--heading, #111827);
-}
-
-/* リンクの見た目をサイトに合わせて控えめに */
-.archive-container a{
-  color: var(--accent, #2563eb);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.archive-container a:hover{
-  opacity: .9;
-}
-
-/* セクションヘッダ（「Update & Archive」周り）を中心寄せ＆余白感を揃える */
-.section .section-header{
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-.section .section-header h2{
-  margin: 0 0 .25rem;
-}
-.section .section-header p{
-  margin: 0;
-  color: var(--muted, #6b7280);
-}
-
-/* 以前の update-list の見た目に寄せたい場合（任意） */
-.update-list{ list-style: none; margin: 0; padding: 0; }
-.update-list > li{ border-bottom: 1px solid var(--border, #e5e7eb); padding: .75rem 0; }
-
-/* スマホ余白調整（読みやすさ優先） */
-@media (max-width: 640px){
-  .archive-container{
-    padding: 0 .75rem;
-    gap: 1rem;
-  }
-  .archive-container .seminar{
-    border-radius: 12px;
-    padding: 1rem 1.1rem;
-  }
-}
-/* ===== Archive（アーカイブ）専用の見た目追加 ===== */
-
-/* カード一覧の並びと余白 */
-.archive-container {
-  display: grid;
-  gap: 24px;           /* カード同士の間隔 */
-  margin-top: 16px;
-}
-
-/* 1枚ずつのカード（サイトのトップと同じ雰囲気） */
-.archive-container .seminar {
-  background: rgba(255, 255, 255, 0.04);     /* うすい面の色 */
-  border: 1px solid rgba(255, 255, 255, 0.08);/* うすいボーダー */
-  border-radius: 16px;                        /* 角丸 */
-  padding: 24px;                               /* 余白 */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); /* ゆるい影 */
-}
-
-/* 見出しの余白調整（詰まり防止） */
-.archive-container .seminar h2 {
-  margin: 0 0 12px;
-  line-height: 1.35;
-}
-
-/* 段落の間隔を少しだけ */
-.archive-container .seminar p {
-  margin: 8px 0;
-}
-
-/* リンクの色は既存テーマに追従（必要なら） */
-.archive-container .seminar a {
-  text-decoration: underline;
-}
-
-/* スマホ時の余白を気持ち広めに */
-@media (max-width: 640px) {
-  .archive-container .seminar {
-    padding: 18px;
-    border-radius: 14px;
-  }
-}
-/* ===== Archive(アーカイブ)の文字色を読みやすくする ===== */
-
-/* サイト共通の色（なければこの値が使われます） */
-:root{
-  --text: #E9EEF5;          /* 本文の色（明るめ） */
-  --heading: #FFFFFF;       /* 見出しの色（白） */
-  --muted: #C9D2DD;         /* 補助文字 */
-  --link: #8AB4FF;          /* リンク色 */
-  --link-hover: #B7CEFF;    /* リンクhover */
-  --border: rgba(255,255,255,.12);
-}
-
-/* アーカイブの薄さ・透過を完全に解除 */
-.archive-container,
-.archive-container * {
-  opacity: 1 !important;
-  filter: none !important;
-}
-
-/* 本文と見出しの色を強制 */
-.archive-container .seminar h2 { 
-  color: var(--heading) !important; 
-}
-.archive-container .seminar p,
-.archive-container .seminar li,
-.archive-container .seminar em,
-.archive-container .seminar strong {
-  color: var(--text) !important;
-}
-
-/* ラベル用 <strong> を少しだけ強調 */
-.archive-container .seminar p > strong {
-  color: var(--heading) !important;
-  font-weight: 600;
-}
-
-/* リンクの色とホバー */
-.archive-container .seminar a {
-  color: var(--link) !important;
-  text-decoration: underline;
-}
-.archive-container .seminar a:hover {
-  color: var(--link-hover) !important;
-}
-
-/* カードの見た目（読みやすさ重視） */
-.archive-container { display: grid; gap: 24px; }
-.archive-container .seminar{
-  background: rgba(255,255,255,.04) !important;
-  border: 1px solid var(--border) !important;
-  border-radius: 16px !important;
-  padding: 24px !important;
-  box-shadow: 0 8px 24px rgba(0,0,0,.18) !important;
-}
-/* === Archive 読みやすさの上書き === */
-.archive-container .seminar {
-  /* カードの見た目（必要なら） */
-  margin: 2rem 0;
-  padding: 1.25rem 1.5rem;
-  border: 1px solid var(--border, #233044);
-  border-radius: 12px;
-  background: var(--card, #0f172a);
-}
-
-/* 文字色＆不透明度を強制リセット（薄くならないように） */
-.archive-container .seminar h2,
-.archive-container .seminar p,
-.archive-container .seminar li,
-.archive-container .seminar strong,
-.archive-container .seminar span {
-  color: var(--text, #e9edf7) !important;
-  opacity: 1 !important;
-}
-
-/* 見出しを少し強めに */
-.archive-container .seminar h2 {
-  font-weight: 700;
-}
-
-/* ラベル（「講演者」「開催場所」など）を読みやすく */
-.archive-container .seminar strong {
-  font-weight: 600;
-}
-
-/* リンクは下線つけて見やすく */
-.archive-container .seminar a {
-  text-decoration: underline;
-}
-/* === アーカイブ文字の最終補正（強制上書き） === */
-.archive-container .seminar p,
-.archive-container .seminar p strong,
-.archive-container .seminar span,
-.archive-container .seminar li {
-  color: #E9EDF7 !important;     /* 明るく読みやすい文字色 */
-  opacity: 1 !important;         /* 半透明を無効化 */
-  filter: none !important;
-}
-
-/* ラベル（講演者・開催場所など）を少し濃く強調 */
-.archive-container .seminar p strong {
-  color: #FFFFFF !important;
-  font-weight: 700;
-}
-
-/* カード背景の色を少し落ち着いた色に調整（視認性アップ） */
-.archive-container .seminar {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 16px;
-  padding: 1.5rem;
-}
-/* === セクションタイトルの配置を自然に左寄せ === */
-.section-header {
-  text-align: left;           /* 左寄せに戻す */
-  margin-left: 3rem;          /* 左に余白をとる（好みに応じて調整） */
-  margin-bottom: 2rem;
-  max-width: 800px;           /* 長いタイトルが広がりすぎないように制限 */
-}
-
-/* スマホなど小さい画面では中央寄せに自動で戻す */
-@media (max-width: 768px) {
-  .section-header {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    text-align: center;
   }
 }
