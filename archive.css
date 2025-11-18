@@ -12,11 +12,11 @@
 
 /* 1つ1つのセミナーの枠（カード） */
 .archive-container .seminar {
-  background: rgba(15, 23, 42, 0.96);      /* 濃いめのカード色 */
-  border: 1px solid rgba(148, 163, 184, .35);
+  background: #0b1220;                       /* 周りより少し明るいカード色（PCで分かりやすく） */
+  border: 1px solid rgba(148, 163, 184, 0.8);/* ちょっと濃いめのボーダー */
   border-radius: 16px;
   padding: 22px 24px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   line-height: 1.8;
 }
 
@@ -49,11 +49,15 @@
   font-size: 0.95rem;
 }
 
-/* リンクの色 */
+/* リンクの色 & 長いURLを折り返す */
 .archive-container .seminar a {
   color: #60a5fa;
   text-decoration: underline;
   text-underline-offset: 2px;
+
+  /* ★ここが「はみ出し対策」★ */
+  word-break: break-all;      /* 長い英数字を途中で折り返しOKにする */
+  overflow-wrap: anywhere;    /* ブラウザに「いい感じに折り返して」とお願い */
 }
 .archive-container .seminar a:hover {
   opacity: 0.9;
