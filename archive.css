@@ -1,0 +1,83 @@
+/* ========== Archive 専用スタイル ========== */
+
+/* カード全体の入れ物 */
+.archive-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 8px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;           /* セミナー同士の間隔 */
+}
+
+/* 1つ1つのセミナーの枠（カード） */
+.archive-container .seminar {
+  background: rgba(15, 23, 42, 0.96);      /* 濃いめのカード色 */
+  border: 1px solid rgba(148, 163, 184, .35);
+  border-radius: 16px;
+  padding: 22px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  line-height: 1.8;
+}
+
+/* タイトル */
+.archive-container .seminar h2 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+/* 本文テキスト */
+.archive-container .seminar p {
+  margin: 6px 0;
+  color: #e5e7eb;          /* 読みやすい明るさ */
+  font-size: 0.95rem;
+}
+
+/* ラベル（講演者・開催場所 など）を少し強めに */
+.archive-container .seminar p strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* 箇条書き（参考文献など） */
+.archive-container .seminar ul,
+.archive-container .seminar ol {
+  margin: 8px 0 8px 1.2rem;
+  padding: 0;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+/* リンクの色 */
+.archive-container .seminar a {
+  color: #60a5fa;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.archive-container .seminar a:hover {
+  opacity: 0.9;
+}
+
+/* ========== スマホ用レイアウト調整 ========== */
+@media (max-width: 640px) {
+
+  .archive-container {
+    padding: 8px 12px 32px;
+    gap: 18px;
+  }
+
+  .archive-container .seminar {
+    padding: 16px 14px;
+    border-radius: 12px;
+  }
+
+  .archive-container .seminar h2 {
+    font-size: 1.1rem;
+  }
+
+  .archive-container .seminar p,
+  .archive-container .seminar li {
+    font-size: 0.9rem;
+  }
+}
