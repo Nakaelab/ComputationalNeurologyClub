@@ -1,104 +1,104 @@
-/* ========== Archive 専用スタイル ========== */
+/* ============================================================
+   Archive Page — 全体リファクタ済みスタイル
+   （検索なし・索引なし、カードレイアウトだけ残す）
+   Computational Neurology Club 用デザイン最適化
+   ============================================================ */
 
-/* カード全体の入れ物 */
+/* ---- アーカイブ全体 ---- */
 .archive-container {
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 8px 16px 40px;
+  padding: 16px 20px 60px;
   display: flex;
   flex-direction: column;
-  gap: 24px;           /* セミナー同士の間隔 */
+  gap: 32px;              /* セミナー枠の間隔 */
 }
 
-/* 1つ1つのセミナーの枠（カード） */
-.archive-container .seminar {
-  background: #0b1220;                        /* 周りより少し明るいカード色 */
-  border: 1px solid rgba(148, 163, 184, 0.8); /* ちょっと濃いめのボーダー */
-  border-radius: 16px;
-  padding: 22px 24px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+/* ---- セミナーカード ---- */
+.archive-page .seminar {
+  background: #0b1220;                            /* 背景（ページより少し明るい） */
+  border: 1px solid rgba(148, 163, 184, 0.35);     /* 控えめのグレーボーダー */
+  border-radius: 18px;
+  padding: 26px 28px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);       /* カードとして浮かせる */
   line-height: 1.8;
 }
 
-/* タイトル */
-.archive-container .seminar h2 {
-  margin: 0 0 10px;
-  font-size: 1.35rem;
-  line-height: 1.4;
-}
-
-/* 本文テキスト */
-.archive-container .seminar p {
-  margin: 6px 0;
-  color: #e5e7eb;          /* 読みやすい明るさ */
-  font-size: 0.95rem;
-}
-
-/* ラベル（講演者・開催場所 など）を少し強めに */
-.archive-container .seminar p strong {
-  color: #ffffff;
+/* ---- セミナータイトル ---- */
+.archive-page .seminar h2 {
+  margin: 0 0 14px;
+  font-size: 1.45rem;
   font-weight: 600;
+  color: #ffffff;
 }
 
-/* 箇条書き（参考文献など） */
-.archive-container .seminar ul,
-.archive-container .seminar ol {
-  margin: 8px 0 8px 1.2rem;
-  padding: 0;
+/* ---- 本文 ---- */
+.archive-page .seminar p {
+  margin: 8px 0;
+  color: #e5e7eb;
+  font-size: 1rem;
+}
+
+/* ---- ラベル強調（講演者・開催場所など） ---- */
+.archive-page .seminar p strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ---- 箇条書き（参考文献など） ---- */
+.archive-page .seminar ul,
+.archive-page .seminar ol {
+  margin: 10px 0 10px 1.4rem;
   color: #e5e7eb;
   font-size: 0.95rem;
 }
 
-/* リンクの色 & 長いURLを折り返す */
-.archive-container .seminar a {
+/* ---- リンク ---- */
+.archive-page .seminar a {
   color: #60a5fa;
   text-decoration: underline;
-  text-underline-offset: 2px;
-
-  /* はみ出し対策 */
+  text-underline-offset: 3px;
   word-break: break-all;
   overflow-wrap: anywhere;
 }
 
-.archive-container .seminar a:hover {
-  opacity: 0.9;
+.archive-page .seminar a:hover {
+  opacity: 0.85;
 }
 
-/* ===== Archive ページだけ「Update & Archive」を中央に ===== */
-
-/* 見出しブロック全体を中央寄せ＋幅をそろえる */
+/* ---- ページ上部の「Update & Archive」見出しを中央揃え ---- */
 .archive-page .section-header {
   text-align: center;
-  max-width: 960px;
-  margin: 0 auto 24px;
+  max-width: 1100px;
+  margin: 0 auto 32px;
 }
 
-/* タイトルとサブタイトルも中央揃え */
-.archive-page .section-header h2,
+.archive-page .section-header h2 {
+  font-size: 2rem;
+}
+
 .archive-page .section-header p {
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1rem;
+  opacity: 0.85;
 }
 
-/* ========== スマホ用レイアウト調整 ========== */
+/* ---- スマホ最適化 ---- */
 @media (max-width: 640px) {
-
   .archive-container {
-    padding: 8px 12px 32px;
-    gap: 18px;
+    padding: 12px 10px 40px;
+    gap: 22px;
   }
 
-  .archive-container .seminar {
-    padding: 16px 14px;
-    border-radius: 12px;
+  .archive-page .seminar {
+    padding: 18px 16px;
+    border-radius: 14px;
   }
 
-  .archive-container .seminar h2 {
-    font-size: 1.1rem;
+  .archive-page .seminar h2 {
+    font-size: 1.2rem;
   }
 
-  .archive-container .seminar p,
-  .archive-container .seminar li {
+  .archive-page .seminar p {
     font-size: 0.9rem;
   }
 }
