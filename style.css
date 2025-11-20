@@ -105,25 +105,7 @@ img {
   align-items: center;
   gap: 12px;
 }
-.logo-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #1e293b; /
-  border: 1px solid rgba(255,255,255,0.12); 
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: "IBM Plex Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 600;
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  color: #e2e8f0; 
-
-  box-shadow: none;    
-}
 
 
 /* ロゴ右側のテキスト（タイトル＋サブタイトル） */
@@ -133,17 +115,69 @@ img {
 }
 
 .logo-title {
-  font-size: 15px;      /* メインタイトルを少し大きめに */
-  font-weight: 700;     /* 太めで見出しっぽく */
+  font-family: "Inter", "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.01em; /* 品のある詰め */
+  color: #ffffff;
 }
+
 
 .logo-subtitle {
-  margin-top: 2px;
-  font-size: 10px;      /* サブタイトルは一段小さく */
-  color: var(--text-muted);
+  font-family: "Inter", "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #cbd5e1;
+  font-size: 11px;
+  letter-spacing: 0.02em;
 }
 
+.logo-mark {
+  background: none;
+  border: none;
+  box-shadow: none;
 
+  font-family: "Inter", "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+
+  /* 学会ロゴらしい広めの文字間 */
+  letter-spacing: 0.28em;
+
+  color: #f1f5f9;
+  opacity: 0.95;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  padding: 2px 0;
+
+  /* ① CNC を淡く発光 */
+  text-shadow: 0 0 6px rgba(96, 165, 250, 0.45);
+}
+
+/* ② 左右に細いラインを入れて国際学会ロゴ風 */
+.logo-mark::before,
+.logo-mark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 1px;
+
+  background: rgba(148, 163, 184, 0.45);
+
+  transform: translateY(-50%);
+  border-radius: 999px;
+}
+
+.logo-mark::before {
+  left: -22px;
+}
+
+.logo-mark::after {
+  right: -22px;
+}
 
 /* PC ナビ */
 .nav {
