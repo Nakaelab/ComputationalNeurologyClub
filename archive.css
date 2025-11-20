@@ -101,26 +101,74 @@
   margin-right: auto;
 }
 
+/* ===== 索引：サイト全体に溶け込むダークテーマ ===== */
+
 .seminar-index {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  border-radius: 8px;
-  background: #f8f9fb;
+  border-radius: 12px;
+
+  background: rgba(17, 24, 39, 0.75); /* #111827の半透明 → カード背景に馴染む */
+  backdrop-filter: blur(4px);
+
+  border: 1px solid rgba(148, 163, 184, 0.25); /* #94a3b8の薄ボーダー */
+  color: #e2e8f0; /* 明るめの白青 */
   font-size: 0.95rem;
 }
 
 .seminar-index h3 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f1f5f9; /* 少し強めの白 */
 }
 
 .seminar-index ul {
-  margin: 0 0 1rem 1.2rem;
+  margin: 0 0 1rem 1.1rem;
   padding: 0;
+  list-style: none; /* デフォルトの丸を消す */
 }
 
 .seminar-index li {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.55;
+
+  /* インデント用に擬似要素でドット表示（おしゃれ用） */
+  position: relative;
+  padding-left: 0.85rem;
 }
 
+.seminar-index li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: #64748b; /* スレートグレーの淡いドット */
+  font-size: 1rem;
+}
+
+/* リンク */
+.seminar-index a {
+  color: #93c5fd; /* やさしいライトブルー */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.seminar-index a:hover {
+  color: #bfdbfe; /* ホバーで少し明るい青 */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* スマホ最適化 */
+@media (max-width: 640px) {
+  .seminar-index {
+    padding: 1.2rem 1rem;
+    border-radius: 10px;
+  }
+
+  .seminar-index h3 {
+    font-size: 1rem;
+  }
+}
