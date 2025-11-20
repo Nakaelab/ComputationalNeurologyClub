@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Archive | Computational Neurology Club</title>
- <link rel="icon" type="image/png" href="image/cnc.icon.png" />
-<link rel="stylesheet" href="style.css?v=6" />
+  <link rel="icon" type="image/png" href="image/cnc.icon.png" />
+  <link rel="stylesheet" href="style.css?v=6" />
   <link rel="stylesheet" href="archive.css?v=1" />
 </head>
 <body class="archive-page">
@@ -32,49 +32,58 @@
     <section class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <h2>Update & Archive</h2>
+          <h2>Update &amp; Archive</h2>
           <p>これまでのセミナー一覧</p>
         </div>
 
         <!-- ここからアーカイブ本体 -->
         <div class="archive-container">
-        <!-- ▼索引（Seminar & Study Group Index）▼ -->
-        <div class="seminar-index">
-          <h3>索引（Seminar）</h3>
-          
-          <ul>
-            <li><a href="#seminar-18">第18回　南部篤「大脳基底核の機能と病態生理の統一的理解を目指して」</a></li>
-            <li><a href="#seminar-17">第17回　栗川知己「自発的神経活動の機能的な意義：特に学習との関係について」</a></li>
-            <li><a href="#seminar-16">第16回　川畑和也「多系統萎縮症のMRI画像診断・進行バイオマーカーの確立に向けて」</a></li>
-            <li><a href="#seminar-15">第15回　村松里衣子「ミエリン修復のメカニズム探索研究」</a></li>
-            <li><a href="#seminar-14">第14回　鎌形康司「非侵襲的MRIバイオマーカーによるGlymphatic system機能の評価」</a></li>
-            <li><a href="#study-6">第6回 Study Group　中江健「AMED脳統合公募資料を読む」</a></li>
-            <li><a href="#seminar-13">第13回　坂戸勇介・澤本伸克「パーキンソン病における脳萎縮パターンに基づく異なるサブタイプの同定」</a></li>
-            <li><a href="#seminar-12">第12回　岩波翔也「数理モデルを用いたウイルスと感染症の理解」</a></li>
-            <li><a href="#seminar-11">第11回　平林敏行「タウ・ネットワークマッピングによる病変と症状をつなぐ回路の同定と霊長類モデルの遺伝学的回路操作による因果性検証」</a></li>
-            <li><a href="#seminar-10">第10回　Laurent Pujo-Menjouet「Neurodegenerative diseases: nice collaboration stories between biologists and mathematicians leading to a better understanding of prion and Alzheimer’s diseases」</a></li>
-            <li><a href="#seminar-9">第9回　柳澤琢史「頭蓋内脳波ビッグデータから何がわかるか」</a></li>
-            <li><a href="#workshop-1">1st Workshop on Computational Neurology</a></li>
-            <li><a href="#seminar-8">第8回　森英一朗「生物学的相分離の駆動・制御・破綻」</a></li>
-            <li><a href="#seminar-7">第7回　伊藤暁「分子シミュレーションで見るアミロイドベータペプチドの凝集初期過程」</a></li>
-            <li><a href="#seminar-6">第6回　齊藤隆太「創薬R&amp;DにおけるデジタルトランスフォーメーションとQuantitative Systems Pharmacology」</a></li>
-            <li><a href="#seminar-5">第5回　Jacob Vogel「Connectome-based models of neurodegenerative disease」</a></li>
-            <li><a href="#seminar-4">第4回　佐藤謙一郎「深層学習を用いた姿勢推定技術の実応用による神経…」</a></li>
-            <li><a href="#seminar-3">第3回　Catherine Chu「Sleep spindles: a mechanistic biomarker for cognitive dysfunction in encephalopathy」</a></li>
-            <li><a href="#seminar-2">第2回　Ben D. Fulcher「The brain as a complex dynamical system」</a></li>
-            <li><a href="#seminar-1">第1回　五十嵐潤「パーキンソン病の振動的神経活動と振戦に関する脳-身体シミュレーション」</a></li>
-          </ul>
 
-          <h3>索引（Study Group）</h3>
-          <ul>
-            <li><a href="#study-5">第5回 Study Group「ADNIデータベースのPET解析」</a></li>
-            <li><a href="#study-4">第4回 Study Group「ADNIデータベースdMRI解析&amp;標準脳マッピング」</a></li>
-            <li><a href="#study-3">第3回 Study Group「ADNIデータベースチュートリアル＆議論」</a></li>
-            <li><a href="#study-2">第2回 Study Group「ADNIデータベース紹介＆論文紹介…」</a></li>
-            <li><a href="#study-1">第1回 Study Group「Connectome-based modelling of neurodegenerative diseases: towards precision medicine and mechanistic insight」</a></li>
-          </ul>
-        </div>
-        <!-- ▲索引ここまで▲ -->
+          <!-- ▼検索 & 簡易索引 ▼ -->
+          <div class="archive-controls">
+            <div class="search-box">
+              <label for="seminar-search">🔍 タイトル / 講演者で検索</label><br>
+              <input
+                id="seminar-search"
+                type="text"
+                placeholder="例）パーキンソン / 南部 / MRI など"
+              />
+              <p id="no-result-message" style="display:none; margin-top:4px; font-size:0.9rem;">
+                該当するセミナーが見つかりませんでした。
+              </p>
+            </div>
+
+            <!-- 最近の索引だけを表示 -->
+            <div class="seminar-index">
+              <h3>最近のセミナー（索引）</h3>
+              <ul>
+                <li><a href="#seminar-18">第18回 南部篤「大脳基底核の機能と病態生理の統一的理解を目指して」</a></li>
+                <li><a href="#seminar-17">第17回 栗川知己「自発的神経活動の機能的な意義」</a></li>
+                <li><a href="#seminar-16">第16回 川畑和也「多系統萎縮症のMRI画像診断…」</a></li>
+                <li><a href="#seminar-15">第15回 村松里衣子「ミエリン修復のメカニズム探索研究」</a></li>
+                <li><a href="#seminar-14">第14回 鎌形康司「Glymphatic system機能の評価」</a></li>
+              </ul>
+
+              <h3>最近の Study Group（索引）</h3>
+              <ul>
+                <li><a href="#study-6">第6回 Study Group「AMED脳統合公募資料を読む」</a></li>
+                <li><a href="#study-5">第5回 Study Group「ADNIデータベースのPET解析」</a></li>
+                <li><a href="#study-4">第4回 Study Group「ADNI dMRI解析&amp;標準脳マッピング」</a></li>
+              </ul>
+
+              <p class="index-note" style="font-size:0.85rem; opacity:0.8;">
+                ※それ以前の回は、下の「年ごとのアーカイブ」からご覧ください。
+              </p>
+            </div>
+          </div>
+          <!-- ▲検索 & 索引ここまで ▲ -->
+
+          <!-- ▼年ごとのアコーディオン▼ -->
+
+          <!-- 2025 -->
+          <details class="year-block" open>
+            <summary>2025年のセミナー / Study Group</summary>
+
 
           <!-- 第18回 -->
           <section class="seminar" id="seminar-18">
