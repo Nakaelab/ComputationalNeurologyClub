@@ -12,8 +12,8 @@
 
 /* 1つ1つのセミナーの枠（カード） */
 .archive-container .seminar {
-  background: #0b1220;                       /* 周りより少し明るいカード色（PCで分かりやすく） */
-  border: 1px solid rgba(148, 163, 184, 0.8);/* ちょっと濃いめのボーダー */
+  background: #0b1220;                        /* 周りより少し明るいカード色 */
+  border: 1px solid rgba(148, 163, 184, 0.8); /* ちょっと濃いめのボーダー */
   border-radius: 16px;
   padding: 22px 24px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
@@ -55,12 +55,29 @@
   text-decoration: underline;
   text-underline-offset: 2px;
 
-  /* ★ここが「はみ出し対策」★ */
-  word-break: break-all;      /* 長い英数字を途中で折り返しOKにする */
-  overflow-wrap: anywhere;    /* ブラウザに「いい感じに折り返して」とお願い */
+  /* はみ出し対策 */
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
+
 .archive-container .seminar a:hover {
   opacity: 0.9;
+}
+
+/* ===== Archive ページだけ「Update & Archive」を中央に ===== */
+
+/* 見出しブロック全体を中央寄せ＋幅をそろえる */
+.archive-page .section-header {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto 24px;
+}
+
+/* タイトルとサブタイトルも中央揃え */
+.archive-page .section-header h2,
+.archive-page .section-header p {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ========== スマホ用レイアウト調整 ========== */
@@ -83,61 +100,5 @@
   .archive-container .seminar p,
   .archive-container .seminar li {
     font-size: 0.9rem;
-  }
-}
-/* ===== Archive ページだけ「Update & Archive」を中央に ===== */
-
-/* 見出しブロック全体を中央寄せ＋幅をそろえる */
-.archive-page .section-header {
-  text-align: center;      /* 文字を中央揃え */
-  max-width: 960px;        /* 横幅をカードと合わせる */
-  margin: 0 auto 24px;     /* 左右は自動で中央に、下だけ少し余白 */
-}
-
-/* タイトルとサブタイトルも中央揃え */
-.archive-page .section-header h2,
-.archive-page .section-header p {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
-  /* インデント用に擬似要素でドット表示（おしゃれ用） */
-  position: relative;
-  padding-left: 0.85rem;
-}
-
-.seminar-index li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0.1rem;
-  color: #64748b; /* スレートグレーの淡いドット */
-  font-size: 1rem;
-}
-
-/* リンク */
-.seminar-index a {
-  color: #93c5fd; /* やさしいライトブルー */
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.seminar-index a:hover {
-  color: #bfdbfe; /* ホバーで少し明るい青 */
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-/* スマホ最適化 */
-@media (max-width: 640px) {
-  .seminar-index {
-    padding: 1.2rem 1rem;
-    border-radius: 10px;
-  }
-
-  .seminar-index h3 {
-    font-size: 1rem;
   }
 }
