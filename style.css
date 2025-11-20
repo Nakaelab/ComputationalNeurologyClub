@@ -80,53 +80,32 @@ img {
 }
 
 .logo-mark {
-  width: 40px;              /* ロゴの大きさ */
-  height: 40px;
-  border-radius: 999px;     /* きれいな丸にする */
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
 
-  /* 落ち着いたグラデーション */
-  background:
-    radial-gradient(circle at 30% 20%, #38bdf8 0%, #1d4ed8 45%, #020617 100%);
-  border: 1px solid rgba(148, 163, 184, 0.85);
+  /* 落ち着いたフラットなブルー */
+  background: #1f2937;
+  border: 1px solid rgba(148, 163, 184, 0.65);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* ロゴの文字のデザイン */
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.18em;   /* 文字間を少し広く */
-  text-transform: uppercase;
-  color: #f9fafb;
-
-  /* 立体感のある影 */
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.8);
-  text-shadow: 0 0 6px rgba(15, 23, 42, 0.8);
-  transition: all 0.15s ease-out;
-}
-
-/* マウスを乗せたとき、ちょっと光る */
-.logo-mark:hover {
-  border-color: rgba(96, 165, 250, 0.9);
-  box-shadow: 0 16px 32px rgba(37, 99, 235, 0.9);
-  transform: translateY(-1px);
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-title {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.logo-subtitle {
+  /* ロゴ用のタイポ（細めでシュッとした感じ） */
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", system-ui, sans-serif;
   font-size: 11px;
-  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+
+  /* 影は消して、主張を弱める */
+  box-shadow: none;
 }
+
+
 
 /* PC ナビ */
 .nav {
