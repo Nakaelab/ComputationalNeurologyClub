@@ -100,3 +100,27 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.seminar-index {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #f8f9fb;
+  font-size: 0.95rem;
+}
+
+.seminar-index h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.seminar-index ul {
+  margin: 0 0 1rem 1.2rem;
+  padding: 0;
+}
+
+.seminar-index li {
+  margin-bottom: 0.3rem;
+}
+
