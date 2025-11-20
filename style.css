@@ -102,9 +102,7 @@ img {
 
 .logo-area {
   display: flex;
-  align-items: flex-end;  /* → ロゴを少し上げて、タイトルと差を出す */
   gap: 14px;
-  padding-bottom: 4px;   /* 逆にタイトルが少し下にいるように見せる */
 }
 
 
@@ -120,7 +118,7 @@ img {
   font-family: "Inter", "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 650;
   font-size: 15px;
-  letter-spacing: -0.01em; /* 品のある詰め */
+  letter-spacing: -0.01em;
   color: #ffffff;
 }
 
@@ -152,33 +150,6 @@ img {
     0 0 12px rgba(59,130,246,0.18);
   
   opacity: 0.9; /* 主張しすぎない控えめさ */
-}
-
-
-/* 左右の細いライン（今度は内側に収める） */
-.logo-mark::before,
-.logo-mark::after {
-  content: "";
-  width: 14px;
-  height: 1px;
-  border-radius: 999px;
-  background: rgba(148, 163, 184, 0.45);
-}
-
-
-/* ② 左右に細いラインを入れて国際学会ロゴ風 */
-.logo-mark::before,
-.logo-mark::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 16px;
-  height: 1px;
-
-  background: rgba(148, 163, 184, 0.45);
-
-  transform: translateY(-50%);
-  border-radius: 999px;
 }
 
 .logo-mark::before {
