@@ -107,30 +107,37 @@ img {
 }
 
 .logo-mark {
-  width: 26px;
-  height: 26px;
+  width: 34px;
+  height: 34px;
   border-radius: 999px;
 
-  /* 落ち着いたフラットなブルー */
-  background: #1f2937;
-  border: 1px solid rgba(148, 163, 184, 0.65);
+  /* 少しだけ立体感のある上品めグラデーション */
+  background: radial-gradient(circle at 30% 0,
+    #93c5fd,   /* 上側の明るい青 */
+    #3b82f6 55%,
+    #1f2937 100%
+  );
+
+  /* 薄い縁取りでキリッとさせる */
+  border: 1px solid rgba(148, 163, 184, 0.7);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* ロゴ用のタイポ（細めでシュッとした感じ） */
-  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", system-ui, sans-serif;
+  /* ロゴ用のフォント調整（シュッとした感じ） */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #e5e7eb;
+  color: #eef2ff;
 
-  /* 影は消して、主張を弱める */
-  box-shadow: none;
+  /* 影はやや控えめに：主張しすぎない程度 */
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.55);
 }
+
 
 
 
