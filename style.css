@@ -102,9 +102,11 @@ img {
 
 .logo-area {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-end;  /* → ロゴを少し上げて、タイトルと差を出す */
+  gap: 14px;
+  padding-bottom: 4px;   /* 逆にタイトルが少し下にいるように見せる */
 }
+
 
 
 
@@ -116,7 +118,7 @@ img {
 
 .logo-title {
   font-family: "Inter", "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 600;
+  font-weight: 650;
   font-size: 15px;
   letter-spacing: -0.01em; /* 品のある詰め */
   color: #ffffff;
@@ -139,7 +141,7 @@ img {
     -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   font-weight: 600;
   font-size: 15px;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.42em;
   text-transform: uppercase;
 
   color: #e7ecf5;
