@@ -30,7 +30,7 @@ body {
   background: radial-gradient(circle at top, #111827, #020617);
   -webkit-font-smoothing: antialiased;
 }
-/* --- 全テキストリンクのスタイル（上品バージョン） --- */
+/* --- 全テキストリンクのスタイル --- */
 a {
   color: #8ab4ff;              /* サイエンス系っぽい青 */
   text-decoration: none;       /* 下線は消して、自前で引く */
@@ -143,13 +143,13 @@ img {
 }
 
 .logo-title {
-  font-size: 20px;      /* メインタイトルを少し大きめに */
+  font-size: 15px;      /* メインタイトルを少し大きめに */
   font-weight: 700;     /* 太めで見出しっぽく */
 }
 
 .logo-subtitle {
   margin-top: 2px;
-  font-size: 13px;      /* サブタイトルは一段小さく */
+  font-size: 10px;      /* サブタイトルは一段小さく */
   color: var(--text-muted);
 }
 
