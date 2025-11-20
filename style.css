@@ -130,28 +130,28 @@ img {
   letter-spacing: 0.02em;
 }
 
-/* ロゴ全体（CNC + 左右ライン） */
 .logo-mark {
-  display: inline-flex;             /* 中身を横並びにする */
+  display: flex;
   align-items: center;
-  gap: 10px;                        /* ラインと文字の間の余白 */
+  justify-content: center;
 
   font-family: "Inter", "IBM Plex Sans",
     -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   font-weight: 600;
   font-size: 15px;
-  letter-spacing: 0.28em;           /* 学会ロゴっぽい広めの字間 */
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: #f1f5f9;
 
-  /* 淡い発光だけ足して上品に */
-  text-shadow: 0 0 6px rgba(96, 165, 250, 0.45);
+  color: #e7ecf5;
 
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 0;
+  /* ---- 上品な“ロゴ発光” ---- */
+  text-shadow:
+    0 0 6px rgba(147,197,253,0.35),
+    0 0 12px rgba(59,130,246,0.18);
+  
+  opacity: 0.9; /* 主張しすぎない控えめさ */
 }
+
 
 /* 左右の細いライン（今度は内側に収める） */
 .logo-mark::before,
