@@ -134,10 +134,24 @@ img {
   text-transform: uppercase;
   color: #eef2ff;
 
-  /* 影はやや控えめに：主張しすぎない程度 */
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.55);
 }
+/* ロゴ右側のテキスト（タイトル＋サブタイトル） */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
 
+.logo-title {
+  font-size: 20px;      /* メインタイトルを少し大きめに */
+  font-weight: 700;     /* 太めで見出しっぽく */
+}
+
+.logo-subtitle {
+  margin-top: 2px;
+  font-size: 13px;      /* サブタイトルは一段小さく */
+  color: var(--text-muted);
+}
 
 
 
