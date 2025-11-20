@@ -551,7 +551,7 @@ img {
   color: var(--text-muted);
 }
 
-/* ========= Organizers ========= */
+/* ========= Organizer Card（置き換え版）========= */
 
 .organizer-grid {
   display: grid;
@@ -559,68 +559,48 @@ img {
   gap: 14px;
 }
 
-/* aタグだけどカードっぽく見せる ＋ リンク感を出す */
+/* Organizer カードを <a> で囲んでいる前提 */
 .organizer-card {
-  display: block;                          /* カード全体がクリック範囲 */
+  display: block;
   background: rgba(15, 23, 42, 0.96);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-subtle);
-  padding: 12px 14px;
+  padding: 14px 18px;
   box-shadow: var(--shadow-subtle);
-  color: inherit;                          /* 文字色はそのまま */
-  text-decoration: none;                   /* 中の文字に下線つけない */
-  cursor: pointer;                         /* 手のカーソルにする */
-  transition: border-color 0.15s ease, 
-              box-shadow 0.15s ease,
-              transform 0.08s ease;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
-/* ホバーしたとき「リンクっぽく」光らせる */
+/* ホバーでカードを浮かせて光らせる */
 .organizer-card:hover {
-  border-color: rgba(59, 130, 246, 0.7);   /* 枠を少し青く */
-  box-shadow: 0 14px 32px rgba(37, 99, 235, 0.7);
-  transform: translateY(-2px);
+  border-color: rgba(96, 165, 250, 0.6);
+  box-shadow: 0 12px 32px rgba(37, 99, 235, 0.3);
+  transform: translateY(-3px);
+  background: rgba(20, 30, 60, 0.9);
 }
 
 .organizer-card h3 {
   margin: 0 0 4px;
   font-size: 14px;
+  color: var(--text);
+  transition: color 0.2s ease;
 }
 
-.org-affiliation {
+.organizer-card .org-affiliation {
   margin: 0;
   font-size: 12px;
   color: var(--text-muted);
-}
-/* ========= フッター ========= */
-
-.site-footer {
-  border-top: 1px solid rgba(15, 23, 42, 0.9);
-  background: #020617;
-  padding: 18px 0 22px;
+  transition: color 0.2s ease;
 }
 
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 12px;
-  color: var(--text-muted);
+/* ホバー時の文字変化（わかりやすい） */
+.organizer-card:hover h3 {
+  color: #ffffff;
 }
 
-.footer-logo {
-  margin: 0 0 4px;
-  font-size: 13px;
-  color: #e5e7eb;
-}
-
-.footer-text {
-  margin: 0;
-}
-
-.footer-meta {
-  margin: 0;
-  text-align: right;
+.organizer-card:hover .org-affiliation {
+  color: #dbeafe;
 }
 
 /* ========= ハンバーガーメニュー（見た目だけ。JSはHTML側） ========= */
