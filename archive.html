@@ -5,174 +5,17 @@
   <title>Archive | Computational Neurology Club</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Computational Neurology Clubの過去のセミナー一覧です。" />
-    <link rel="icon" type="imag/png" href="image/cnc.icon.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="image/cnc.icon.png" />
+  <link rel="icon" type="imag/png" href="image/cnc.icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="image/cnc.icon.png" />
   <link rel="apple-touch-icon" href="image/cnc.icon.png" />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
   
-  <style>
-    /* ------------------------------------------------------------- */
-    /* Archiveページ専用スタイル */
-    /* ------------------------------------------------------------- */
-    
-    /* 年別索引のデザイン */
-    .archive-toc {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-        margin-bottom: 40px;
-        padding: 12px 20px;
-        background: var(--card); /* カード背景色を使用 */
-        border-radius: var(--radius-lg);
-        border: 1px solid var(--border-subtle);
-        box-shadow: var(--shadow-subtle);
-    }
-    .archive-toc a {
-        padding: 6px 14px;
-        font-weight: 500;
-        font-size: 14px;
-        border-radius: 999px;
-        color: var(--text-muted);
-        background-color: transparent;
-        transition: background-color 0.2s, color 0.2s;
-        border: 1px solid transparent;
-    }
-    /* リンクの下線アニメーションを上書きしてボタン風に */
-    .archive-toc a::after {
-        content: none;
-    }
-    .archive-toc a:hover {
-        color: var(--text);
-        border-color: rgba(96, 165, 250, 0.4);
-        background-color: rgba(59, 130, 246, 0.1);
-    }
-
-    /* 年度の区切り見出し */
-    .year-heading {
-        font-size: 18px;
-        color: var(--accent);
-        margin-top: 35px;
-        margin-bottom: 20px;
-        border-left: 4px solid var(--accent);
-        padding-left: 12px;
-    }
-
-    /* セミナーカード（アコーディオン） */
-    .seminar-card {
-        background: var(--card);
-        border-radius: var(--radius-lg);
-        border: 1px solid var(--border-subtle);
-        box-shadow: var(--shadow-subtle);
-        margin-bottom: 12px;
-        cursor: pointer;
-        transition: border-color 0.2s, background 0.2s;
-    }
-    .seminar-card:hover {
-        border-color: rgba(96, 165, 250, 0.5);
-        background: #14182e; /* ホバーで少し明るく */
-    }
-
-    .seminar-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 14px 18px;
-        user-select: none;
-        border-bottom: 1px solid transparent;
-        transition: border-bottom 0.2s;
-    }
-
-    /* 開いている時のヘッダーの区切り線 */
-    .seminar-header.open {
-        border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .seminar-title {
-        margin: 0;
-        font-size: 15px;
-        font-weight: 500;
-        color: var(--text);
-    }
-
-    /* 開閉アイコン（+ / -） */
-    .toggle-icon {
-        font-size: 1.5em;
-        line-height: 1;
-        width: 20px;
-        text-align: center;
-        color: var(--accent);
-        transition: transform 0.3s;
-        transform: rotate(0deg);
-    }
-
-    /* 開いたときにアイコンを回転させて X のように見せる */
-    .seminar-header.open .toggle-icon {
-        transform: rotate(45deg);
-    }
-
-    /* セミナー情報のリスト */
-    .seminar-info-list {
-        list-style: none;
-        padding: 0 18px;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        font-size: 12px;
-        color: var(--text-muted);
-    }
-
-    .seminar-info-list li {
-        display: flex;
-        gap: 8px;
-    }
-
-    .seminar-info-list strong {
-        font-weight: 600;
-        color: #d1d5db; /* 少し明るい色 */
-    }
-
-    /* 概要部分（アコーディオン本体） */
-    .seminar-abstract {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-        padding: 0 18px;
-        color: var(--text-muted);
-        font-size: 13px;
-    }
-
-    .seminar-abstract.open {
-        max-height: 800px; /* 十分な高さを設定 */
-        padding: 15px 18px 20px;
-    }
-    
-    /* レスポンシブ対応 */
-    @media (max-width: 640px) {
-        .seminar-header {
-            padding: 12px 16px;
-        }
-        .seminar-title {
-            font-size: 14px;
-        }
-        .seminar-info-list {
-            padding: 0 16px;
-            flex-direction: column;
-            gap: 5px;
-        }
-        .seminar-abstract {
-             padding: 0 16px;
-        }
-        .seminar-abstract.open {
-            padding: 10px 16px 15px;
-        }
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="archive.css" />
+  
 </head>
 <body>
+  
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo-area">
@@ -305,7 +148,7 @@
                 <li><strong>場所</strong>：Zoom</li>
             </ul>
             <div class="seminar-abstract" id="abstract-9">
-                <p>概要：てんかん外科治療における頭蓋内脳波計測は治療方針決定に重要であり、発作間欠期の脳波は様々な脳機能調査にも活用される。（...続く...）既に100名以上の患者について、病室で過ごす間の状態と頭蓋内脳波のビッグデータを得ている。このデータから、ヒトの思考状態と関連する脳活動を同定し、てんかん発作時の脳波特徴を明らかにしてきた。頭蓋内脳波計測から、てんかんやヒトの高次機能について何を明らかにできるか議論する。</p>
+                <p>概要：てんかん外科治療における頭蓋内脳波計測は治療方針決定に重要であり、発作間欠期の脳波は様々な脳機能調査にも活用される。（...続く...）既に100名以上の患者について、病室で過ごす間の状態と頭蓋内脳波のビッグデータを得ている。このデータから、ヒトの思考状態と関連する脳活動を同定し、てんかん発作時の脳波特徴を明らかにし...。</p>
             </div>
         </article>
 
@@ -375,7 +218,6 @@
       // メニュー内のリンクがクリックされた時にメニューを閉じる
       navMenu.querySelectorAll('a').forEach(link => {
           link.addEventListener('click', () => {
-              // リンククリック時にすぐにis-openを解除する (スマホ操作を快適に)
               if (navMenu.classList.contains('is-open')) {
                 navToggle.classList.remove('is-open');
                 navMenu.classList.remove('is-open');
