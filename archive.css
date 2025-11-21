@@ -1,104 +1,186 @@
-/* ============================================================
-   Archive Page — 全体リファクタ済みスタイル
-   （検索なし・索引なし、カードレイアウトだけ残す）
-   Computational Neurology Club 用デザイン最適化
-   ============================================================ */
+/*
+ * archive.css
+ * Computational Neurology Club - 過去のセミナー一覧ページ専用スタイル
+ * -------------------------------------------------------------
+ * 備考: このファイルは、メインの style.css (ダークテーマ) を前提としています。
+ */
 
-/* ---- アーカイブ全体 ---- */
-.archive-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 16px 20px 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;              /* セミナー枠の間隔 */
+
+/* ===================================== */
+/* 1. 年別索引（TOC） */
+/* ===================================== */
+
+.archive-toc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    padding: 12px 20px;
+    /* style.cssの変数を使用 */
+    background: var(--card); 
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-subtle);
 }
 
-/* ---- セミナーカード ---- */
-.archive-page .seminar {
-  background: #0b1220;                            /* 背景（ページより少し明るい） */
-  border: 1px solid rgba(148, 163, 184, 0.35);     /* 控えめのグレーボーダー */
-  border-radius: 18px;
-  padding: 26px 28px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);       /* カードとして浮かせる */
-  line-height: 1.8;
+.archive-toc a {
+    padding: 6px 14px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 999px;
+    color: var(--text-muted);
+    background-color: transparent;
+    transition: background-color 0.2s, color 0.2s;
+    border: 1px solid transparent;
 }
 
-/* ---- セミナータイトル ---- */
-.archive-page .seminar h2 {
-  margin: 0 0 14px;
-  font-size: 1.45rem;
-  font-weight: 600;
-  color: #ffffff;
+/* リンクの下線アニメーションを無効化 */
+.archive-toc a::after {
+    content: none;
 }
 
-/* ---- 本文 ---- */
-.archive-page .seminar p {
-  margin: 8px 0;
-  color: #e5e7eb;
-  font-size: 1rem;
+/* ホバー時の装飾 */
+.archive-toc a:hover {
+    color: var(--text);
+    border-color: rgba(96, 165, 250, 0.4);
+    background-color: rgba(59, 130, 246, 0.1);
 }
 
-/* ---- ラベル強調（講演者・開催場所など） ---- */
-.archive-page .seminar p strong {
-  color: #ffffff;
-  font-weight: 700;
+/* 年度の区切り見出し */
+.year-heading {
+    font-size: 18px;
+    color: var(--accent);
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
 }
 
-/* ---- 箇条書き（参考文献など） ---- */
-.archive-page .seminar ul,
-.archive-page .seminar ol {
-  margin: 10px 0 10px 1.4rem;
-  color: #e5e7eb;
-  font-size: 0.95rem;
+
+/* ===================================== */
+/* 2. セミナーカード（アコーディオン） */
+/* ===================================== */
+
+.seminar-card {
+    background: var(--card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-subtle);
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
 }
 
-/* ---- リンク ---- */
-.archive-page .seminar a {
-  color: #60a5fa;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  word-break: break-all;
-  overflow-wrap: anywhere;
+.seminar-card:hover {
+    border-color: rgba(96, 165, 250, 0.5);
+    background: #14182e; /* ホバーで少し明るく */
 }
 
-.archive-page .seminar a:hover {
-  opacity: 0.85;
+/* ヘッダー部分 */
+.seminar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    user-select: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s;
 }
 
-/* ---- ページ上部の「Update & Archive」見出しを中央揃え ---- */
-.archive-page .section-header {
-  text-align: center;
-  max-width: 1100px;
-  margin: 0 auto 32px;
+/* 開いている時のヘッダーの区切り線 */
+.seminar-header.open {
+    border-bottom: 1px solid var(--border-subtle);
 }
 
-.archive-page .section-header h2 {
-  font-size: 2rem;
+.seminar-title {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
 }
 
-.archive-page .section-header p {
-  font-size: 1rem;
-  opacity: 0.85;
+/* 開閉アイコン（+ / -） */
+.toggle-icon {
+    font-size: 1.5em;
+    line-height: 1;
+    width: 20px;
+    text-align: center;
+    color: var(--accent);
+    transition: transform 0.3s;
+    transform: rotate(0deg);
 }
 
-/* ---- スマホ最適化 ---- */
+/* 開いたときにアイコンを回転させて X のように見せる */
+.seminar-header.open .toggle-icon {
+    transform: rotate(45deg);
+}
+
+/* セミナー情報のリスト */
+.seminar-info-list {
+    list-style: none;
+    padding: 0 18px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.seminar-info-list li {
+    display: flex;
+    gap: 8px;
+}
+
+.seminar-info-list strong {
+    font-weight: 600;
+    color: #d1d5db; /* 少し明るい色 */
+}
+
+/* 概要部分（アコーディオン本体） */
+.seminar-abstract {
+    /* JavaScriptで max-height を制御して開閉アニメーションを実現 */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding: 0 18px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* JavaScriptで .open クラスが付与された時 */
+.seminar-abstract.open {
+    max-height: 800px; /* 十分な高さを設定（コンテンツに合わせて調整可） */
+    padding: 15px 18px 20px;
+}
+
+
+/* ===================================== */
+/* 3. レスポンシブ対応 (640px以下) */
+/* ===================================== */
+
 @media (max-width: 640px) {
-  .archive-container {
-    padding: 12px 10px 40px;
-    gap: 22px;
-  }
-
-  .archive-page .seminar {
-    padding: 18px 16px;
-    border-radius: 14px;
-  }
-
-  .archive-page .seminar h2 {
-    font-size: 1.2rem;
-  }
-
-  .archive-page .seminar p {
-    font-size: 0.9rem;
-  }
+    .seminar-header {
+        padding: 12px 16px;
+    }
+    .seminar-title {
+        font-size: 14px;
+    }
+    
+    /* 情報リストを縦並びにする */
+    .seminar-info-list {
+        padding: 0 16px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .seminar-abstract {
+         padding: 0 16px;
+    }
+    
+    /* 概要部分のパディング調整 */
+    .seminar-abstract.open {
+        padding: 10px 16px 15px;
+    }
 }
