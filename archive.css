@@ -19,9 +19,9 @@
     -webkit-backdrop-filter: blur(16px);
     border-radius: 99px;
     border: 1px solid var(--border-subtle);
-    position: sticky;
-    top: 90px;
-    z-index: 100;
+    /* position: sticky;  <-- Removed as requested */
+    /* top: 90px; */
+    /* z-index: 100; */
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
     max-width: fit-content;
     margin-left: auto;
@@ -217,33 +217,41 @@
         overflow-x: auto;
         justify-content: flex-start;
         padding: 12px;
-        margin: 0 -16px 40px;
-        border-radius: 0;
-        border-left: none;
-        border-right: none;
-        max-width: none;
+        margin: 0 auto 40px;
+        /* Center it */
+        border-radius: 12px;
+        /* Less rounded on mobile */
+        max-width: 100%;
         background: rgba(17, 24, 39, 0.95);
+        white-space: nowrap;
+        /* Keep items in one line if scrolling */
     }
 
     .seminar-header {
-        padding: 20px;
-        grid-template-columns: 1fr;
-        /* タイトルとアイコンを縦にするか、横のままか...横のままでいいが、スペースが狭いなら調整 */
+        padding: 16px;
         grid-template-columns: 1fr auto;
+        gap: 12px;
     }
 
     .seminar-title {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.5;
     }
 
     .seminar-info-list {
         flex-direction: column;
-        gap: 10px;
-        padding: 0 20px 20px;
+        gap: 8px;
+        padding: 0 16px 16px;
         align-items: flex-start;
     }
 
     .seminar-abstract.open {
-        padding: 20px;
+        padding: 16px;
+    }
+
+    /* Ensure text doesn't overflow */
+    .seminar-abstract p {
+        font-size: 14px;
+        word-wrap: break-word;
     }
 }

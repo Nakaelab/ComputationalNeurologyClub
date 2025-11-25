@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <title>Computational Neurology Club</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Computational Neurology Clubは、計算論的アプローチで神経内科疾患を探究するコミュニティです。2ヶ月に1回のオンラインセミナーを中心に活動しています。"
-  />
-   <link rel="icon" type="imag/png" href="image/cnc.icon.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="image/cnc.icon.png" />
+  <meta name="description"
+    content="Computational Neurology Clubは、計算論的アプローチで神経内科疾患を探究するコミュニティです。2ヶ月に1回のオンラインセミナーを中心に活動しています。" />
+  <link rel="icon" type="imag/png" href="image/cnc.icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="image/cnc.icon.png" />
   <link rel="apple-touch-icon" href="image/cnc.icon.png" />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="logo-area">
+      <a href="index.html" class="logo-area">
         <div class="logo-mark">CNC</div>
         <div class="logo-text">
           <span class="logo-title">Computational Neurology Club</span>
           <span class="logo-subtitle">計算論的神経内科学 研究会</span>
         </div>
-      </div>
-      <nav class="nav">
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-controls="main-nav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="main-nav">
         <a href="index.html" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#next">次回セミナー</a>
@@ -34,41 +41,41 @@
     </div>
   </header>
   <main>
-  <!-- ヒーロー -->
-<section class="hero">
-  <div class="hero-overlay"></div>
+    <!-- ヒーロー -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
 
-  <div class="container hero-inner">
+      <div class="container hero-inner">
 
-    <!-- 左：テキスト -->
-    <div class="hero-text">
-      <h1>Computational Neurology Club</h1>
-      <p>
-        計算論的手法を用いて、アルツハイマー病・パーキンソン病・てんかんなど<br />
-        神経内科疾患の病態理解と臨床応用をめざすコミュニティです。
-      </p>
-      <p class="hero-sub">
-        2ヶ月に1回のオンラインセミナーを通じて、<br />
-        学生・研究者・臨床家が分野を越えて議論する場を提供します。
-      </p>
+        <!-- 左：テキスト -->
+        <div class="hero-text">
+          <h1>Computational Neurology Club</h1>
+          <p>
+            計算論的手法を用いて、アルツハイマー病・パーキンソン病・てんかんなど<br />
+            神経内科疾患の病態理解と臨床応用をめざすコミュニティです。
+          </p>
+          <p class="hero-sub">
+            2ヶ月に1回のオンラインセミナーを通じて、<br />
+            学生・研究者・臨床家が分野を越えて議論する場を提供します。
+          </p>
 
-      <div class="hero-actions">
-        <a href="#next" class="btn primary">次回セミナー情報を見る</a>
-        <a href="archive.html" class="btn ghost">過去セミナーをみる</a>
+          <div class="hero-actions">
+            <a href="#next" class="btn primary">次回セミナー情報を見る</a>
+            <a href="archive.html" class="btn ghost">過去セミナーをみる</a>
+          </div>
+        </div>
+
+        <!-- 右：脳画像 -->
+        <div class="hero-image">
+          <img src="image/brain-hero.png" alt="Brain Image">
+        </div>
+
       </div>
-    </div>
-
-    <!-- 右：脳画像 -->
-    <div class="hero-image">
-      <img src="image/brain-hero.png" alt="Brain Image">
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
 
-   <!-- 次回セミナー -->
+    <!-- 次回セミナー -->
     <section id="next" class="section">
       <div class="container">
         <div class="section-header">
@@ -110,12 +117,8 @@
             </p>
 
             <div class="event-actions">
-              <a
-                href="https://forms.office.com/r/e5uyKBWWHz"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn primary"
-              >
+              <a href="https://forms.office.com/r/e5uyKBWWHz" target="_blank" rel="noopener noreferrer"
+                class="btn primary">
                 参加登録フォームへ
               </a>
               <span class="event-note">
@@ -146,7 +149,7 @@
       </div>
     </section>
 
-    
+
     <!-- About -->
     <section id="about" class="section section-alt">
       <div class="container">
@@ -159,8 +162,8 @@
             <p>
               計算論的神経科学（Computational Neuroscience）は数理的アプローチを用いて脳や心を研究する分野です。
               計算論的精神医学（Computational Psychiatry）は、この中で統合失調症などの精神医学を扱う領域で、
-               <a href="https://cpsyjournal.org/?utm_source=chatgpt.com">
-              同名の国際雑誌（Computational Psychiatry） </a>が刊行され近年国際的にも認められる分野となっています。
+              <a href="https://cpsyjournal.org/?utm_source=chatgpt.com">
+                同名の国際雑誌（Computational Psychiatry） </a>が刊行され近年国際的にも認められる分野となっています。
               一方で、脳や心の疾患ですがアルツハイマー病やパーキンソン病といった神経変性疾患、
               てんかんや脳卒中など神経内科学(Neurology)に属する疾患に関して、
               計算論的な立場からまとまった分野としての取り扱いがなされていません。
@@ -173,18 +176,18 @@
           <div class="column">
             <div class="info-card">
               <h3>共催</h3>
-             <ul>
- 　　　　 <li>
-    <a href="https://braidyn-bc.jp/" target="_blank" rel="noopener noreferrer">
-      日本学術振興会 学術変革領域A「行動変容生物学」
-    </a>
-  </li>
-  <li>
-    <a href="https://www.excells.orion.ac.jp/">
-      自然科学研究機構・生命創成探究センター（ExCELLS）
-    </a>
-  </li>
-</ul>
+              <ul>
+                　　　　 <li>
+                  <a href="https://braidyn-bc.jp/" target="_blank" rel="noopener noreferrer">
+                    日本学術振興会 学術変革領域A「行動変容生物学」
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.excells.orion.ac.jp/">
+                    自然科学研究機構・生命創成探究センター（ExCELLS）
+                  </a>
+                </li>
+              </ul>
             </div>
             <div class="info-card">
               <h3>開催概要</h3>
@@ -196,57 +199,52 @@
             </div>
           </div>
         </div>
-      
+
       </div>
     </section>
 
-<!-- オーガナイザー -->
-<section id="organizers" class="section">
-  <div class="container">
+    <!-- オーガナイザー -->
+    <section id="organizers" class="section">
+      <div class="container">
 
-    <div class="section-header">
-      <h2>Organizers</h2>
-      <p>オーガナイザー</p>
-    </div>
+        <div class="section-header">
+          <h2>Organizers</h2>
+          <p>オーガナイザー</p>
+        </div>
 
-   <div class="organizer-grid">
+        <div class="organizer-grid">
 
-  <!-- 矢田さん -->
-  <a class="organizer-card"
-     href="https://researchmap.jp/yuichiro.yada"
-     target="_blank" rel="noopener noreferrer">
+          <!-- 矢田さん -->
+          <a class="organizer-card" href="https://researchmap.jp/yuichiro.yada" target="_blank"
+            rel="noopener noreferrer">
 
-    <!-- テキスト部分 -->
-    <div class="organizer-main">
-      <h3>矢田 祐一郎</h3>
-      <p class="org-affiliation">名古屋大学 大学院医学系研究科</p>
-    </div>
-  </a>
+            <!-- テキスト部分 -->
+            <div class="organizer-main">
+              <h3>矢田 祐一郎</h3>
+              <p class="org-affiliation">名古屋大学 大学院医学系研究科</p>
+            </div>
+          </a>
 
-  <!-- 近藤さん -->
-  <a class="organizer-card"
-     href="https://researchmap.jp/7000009439"
-     target="_blank" rel="noopener noreferrer">
-    <div class="organizer-main">
-      <h3>近藤 洋平</h3>
-      <p class="org-affiliation">名古屋大学 大学院医学研究科</p>
-    </div>
-  </a>
+          <!-- 近藤さん -->
+          <a class="organizer-card" href="https://researchmap.jp/7000009439" target="_blank" rel="noopener noreferrer">
+            <div class="organizer-main">
+              <h3>近藤 洋平</h3>
+              <p class="org-affiliation">名古屋大学 大学院医学研究科</p>
+            </div>
+          </a>
 
-  <!-- 中江さん -->
-  <a class="organizer-card"
-     href="https://researchmap.jp/ken.nakae"
-     target="_blank" rel="noopener noreferrer">
+          <!-- 中江さん -->
+          <a class="organizer-card" href="https://researchmap.jp/ken.nakae" target="_blank" rel="noopener noreferrer">
 
-    <div class="organizer-main">
-      <h3>中江 健</h3>
-      <p class="org-affiliation">福井大学 学術研究院工学系部門</p>
-    </div>
-  </a>
+            <div class="organizer-main">
+              <h3>中江 健</h3>
+              <p class="org-affiliation">福井大学 学術研究院工学系部門</p>
+            </div>
+          </a>
 
-</div>
-  </div>
-</section>
+        </div>
+      </div>
+    </section>
 
   </main>
 
@@ -264,6 +262,28 @@
       </div>
     </div>
   </footer>
-</body>
-</html>
 
+  <script>
+    // ハンバーガーメニューのトグル機能
+    document.addEventListener('DOMContentLoaded', () => {
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('main-nav');
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+          navToggle.classList.toggle('is-open');
+          navMenu.classList.toggle('is-open');
+        });
+
+        // メニュー内のリンクがクリックされた時にメニューを閉じる
+        navMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            if (navMenu.classList.contains('is-open')) {
+              navToggle.classList.remove('is-open');
+              navMenu.classList.remove('is-open');
+            }
+          });
+        });
+      }
+    });
+  </script>
