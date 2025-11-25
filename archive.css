@@ -1,10 +1,7 @@
 /*
  * archive.css
  * Computational Neurology Club - 過去のセミナー一覧ページ専用スタイル
- * -------------------------------------------------------------
- * 備考: このファイルは、メインの style.css (ダークテーマ) を前提としています。
  */
-
 
 /* ===================================== */
 /* 1. 年別索引（TOC） */
@@ -14,173 +11,239 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
-    margin-bottom: 40px;
-    padding: 12px 20px;
-    /* style.cssの変数を使用 */
-    background: var(--card); 
-    border-radius: var(--radius-lg);
+    gap: 12px;
+    margin-bottom: 60px;
+    padding: 16px 24px;
+    background: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 99px;
     border: 1px solid var(--border-subtle);
-    box-shadow: var(--shadow-subtle);
+    position: sticky;
+    top: 90px;
+    z-index: 100;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .archive-toc a {
-    padding: 6px 14px;
-    font-weight: 500;
+    padding: 8px 20px;
+    font-weight: 600;
     font-size: 14px;
-    border-radius: 999px;
+    border-radius: 99px;
     color: var(--text-muted);
     background-color: transparent;
-    transition: background-color 0.2s, color 0.2s;
+    transition: all 0.3s ease;
     border: 1px solid transparent;
 }
 
-/* リンクの下線アニメーションを無効化 */
-.archive-toc a::after {
-    content: none;
-}
-
-/* ホバー時の装飾 */
 .archive-toc a:hover {
-    color: var(--text);
-    border-color: rgba(96, 165, 250, 0.4);
-    background-color: rgba(59, 130, 246, 0.1);
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
 }
-
-/* 年度の区切り見出し */
-.year-heading {
-    font-size: 18px;
-    color: var(--accent);
-    margin-top: 35px;
-    margin-bottom: 20px;
-    border-left: 4px solid var(--accent);
-    padding-left: 12px;
-}
-
 
 /* ===================================== */
-/* 2. セミナーカード（アコーディオン） */
+/* 2. 年見出し */
+/* ===================================== */
+
+.year-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 60px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 8px;
+}
+
+.year-heading::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--border-subtle), transparent);
+}
+
+/* ===================================== */
+/* 3. セミナーカード（アコーディオン） */
 /* ===================================== */
 
 .seminar-card {
     background: var(--card);
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-subtle);
-    box-shadow: var(--shadow-subtle);
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     cursor: pointer;
-    transition: border-color 0.2s, background 0.2s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.seminar-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .seminar-card:hover {
-    border-color: rgba(96, 165, 250, 0.5);
-    background: #14182e; /* ホバーで少し明るく */
+    transform: translateY(-2px);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+}
+
+.seminar-card:hover::before {
+    opacity: 1;
 }
 
 /* ヘッダー部分 */
 .seminar-header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
     align-items: center;
-    padding: 14px 18px;
+    padding: 24px;
     user-select: none;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.2s;
-}
-
-/* 開いている時のヘッダーの区切り線 */
-.seminar-header.open {
-    border-bottom: 1px solid var(--border-subtle);
 }
 
 .seminar-title {
     margin: 0;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     color: var(--text);
+    line-height: 1.4;
+    transition: color 0.3s ease;
 }
 
-/* 開閉アイコン（+ / -） */
+.seminar-card:hover .seminar-title {
+    color: #fff;
+}
+
+/* 開閉アイコン */
 .toggle-icon {
-    font-size: 1.5em;
-    line-height: 1;
-    width: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
     color: var(--accent);
-    transition: transform 0.3s;
-    transform: rotate(0deg);
+    font-size: 18px;
+    transition: all 0.3s ease;
 }
 
-/* 開いたときにアイコンを回転させて X のように見せる */
+.seminar-card:hover .toggle-icon {
+    background: var(--accent);
+    color: #fff;
+}
+
 .seminar-header.open .toggle-icon {
     transform: rotate(45deg);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
 }
 
 /* セミナー情報のリスト */
 .seminar-info-list {
     list-style: none;
-    padding: 0 18px;
+    padding: 0 24px 20px;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    font-size: 12px;
+    gap: 20px;
+    font-size: 13px;
     color: var(--text-muted);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.seminar-header.open+.seminar-info-list {
+    border-bottom-color: var(--border-subtle);
 }
 
 .seminar-info-list li {
     display: flex;
+    align-items: center;
     gap: 8px;
 }
 
 .seminar-info-list strong {
     font-weight: 600;
-    color: #d1d5db; /* 少し明るい色 */
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 /* 概要部分（アコーディオン本体） */
 .seminar-abstract {
-    /* JavaScriptで max-height を制御して開閉アニメーションを実現 */
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-    padding: 0 18px;
-    color: var(--text-muted);
-    font-size: 13px;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
+    padding: 0 24px;
+    background: rgba(0, 0, 0, 0.2);
 }
 
-/* JavaScriptで .open クラスが付与された時 */
 .seminar-abstract.open {
-    max-height: 800px; /* 十分な高さを設定（コンテンツに合わせて調整可） */
-    padding: 15px 18px 20px;
+    max-height: 1000px;
+    padding: 24px;
 }
 
+.seminar-abstract p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
 
 /* ===================================== */
-/* 3. レスポンシブ対応 (640px以下) */
+/* 4. レスポンシブ対応 */
 /* ===================================== */
 
 @media (max-width: 640px) {
+    .archive-toc {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 12px;
+        margin: 0 -16px 40px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        max-width: none;
+        background: rgba(17, 24, 39, 0.95);
+    }
+
     .seminar-header {
-        padding: 12px 16px;
+        padding: 20px;
+        grid-template-columns: 1fr;
+        /* タイトルとアイコンを縦にするか、横のままか...横のままでいいが、スペースが狭いなら調整 */
+        grid-template-columns: 1fr auto;
     }
+
     .seminar-title {
-        font-size: 14px;
+        font-size: 16px;
     }
-    
-    /* 情報リストを縦並びにする */
+
     .seminar-info-list {
-        padding: 0 16px;
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
+        padding: 0 20px 20px;
+        align-items: flex-start;
     }
-    
-    .seminar-abstract {
-         padding: 0 16px;
-    }
-    
-    /* 概要部分のパディング調整 */
+
     .seminar-abstract.open {
-        padding: 10px 16px 15px;
+        padding: 20px;
     }
 }
