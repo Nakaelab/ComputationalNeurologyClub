@@ -208,50 +208,27 @@
     color: #cbd5e1;
 }
 
-/* ===================================== */
-/* 4. レスポンシブ対応 */
-/* ===================================== */
+}
 
-@media (max-width: 640px) {
-    .archive-toc {
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding: 12px;
-        margin: 0 auto 40px;
-        /* Center it */
-        border-radius: 12px;
-        /* Less rounded on mobile */
-        max-width: 100%;
-        background: rgba(17, 24, 39, 0.95);
-        white-space: nowrap;
-        /* Keep items in one line if scrolling */
-    }
+.seminar-title {
+    font-size: 15px;
+    line-height: 1.5;
+}
 
-    .seminar-header {
-        padding: 16px;
-        grid-template-columns: 1fr auto;
-        gap: 12px;
-    }
+.seminar-info-list {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 16px 16px;
+    align-items: flex-start;
+}
 
-    .seminar-title {
-        font-size: 15px;
-        line-height: 1.5;
-    }
+.seminar-abstract.open {
+    padding: 16px;
+}
 
-    .seminar-info-list {
-        flex-direction: column;
-        gap: 8px;
-        padding: 0 16px 16px;
-        align-items: flex-start;
-    }
-
-    .seminar-abstract.open {
-        padding: 16px;
-    }
-
-    /* Ensure text doesn't overflow */
-    .seminar-abstract p {
-        font-size: 14px;
-        word-wrap: break-word;
-    }
+/* Ensure text doesn't overflow */
+.seminar-abstract p {
+    font-size: 14px;
+    word-wrap: break-word;
+}
 }
