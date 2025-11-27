@@ -106,7 +106,7 @@ img {
 
 /* 画像自体のサイズ調整 */
 .logo-img {
-  height: 50px; /* ← ★ここ数字を変えて大きさを調整してください */
+  height: 30px; /* ← ★ここ数字を変えて大きさを調整してください */
   width: auto;
   object-fit: contain;
 }
