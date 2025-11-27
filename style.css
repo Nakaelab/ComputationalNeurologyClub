@@ -97,8 +97,16 @@ img {
   text-decoration: none;
 }
 
+/* ロゴの枠（div）の調整 */
 .logo-mark {
-  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-right: 8px; /* ロゴと文字の間の隙間 */
+}
+
+/* 画像自体のサイズ調整 */
+.logo-img {
+  height: 50px; /* ← ★ここ数字を変えて大きさを調整してください */
   width: auto;
   object-fit: contain;
 }
