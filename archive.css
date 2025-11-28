@@ -255,20 +255,78 @@
   position: relative;
   overflow: hidden;
   padding: 40px 0;
-}
+}.archive-toc
 
 .header-content {
   position: relative;
   z-index: 2;
 }
-/* ========================================= */
-/* ★年度ボタンの中のアイコンを消す修正 */
-/* ========================================= */
 
-/* svgタグ, imgタグ, iタグなど、アイコンの可能性が高いものを全て消す */
-.archive-toc a svg,
+/* ===================================== */
+/* 1. 年別索引（TOC）完全修正版 */
+/* ===================================== */
+
+/* ボタンを入れる「外側の枠」 */
+.archive-toc {
+  display: flex;             /* 横並びにする */
+  justify-content: center;   /* 真ん中に寄せる */
+  align-items: center;       /* 上下も真ん中 */
+  gap: 8px;                  /* ボタン同士の隙間 */
+  
+  /* 枠のデザイン */
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: 99px;       /* 楕円形にする */
+  padding: 6px;              /* 枠の内側の余白 */
+  
+  /* 位置の調整 */
+  margin: 0 auto 60px;       /* 画面中央配置 + 下に余白 */
+  width: fit-content;        /* 中身に合わせた幅にする */
+}
+
+/* 「2025年」などのボタン本体 */
+.archive-toc a {
+  display: block;            /* 形を整える */
+  padding: 8px 24px;         /* ボタンの大きさ（上下8px, 左右24px） */
+  
+  /* 文字のデザイン */
+  color: var(--text-muted);  /* グレー */
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;     /* 下線を消す */
+  line-height: 1;            /* 文字の高さズレを防ぐ */
+  
+  /* 角丸と背景 */
+  border-radius: 99px;
+  background: transparent;   /* 通常は背景なし */
+  border: 1px solid transparent; /* 枠線のズレ防止 */
+  transition: all 0.3s ease;
+}
+
+/* マウスを乗せた時 */
+.archive-toc a:hover {
+  color: #fff;               /* 文字を白く */
+  background: rgba(255, 255, 255, 0.1); /* 背景を薄く光らせる */
+}
+
+/* ★以前の「強制リセット」が悪さをしないように、念のため無効化 */
+.archive-toc a::before,
+.archive-toc a::after {
+  content: none;
+  display: none;
+}
 .archive-toc a img,
-.archive-toc a i,
-.archive-toc a span[class*="icon"] {
+.archive-toc a svg {
+  display: none;
+}
+
+/* 1. 中身が空っぽのリンク（文字がないボタン）を消す */
+.archive-toc a:empty {
+  display: none !important;
+}
+
+/* 2. もし空じゃなくても「Googleフォーム」や「Officeフォーム」へのリンクなら消す */
+/* （2025などの数字は消えずに、横の変なリンクだけ消えます） */
+.archive-toc a[href*="forms"] {
   display: none !important;
 }
