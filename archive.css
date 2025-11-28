@@ -247,26 +247,3 @@
   z-index: 2;
 }
 
-/* 背景画像のスタイル */
-.header-bg-image {
-  position: absolute;
-  top: 50%;
-  right: -1; /* 右寄せ */
-  transform: translateY(-50%); /* 上下中央配置 */
-  height: 100%; /* 高さを調整して大きさを変える */
-  width: auto;
-  opacity: 0.9; /* 透明度を下げて背景になじませる (0.1〜0.3くらいが目安) */
-  z-index: -3; /* テキストより背面に */
-  pointer-events: none; /* マウスイベントを無効化 */
-  /* ブレンドモードを使ってさらになじませる (任意) */
-  /* mix-blend-mode: screen; または overlay, soft-light など試してみてください */
-}
-
-/* レスポンシブ対応 (スマホなど画面が狭い時) */
-@media (max-width: 768px) {
-  .header-bg-image {
-    height: 100%;
-    right: -20%; /* 少し右にはみ出させる */
-    opacity: 0.1; /* スマホではさらに薄くする */
-  }
-}
