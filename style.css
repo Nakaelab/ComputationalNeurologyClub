@@ -95,6 +95,9 @@ img {
   align-items: center;
   gap: 4px;
   text-decoration: none;
+flex-grow: 7; /* ヘッダー全体の約7割のスペースを使う */
+ flex-shrink: 1; /* スペースがなければ縮むことを許可 */
+ max-width: none; /* max-widthは不要 */
 }
 
 /* ロゴの枠（div）の調整 */
@@ -134,11 +137,14 @@ img {
 .nav {
   display: flex;
   gap: 32px;
+  flex-shrink: 0;
+  flex-grow: 3; /* ★追加: スペースを確保 */
+ justify-content: flex-end; /* ★追加: リンクを右寄せ */
 }
 
 .nav a {
   color: var(--text-muted);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   position: relative;
   padding: 8px 0;
@@ -269,7 +275,7 @@ img {
 
 /* ========= セクション共通設定 ========= */
 .section {
-  padding-top: 30px;    /* 上の余白 */
+  padding-top: 120px;    /* 上の余白 */
   padding-bottom: 60px; /* 下の余白 */
 }
 
