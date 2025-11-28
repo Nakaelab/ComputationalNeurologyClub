@@ -93,7 +93,7 @@ img {
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   text-decoration: none;
 }
 
@@ -101,7 +101,7 @@ img {
 .logo-mark {
   display: flex;
   align-items: center;
-  margin-right: 4px; /* ロゴと文字の間の隙間 */
+  margin-right: 0px; /* ロゴと文字の間の隙間 */
 }
 
 /* 画像自体のサイズ調整 */
