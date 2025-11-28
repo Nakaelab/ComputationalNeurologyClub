@@ -251,7 +251,21 @@ img {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-.hero-image {}
+.hero-image {
+  /* 必要に応じて位置調整 */
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image img {
+  /* 画像の周囲（特に四隅）をふわっとぼかして背景に馴染ませる */
+  -webkit-mask-image: radial-gradient(closest-side, black 60%, transparent 100%);
+  mask-image: radial-gradient(closest-side, black 60%, transparent 100%);
+  
+  /* もし「左上」だけをもっと強く消したい場合は、上の2行を消して以下を使ってください */
+  /* -webkit-mask-image: linear-gradient(135deg, transparent 0%, black 25%); */
+  /* mask-image: linear-gradient(135deg, transparent 0%, black 25%); */
+}
 
 .section-alt {
   background: var(--bg-alt);
