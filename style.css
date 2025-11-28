@@ -171,6 +171,44 @@ flex-grow: 7; /* ヘッダー全体の約7割のスペースを使う */
 .nav a.active::after {
   width: 100%;
 }
+/* ========================================= */
+/* ★ヘッダー内の「参加登録」ボタンのスタイル */
+/* ========================================= */
+
+/* ボタンの基本形 */
+.nav-btn-join {
+  /* ピンク〜オレンジのグラデーション（目立たせる） */
+  background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+  color: #fff !important; /* 文字色は強制的に白 */
+  
+  /* ボタンの形を作る */
+  padding: 8px 20px !important; /* 内側の余白 */
+  border-radius: 99px;          /* 丸くする */
+  font-size: 13px;
+  font-weight: 700;
+  
+  /* 位置の調整 */
+  margin-left: 16px; /* 左隣のメニューとの距離 */
+  
+  /* 動き */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+  
+  /* 改行させない */
+  white-space: nowrap;
+}
+
+/* ホバーした時の動き（浮き上がる） */
+.nav-btn-join:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.5);
+  opacity: 1;
+}
+
+/* ★重要：他のメニューにある「下線アニメーション」をこのボタンだけ無効にする */
+.nav a.nav-btn-join::after {
+  display: none;
+}
 
 /* ========= ヒーローセクション ========= */
 .hero {
@@ -232,6 +270,7 @@ flex-grow: 7; /* ヘッダー全体の約7割のスペースを使う */
   font-weight: 600;
   transition: all 0.3s ease;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .btn.primary {
@@ -256,7 +295,38 @@ flex-grow: 7; /* ヘッダー全体の約7割のスペースを使う */
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
 }
+/* ========= ボタンの追加スタイル ========= */
 
+/* 目立たせるためのスペシャルボタン (ピンク〜オレンジのグラデーション) */
+.btn.special {
+  /* 背景をピンク・オレンジ系にして、青いサイト内で「異質」にして目立たせる */
+  background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+  color: white;
+  border: 1px solid transparent;
+  
+  /* 少しだけ他のボタンより大きく強調する */
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+/* ホバー時の動き */
+.btn.special:hover {
+  transform: translateY(-2px) scale(1.05); /* 少し拡大してアピール */
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.6);
+}
+
+/* スマホの時はボタンが縦に並ぶので、マージン調整（既存CSSで gap が効いていれば不要ですが念のため） */
+@media (max-width: 640px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn {
+    width: 100%; /* スマホではボタンを横幅いっぱいに */
+  }
+}
 .hero-image {
   /* 必要に応じて位置調整 */
   position: relative;
