@@ -171,44 +171,7 @@ flex-grow: 7; /* ヘッダー全体の約7割のスペースを使う */
 .nav a.active::after {
   width: 100%;
 }
-/* ========================================= */
-/* ★ヘッダー内の「参加登録」ボタンのスタイル */
-/* ========================================= */
 
-/* ボタンの基本形 */
-.nav-btn-join {
-  /* ピンク〜オレンジのグラデーション（目立たせる） */
-  background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
-  color: #fff !important; /* 文字色は強制的に白 */
-  
-  /* ボタンの形を作る */
-  padding: 8px 20px !important; /* 内側の余白 */
-  border-radius: 99px;          /* 丸くする */
-  font-size: 13px;
-  font-weight: 700;
-  
-  /* 位置の調整 */
-  margin-left: 16px; /* 左隣のメニューとの距離 */
-  
-  /* 動き */
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
-  
-  /* 改行させない */
-  white-space: nowrap;
-}
-
-/* ホバーした時の動き（浮き上がる） */
-.nav-btn-join:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.5);
-  opacity: 1;
-}
-
-/* ★重要：他のメニューにある「下線アニメーション」をこのボタンだけ無効にする */
-.nav a.nav-btn-join::after {
-  display: none;
-}
 
 /* ========= ヒーローセクション ========= */
 .hero {
@@ -789,4 +752,44 @@ flex-grow: 7; /* ヘッダー全体の約7割のスペースを使う */
   max-width: 540px;
     /* ★追加するCSS */
     line-break: strict; 
+}
+/* ========================================= */
+/* ★ここから下をCSSファイルの一番最後に追加してください */
+/* ========================================= */
+
+/* ▼ 基本のボタン設定（PC・スマホ共通） */
+.nav-btn-join {
+  background: linear-gradient(135deg, #ec4899 0%, #f97316 100%) !important;
+  color: #fff !important;
+  padding: 8px 20px !important;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 16px; /* PCでは左に隙間をあける */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+  white-space: nowrap;
+  display: inline-block; /* 念のため追加 */
+}
+
+/* ホバー時の動き */
+.nav-btn-join:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.5);
+  opacity: 1;
+}
+
+/* 下線を消す */
+.nav a.nav-btn-join::after {
+  display: none;
+}
+
+/* ▼ スマホで見た時だけの位置調整 */
+@media (max-width: 640px) {
+  .nav-btn-join {
+    margin-left: 0 !important; /* スマホでは左の隙間をなくす */
+    margin-top: 10px;          /* 上に少し隙間をあける */
+    align-self: center;        /* 真ん中に配置する */
+    width: fit-content;        /* 文字数に合わせた幅にする */
+  }
 }
