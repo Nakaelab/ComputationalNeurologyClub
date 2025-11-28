@@ -463,40 +463,80 @@ img {
 
 /* ========= Organizers ========= */
 .organizer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 24px;
 }
 
+/* ★修正: カード全体がリンクになるため、padding-bottomとposition:relativeを追加 */
 .organizer-card {
-  display: flex;
-  flex-direction: column;
-  background: var(--card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+ /* カード全体がリンクのため<a>タグですが、レイアウトはflex-boxで調整 */
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start; /* テキストを左寄せにするため */
+ background: var(--card);
+ border: 1px solid var(--border-subtle);
+ border-radius: var(--radius-lg);
+ 
+ /* 下にResearchMapリンクを配置するための余白を確保 */
+ padding: 24px;
+ padding-bottom: 60px; /* リンクを配置するスペース */
+ 
+ text-decoration: none; /* リンクの下線を消す */
+ transition: all 0.3s ease;
+ 
+ /* ResearchMapインジケーターの絶対配置の基準にする */
+ position: relative; 
+ overflow: hidden;
 }
 
 .organizer-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(59, 130, 246, 0.4);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+ transform: translateY(-5px);
+ /* ホバー時に青い境界線と影で強調 */
+ border-color: rgba(59, 130, 246, 0.4);
+ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+.organizer-main {
+ /* 名前と所属が入るメインエリア */
+ flex-grow: 1; 
+}
+
+/* ★修正: <a>タグになっても名前の色を白に保つ */
 .organizer-main h3 {
-  font-size: 16px;
-  margin: 0 0 4px;
-  color: #fff;
+ font-size: 16px; /* サイズ維持 */
+ margin: 0 0 4px;
+ color: #fff;
 }
 
+/* ★修正: <a>タグになっても所属の色をグレーに保つ */
 .org-affiliation {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin: 0;
+ font-size: 12px; /* サイズ維持 */
+ color: var(--text-muted);
+ margin: 0;
+}
+
+/* ==================================== */
+/* ★新規追加: ResearchMap インジケーターのスタイル */
+/* ==================================== */
+.research-indicator {
+ /* ★ご要望の水色と小さい文字サイズを適用 */
+ color: #60a5fa; /* 明るい水色 */
+ font-size: 13px; /* 小さいサイズ */
+ font-weight: 500;
+ 
+ /* カードの枠内左下に絶対配置 */
+ position: absolute;
+ bottom: 24px;
+ left: 24px;
+ z-index: 10;
+ 
+ transition: color 0.2s ease;
+}
+
+/* ★新規追加: カードにホバーしたときのインジケーターの色変化 */
+.organizer-card:hover .research-indicator {
+ color: #93c5fd; /* ホバー時の明るい水色 */
 }
 
 /* ========= フッター ========= */
