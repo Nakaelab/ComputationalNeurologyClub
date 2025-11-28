@@ -623,5 +623,46 @@ img {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+   
+
+@media (max-width: 640px) {
+  .nav-toggle { display: block; }
+  .nav { display: none; /* ...略... */ }
+  .nav.is-open { display: flex; }
+  
+  .footer-inner {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+} 
+
+/* ========== ここから下は、PCを含む「すべての画面」で有効にする設定 ========== */
+
+.seminar-title {
+  /* 文字サイズ：13pxは小さすぎるので16pxか17pxにします */
+  font-size: 16px;
+  
+  /* 行間 */
+  line-height: 1.5;
+  
+  font-weight: 700;
+  color: #fff;
+
+  /* ★重要：文字の間隔を少し詰めて、1行に収まりやすくする */
+  letter-spacing: -0.05em;
+
+  /* 右の余白をなくしてスペース確保 */
+  padding-right: 0;
+
+  /* 「て」が下に落ちないよう、強制的に改行ルールを適用 */
+  word-break: break-all;
+}
+
+/* ========== スマホの時だけの設定 ========== */
+@media (max-width: 768px) {
+  .seminar-title {
+    font-size: 15px; /* スマホでは少し小さく */
+    line-height: 1.4;
   }
 }
