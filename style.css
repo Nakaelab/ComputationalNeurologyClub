@@ -275,7 +275,7 @@ flex-grow: 7; /* ヘッダー全体の約7割のスペースを使う */
 
 /* ========= セクション共通設定 ========= */
 .section {
-  padding-top: 120px;    /* 上の余白 */
+  padding-top: 65px;    /* 上の余白 */
   padding-bottom: 60px; /* 下の余白 */
 }
 
