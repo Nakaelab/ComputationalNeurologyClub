@@ -1,249 +1,254 @@
 /*
  * archive.css
  * Computational Neurology Club - 過去のセミナー一覧ページ専用スタイル
+ * (PC・スマホ完全対応版)
  */
 
 /* ===================================== */
 /* 1. 年別索引（TOC） */
 /* ===================================== */
-
 .archive-toc {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 60px;
-    padding: 16px 24px;
-    background: rgba(17, 24, 39, 0.8);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-radius: 99px;
-    border: 1px solid var(--border-subtle);
-    /* position: sticky;  <-- Removed as requested */
-    /* top: 90px; */
-    /* z-index: 100; */
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 60px;
+  padding: 16px 24px;
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 99px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .archive-toc a {
-    padding: 8px 20px;
-    font-weight: 600;
-    font-size: 14px;
-    border-radius: 99px;
-    color: var(--text-muted);
-    background-color: transparent;
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 99px;
+  color: var(--text-muted);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
 
 .archive-toc a:hover {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ===================================== */
 /* 2. 年見出し */
 /* ===================================== */
-
 .year-heading {
-    font-size: 24px;
-    font-weight: 700;
-    color: #fff;
-    margin-top: 60px;
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding-left: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 60px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 8px;
+  width: 100%; /* 幅を確保 */
 }
 
 .year-heading::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(to right, var(--border-subtle), transparent);
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--border-subtle), transparent);
 }
 
 /* ===================================== */
-/* 3. セミナーカード（アコーディオン） */
+/* 3. セミナーカード（PC用デフォルト） */
 /* ===================================== */
-
 .seminar-card {
-    background: var(--card);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--border-subtle);
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .seminar-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--gradient-primary);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .seminar-card:hover {
-    transform: translateY(-2px);
-    border-color: rgba(59, 130, 246, 0.4);
-    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
 }
 
 .seminar-card:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* ヘッダー部分 */
 .seminar-header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 16px;
-    align-items: center;
-    padding: 24px;
-    user-select: none;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 24px;
+  user-select: none;
 }
 
+/* PC用のタイトルサイズ */
 .seminar-title {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--text);
-    line-height: 1.4;
-    transition: color 0.3s ease;
+  margin: 0;
+  font-size: 18px; /* PCでは大きく */
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  transition: color 0.3s ease;
 }
 
 .seminar-card:hover .seminar-title {
-    color: #fff;
+  color: #fff;
 }
 
 /* 開閉アイコン */
 .toggle-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    color: var(--accent);
-    font-size: 18px;
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent);
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
 .seminar-card:hover .toggle-icon {
-    background: var(--accent);
-    color: #fff;
+  background: var(--accent);
+  color: #fff;
 }
 
 .seminar-header.open .toggle-icon {
-    transform: rotate(45deg);
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-muted);
+  transform: rotate(45deg);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
 }
 
-/* セミナー情報のリスト */
+/* セミナー情報のリスト（PC用：横並び） */
 .seminar-info-list {
-    list-style: none;
-    padding: 0 24px 20px;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    font-size: 13px;
-    color: var(--text-muted);
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease;
+  list-style: none;
+  padding: 0 24px 20px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* 縦位置中央揃え */
+  gap: 20px;
+  font-size: 13px;
+  color: var(--text-muted);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+  
+  /* 重要：PCでは flex-direction: row (横並び) がデフォルトです */
 }
 
-.seminar-header.open+.seminar-info-list {
-    border-bottom-color: var(--border-subtle);
+.seminar-header.open + .seminar-info-list {
+  border-bottom-color: var(--border-subtle);
 }
 
 .seminar-info-list li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .seminar-info-list strong {
-    font-weight: 600;
-    color: #94a3b8;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  font-weight: 600;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-/* 概要部分（アコーディオン本体） */
+/* 概要部分 */
 .seminar-abstract {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
-    padding: 0 24px;
-    background: rgba(0, 0, 0, 0.2);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
+  padding: 0 24px;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .seminar-abstract.open {
-    max-height: 1000px;
-    padding: 24px;
+  max-height: 1000px;
+  padding: 24px;
 }
 
 .seminar-abstract p {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.8;
-    color: #cbd5e1;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #cbd5e1;
 }
 
-}
+/* ===================================== */
+/* 4. スマホ用レスポンシブ設定 (640px以下) */
+/* ===================================== */
+/* このブロックの中身はスマホでのみ有効になります */
+@media (max-width: 640px) {
 
-.seminar-title {
+  /* タイトルを少し小さく */
+  .seminar-title {
     font-size: 15px;
     line-height: 1.5;
-}
+  }
 
-.seminar-info-list {
-    flex-direction: column;
+  /* リストを縦並びにする（スマホのみ！） */
+  .seminar-info-list {
+    flex-direction: column; /* 縦並び */
+    align-items: flex-start; /* 左寄せ */
     gap: 8px;
     padding: 0 16px 16px;
-    align-items: flex-start;
-}
+  }
 
-.seminar-abstract.open {
+  /* 概要部分の余白調整 */
+  .seminar-abstract.open {
     padding: 16px;
-}
+  }
 
-/* Ensure text doesn't overflow */
-.seminar-abstract p {
+  .seminar-abstract p {
     font-size: 14px;
     word-wrap: break-word;
+  }
 }
-}/* archive.css */
 
-/* ヘッダーコンテナを相対配置にする */
+/* ===================================== */
+/* 5. ヘッダー調整 */
+/* ===================================== */
 .archive-header {
   position: relative;
-  overflow: hidden; /* はみ出した部分を隠す */
-  /* 必要に応じてパディングなどを調整 */
+  overflow: hidden;
   padding: 40px 0;
 }
 
-/* テキストコンテンツを前面に出す */
 .header-content {
   position: relative;
   z-index: 2;
 }
-
