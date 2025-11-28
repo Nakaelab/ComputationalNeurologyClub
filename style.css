@@ -195,8 +195,8 @@ img {
 
 .hero-text h1 {
   font-size: clamp(32px, 5vw, 48px);
-  line-height: 1.1;
-  margin: 0 0 24px;
+  line-height: 1.2;
+  margin: 0 0 40px;
   background: linear-gradient(to right, #fff, #cbd5e1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -644,7 +644,7 @@ img {
   font-size: 16px;
   
   /* 行間 */
-  line-height: 1.5;
+  line-height: 1.7;
   
   font-weight: 700;
   color: #fff;
@@ -665,4 +665,12 @@ img {
     font-size: 15px; /* スマホでは少し小さく */
     line-height: 1.4;
   }
+}
+.hero-text p {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  max-width: 540px;
+    /* ★追加するCSS */
+    line-break: strict; 
 }
