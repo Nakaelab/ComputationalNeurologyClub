@@ -26,7 +26,14 @@
 }
 
 .archive-toc a {
-  padding: 8px 20px;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 10px 24px !important; /* 左右均等 */
+  width: auto !important;
+  min-width: 0 !important;
+  
+  /* 以下、見た目の設定 */
   font-weight: 600;
   font-size: 14px;
   border-radius: 99px;
@@ -34,6 +41,8 @@
   background-color: transparent;
   transition: all 0.3s ease;
   border: 1px solid transparent;
+  text-decoration: none !important;
+  line-height: 1 !important;
 }
 
 .archive-toc a:hover {
@@ -251,4 +260,15 @@
 .header-content {
   position: relative;
   z-index: 2;
+}
+/* ========================================= */
+/* ★年度ボタンの中のアイコンを消す修正 */
+/* ========================================= */
+
+/* svgタグ, imgタグ, iタグなど、アイコンの可能性が高いものを全て消す */
+.archive-toc a svg,
+.archive-toc a img,
+.archive-toc a i,
+.archive-toc a span[class*="icon"] {
+  display: none !important;
 }
