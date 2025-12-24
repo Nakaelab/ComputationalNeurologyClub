@@ -1,479 +1,626 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Archive | Computational Neurology Club</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Computational Neurology Clubの過去のセミナー一覧です。" />
-  <link rel="icon" type="imag/png" href="image/cnc.icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="image/cnc.icon.png" />
-  <link rel="apple-touch-icon" href="image/cnc.icon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="archive.css" />
-  
+    <meta charset="UTF-8" />
+    <title>Archive | Computational Neurology Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Computational Neurology Clubの過去のセミナー一覧です。" />
+    <link rel="icon" type="imag/png" href="image/cnc.icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="image/cnc.icon.png" />
+    <link rel="apple-touch-icon" href="image/cnc.icon.png" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="archive.css" />
+
 </head>
+
 <body>
-  
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo-area">
-        <div class="logo-mark">
-  <img src="image/logo-mark.png" alt="CNC" class="logo-img">
-</div>
-        <div class="logo-text">
-          <span class="logo-title">Computational Neurology Club</span>
-          <span class="logo-subtitle">計算論的神経内科学 研究会</span>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-area">
+                <div class="logo-mark">
+                    <img src="image/logo-mark.png" alt="CNC" class="logo-img">
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">Computational Neurology Club</span>
+                    <span class="logo-subtitle">計算論的神経内科学 研究会</span>
+                </div>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-controls="main-nav" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="main-nav">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#next">次回セミナー</a>
+                <a href="archive.html" class="active">過去のセミナー</a>
+                <a href="index.html#organizers">オーガナイザー</a>
+                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=g7JUf-0iPEqpRHX3VeWDBuUgYim7RQ9FtolDVhQvkeJUQUdHRDlSTEJDVEc0SFM5MFNEVlZPUkRVMC4u"
+                    class="nav-btn-join" target="_blank">
+                    CNCに参加登録する
+            </nav>
         </div>
-      </a>
-      
-      <button class="nav-toggle" id="nav-toggle" aria-controls="main-nav" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-      </button>
+    </header>
 
-      <nav class="nav" id="main-nav">
-        <a href="index.html">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#next">次回セミナー</a>
-        <a href="archive.html" class="active">過去のセミナー</a>
-        <a href="index.html#organizers">オーガナイザー</a>
-        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=g7JUf-0iPEqpRHX3VeWDBuUgYim7RQ9FtolDVhQvkeJUQUdHRDlSTEJDVEc0SFM5MFNEVlZPUkRVMC4u" class="nav-btn-join" target="_blank">
-    CNCに参加登録する
-      </nav>
-    </div>
-  </header>
+    <main>
+        <section class="section">
+            <div class="container">
 
-  <main>
-    <section class="section">
-      <div class="container">
-        
-        <div class="section-header">
-  <h2>Archive</h2>
-  <p>これまでに開催されたセミナー一覧です</p>
-</div>
+                <div class="section-header">
+                    <h2>Archive</h2>
+                    <p>これまでに開催されたセミナー一覧です</p>
+                </div>
 
-        <div class="archive-toc">
-            <a href="#year-2025">2025年</a>
-            <a href="#year-2024">2024年</a>
-            <a href="#year-2023">2023年</a>
-        </div>
-        
-        <!-- 2025年 -->
-        <h3 id="year-2025" class="year-heading">2025年</h3>
-        
-        <!-- 第18回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-18')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第18回：大脳基底核の機能と病態生理の統一的理解を目指して</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：南部篤(自然科学研究機構生理学研究所)</li>
-                <li><strong>日時</strong>：2025/8/4（月）13:00-14:30 JST</li>
-                <li><strong>場所</strong>：ハイブリッド（Zoom、福井大学総合研究棟I 4階知能システム演習室)</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-18">
-                <p>概要：正常なサルやマウスにおいて、大脳基底核の出力核である淡蒼球内節•黒質網様部から神経活動を記録し、大脳皮質運動野に電気刺激を加えると、早い興奮•抑制•遅い興奮から成る３相性の応答が引き起こされる。早い興奮•抑制•遅い興奮は、それぞれハイパー直接路•直接路•間接路を介した応答であり、この３経路が時間•空間的に適切に働くことが随意運動の遂行に必須であると考えられる。パーキンソン病、ジストニアなどの大脳基底核疾患モデル動物から記録を行うと、この３相性の応答パターンが系統的に変化していた。また、定位脳手術を施すと応答パターンが復活し、運動も正常化した。大脳皮質に由来する大脳基底核の動的な活動の変化を基に、大脳基底核の機能、大脳基底核疾患の病態生理や治療メカニズムを統一的に考えてみたい。</p>
-            </div>
-        </article>
+                <div class="archive-toc">
+                    <a href="#year-2025">2025年</a>
+                    <a href="#year-2024">2024年</a>
+                    <a href="#year-2023">2023年</a>
+                </div>
 
-        <!-- 第17回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-17')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第17回：自発的神経活動の機能的な意義：特に学習との関係について</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：栗川知己(公立はこだて未来大学)</li>
-                <li><strong>日時</strong>：2025/7/28（月）15:30-17:00 JST</li>
-                <li><strong>場所</strong>：ハイブリッド（名古屋大学・鶴舞キャンパス、Zoom）</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-17">
-                <p>概要：近年神経科学において、自発的な神経活動に注目が集まっている。入力がない神経活動は様々な時空間パタンを示すだけでなく、刺激や入力が与えられたときにどのような振る舞いをするか＝機能的な意義とも深く関係している。例えば、自発的な神経活動の空間パタンと学習するパタンの幾何学的な関係性が、どのように学習がすすむかとも関係している。本発表では、そのような自発的な神経活動の機能的な意義を紹介した後に、最近行っている自発活動と学習との間になりたつ一般的な関係や、その周辺の研究をお話したい。</p>
-            </div>
-        </article>
+                <!-- 2025年 -->
+                <h3 id="year-2025" class="year-heading">2025年</h3>
 
-        <!-- 第16回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-16')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第16回：多系統萎縮症のMRI画像診断・進行バイオマーカーの確立に向けて</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：川畑和也(藤田医科大学)</li>
-                <li><strong>日時</strong>：2025/6/17（火）14:00-15:30 JST</li>
-                <li><strong>場所</strong>：Zoom</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-16">
-                <p>概要：多系統萎縮症(MSA)は、50歳代を好発年齢とする成人発症の神経変性疾患の一つで、進行が速く、発症後の平均余命は約10年とされている。自律神経症状、パーキンソニズム、小脳性運動失調症がさまざまな程度で組み合わさって出現し、突然死もきたすことも少なくない。現在のところ根本的な治療法はない、難病中の難病である。しかし近年、神経変性疾患において疾患修飾療法が登場する時代となり、MSAにおいても複数の候補薬が治験段階にある。こうした治療薬の開発において、発症早期に精度の高い診断が可能であること、ならびに進行の程度を他覚的に追跡・評価できることが重要である。現在、MRIによる脳容積解析を用いた高精度な診断法の開発が多施設共同研究として進行中であり、あわせて縦断的画像を用いた進行指標となりうる画像マーカーについて報告を行った(Mov Disord 2025)。さらに、この画像マーカーを用いることで、発症前の超早期診断ができる可能性について見出した。本発表では、私たちが取り組んでいるMSAに対する信頼性の高い早期画像診断法の開発について紹介する。</p>
-            </div>
-        </article>
+                <!-- 第19回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-19')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第19回：認知症バイオマーカーの階層的開発：画像診断から血液検査への展開</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：互 健二（量子科学技術研究開発機構）</li>
+                        <li><strong>日時</strong>：2025/10/21（火）10:00-11:30 JST</li>
+                        <li><strong>場所</strong>：オンライン（Zoom）</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-19">
+                        <p>概要：認知症の早期診断や治療効果判定においては、背景病理を高精度に評価できるバイオマーカーが重要です。本セミナーでは、新規PETリガンド18F-PM-PBB3を基盤とした画像バイオマーカーと、それをリファレンスとした血液バイオマーカー開発の取り組みについて紹介し、画像と血液を組み合わせた階層的な診断戦略の可能性を議論します。
+                        </p>
+                    </div>
+                </article>
 
-        <!-- 第15回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-15')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第15回：ミエリン修復のメカニズム探索研究</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：村松里衣子(国立精神・神経医療研究センター)</li>
-                <li><strong>日時</strong>：2025年5月13日（火）13:30-15:00 JST</li>
-                <li><strong>場所</strong>：Zoom</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-15">
-                <p>概要：脳の約40%を占める白質には、ミエリンが豊富に含まれている。ミエリンは、グリア細胞の一種であるオリゴデンドロサイトが神経軸索を取り囲む構造体であり、神経活動の高速伝達や周囲細胞への栄養供給を担い、脳内の恒常性維持に不可欠な役割を果たす。ミエリンの脱落は、多様な神経・精神疾患に加え、老化脳においても顕著に認められることから、その健全性を維持することは、疾患治療や脳機能の安定化において重要と考えられている。ミエリンの形成・修復には、オリゴデンドロサイト前駆細胞の増殖、成熟細胞への分化、そして神経軸索への巻き付きが不可欠である。本講演では、オリゴデンドロサイトの増殖や分化のメカニズムに関する最新の知見に加え、現在取り組んでいる「まきつき」の評価系について紹介する。</p>
-            </div>
-        </article>
+                <!-- 第18回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-18')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第18回：大脳基底核の機能と病態生理の統一的理解を目指して</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：南部篤(自然科学研究機構生理学研究所)</li>
+                        <li><strong>日時</strong>：2025/8/4（月）13:00-14:30 JST</li>
+                        <li><strong>場所</strong>：ハイブリッド（Zoom、福井大学総合研究棟I 4階知能システム演習室)</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-18">
+                        <p>概要：正常なサルやマウスにおいて、大脳基底核の出力核である淡蒼球内節•黒質網様部から神経活動を記録し、大脳皮質運動野に電気刺激を加えると、早い興奮•抑制•遅い興奮から成る３相性の応答が引き起こされる。早い興奮•抑制•遅い興奮は、それぞれハイパー直接路•直接路•間接路を介した応答であり、この３経路が時間•空間的に適切に働くことが随意運動の遂行に必須であると考えられる。パーキンソン病、ジストニアなどの大脳基底核疾患モデル動物から記録を行うと、この３相性の応答パターンが系統的に変化していた。また、定位脳手術を施すと応答パターンが復活し、運動も正常化した。大脳皮質に由来する大脳基底核の動的な活動の変化を基に、大脳基底核の機能、大脳基底核疾患の病態生理や治療メカニズムを統一的に考えてみたい。
+                        </p>
+                    </div>
+                </article>
 
-        <!-- 第14回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-14')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第14回：非侵襲的MRIバイオマーカーによるGlymphatic system機能の評価</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：鎌形康司(順天堂大学医学部)</li>
-                <li><strong>日時</strong>：2025年3月10日（月）10:00-11:30 JST</li>
-                <li><strong>場所</strong>：Zoom</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-14">
-                <p>概要：本講演では、脳のクリアランスシステムであるGlymphatic system機能評価の有望な手法として非侵襲的MRI技術の最新の進展について概説する。特にGlymphatic systemの主要な導管となる血管周囲腔のimaging技術について焦点を当てる。3D-T1WI/T2WIを元にして先進的な3Dイメージング技術を用いることで血管周囲腔構造の詳細な可視化する手法や、拡散テンソルによって血管周囲腔方向の水拡散性の評価する手法を用いることで非侵襲的にGlymphatic system機能を反映した指標が得られることが期待されている。さらに、本講演では、血管周囲腔に関連したMRI指標の変化とさまざまな病理学的状態との関連性についても概説する。特に、アルツハイマー病などの神経変性疾患との関連性に注目し、これまでの研究で明らかになった知見を紹介する。また、本分野の研究における課題として、大規模コホート研究の必要性、マルチモーダルイメージングの統合、標準化された解析手法の確立に焦点を当てる。本講演を通じて、MRIによる血管周囲腔イメージングを活用したGlymphatic systemの理解と、Glymphatic system機能障害に関連する中枢神経系疾患の新たな診断および治療戦略の開発への道を拓くことを目指す。</p>
-            </div>
-        </article>
+                <!-- 第17回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-17')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第17回：自発的神経活動の機能的な意義：特に学習との関係について</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：栗川知己(公立はこだて未来大学)</li>
+                        <li><strong>日時</strong>：2025/7/28（月）15:30-17:00 JST</li>
+                        <li><strong>場所</strong>：ハイブリッド（名古屋大学・鶴舞キャンパス、Zoom）</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-17">
+                        <p>概要：近年神経科学において、自発的な神経活動に注目が集まっている。入力がない神経活動は様々な時空間パタンを示すだけでなく、刺激や入力が与えられたときにどのような振る舞いをするか＝機能的な意義とも深く関係している。例えば、自発的な神経活動の空間パタンと学習するパタンの幾何学的な関係性が、どのように学習がすすむかとも関係している。本発表では、そのような自発的な神経活動の機能的な意義を紹介した後に、最近行っている自発活動と学習との間になりたつ一般的な関係や、その周辺の研究をお話したい。
+                        </p>
+                    </div>
+                </article>
 
-        <!-- 第6回 Study Group -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-study-6')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第6回 Study Group：AMED脳統合公募資料を読む</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：中江健（自然科学研究機構 ExCELLS）</li>
-                <li><strong>日時</strong>：2025年2月12日（月）18:00-19:00</li>
-                <li><strong>場所</strong>：オンライン(zoom)</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-study-6">
-                <p>概要: 脳統合の新規公募が始まりましたが、僕が公募要領を読む会を2/12の18時から始めたいと思います。<br>
-                <a href="https://www.amed.go.jp/koubo/15/01/1501B_00131.html" target="_blank" rel="noopener">https://www.amed.go.jp/koubo/15/01/1501B_00131.html</a><br>
-                公開されている情報から何が求められているのかを分析してみます(当たる保証はありませんが笑)。</p>
-            </div>
-        </article>
+                <!-- 第16回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-16')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第16回：多系統萎縮症のMRI画像診断・進行バイオマーカーの確立に向けて</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：川畑和也(藤田医科大学)</li>
+                        <li><strong>日時</strong>：2025/6/17（火）14:00-15:30 JST</li>
+                        <li><strong>場所</strong>：Zoom</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-16">
+                        <p>概要：多系統萎縮症(MSA)は、50歳代を好発年齢とする成人発症の神経変性疾患の一つで、進行が速く、発症後の平均余命は約10年とされている。自律神経症状、パーキンソニズム、小脳性運動失調症がさまざまな程度で組み合わさって出現し、突然死もきたすことも少なくない。現在のところ根本的な治療法はない、難病中の難病である。しかし近年、神経変性疾患において疾患修飾療法が登場する時代となり、MSAにおいても複数の候補薬が治験段階にある。こうした治療薬の開発において、発症早期に精度の高い診断が可能であること、ならびに進行の程度を他覚的に追跡・評価できることが重要である。現在、MRIによる脳容積解析を用いた高精度な診断法の開発が多施設共同研究として進行中であり、あわせて縦断的画像を用いた進行指標となりうる画像マーカーについて報告を行った(Mov
+                            Disord
+                            2025)。さらに、この画像マーカーを用いることで、発症前の超早期診断ができる可能性について見出した。本発表では、私たちが取り組んでいるMSAに対する信頼性の高い早期画像診断法の開発について紹介する。
+                        </p>
+                    </div>
+                </article>
 
-        <!-- 第13回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-13')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第13回：パーキンソン病における脳萎縮パターンに基づく異なるサブタイプの同定</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：坂戸勇介、澤本伸克（京都大学大学院 医学研究科）</li>
-                <li><strong>日時</strong>：2025年1月17日（金）14:30-16:00 JST</li>
-                <li><strong>場所</strong>：Zoom</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-13">
-                <p>概要：パーキンソン病は、運動緩慢・筋強剛・静止時振戦などの運動症状に加え、認知機能低下・自律神経症状・精神症状など様々な非運動症状を呈するが、それらの組み合わせや進行速度には大きな多様性がある。これまで、発症年齢や優位な運動症状に基づいたPDのサブタイプ分類が試みられてきたが、その病理学的な背景は明らかにされていない。最近、疾患進行モデルとクラスタリング手法を統合した機械学習アルゴリズム”Subtype and Stage Inference (SuStaIn)”が提案された(Young, et al. Nat Commun. 2018)。この手法を遺伝性前頭側頭型認知症の脳MRI構造画像・横断データに適用して脳萎縮の空間的および時間的な進行パターンを推定することで、遺伝子型に基づくサブタイプが同定できることが示された。我々はパーキンソン病にSuStaInを適用し、脳萎縮の空間的および時間的な進行パターンに基づいて3つの異なるサブタイプを同定し、それぞれの臨床的特徴の違いを明らかにした(Sakato et al. Brain. 2024)。本講演では、この研究をご紹介すると共に、今後の研究の展開についても議論したい。</p>
-            </div>
-        </article>
+                <!-- 第15回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-15')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第15回：ミエリン修復のメカニズム探索研究</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：村松里衣子(国立精神・神経医療研究センター)</li>
+                        <li><strong>日時</strong>：2025年5月13日（火）13:30-15:00 JST</li>
+                        <li><strong>場所</strong>：Zoom</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-15">
+                        <p>概要：脳の約40%を占める白質には、ミエリンが豊富に含まれている。ミエリンは、グリア細胞の一種であるオリゴデンドロサイトが神経軸索を取り囲む構造体であり、神経活動の高速伝達や周囲細胞への栄養供給を担い、脳内の恒常性維持に不可欠な役割を果たす。ミエリンの脱落は、多様な神経・精神疾患に加え、老化脳においても顕著に認められることから、その健全性を維持することは、疾患治療や脳機能の安定化において重要と考えられている。ミエリンの形成・修復には、オリゴデンドロサイト前駆細胞の増殖、成熟細胞への分化、そして神経軸索への巻き付きが不可欠である。本講演では、オリゴデンドロサイトの増殖や分化のメカニズムに関する最新の知見に加え、現在取り組んでいる「まきつき」の評価系について紹介する。
+                        </p>
+                    </div>
+                </article>
 
-        <!-- 2024年 -->
-        <h3 id="year-2024" class="year-heading">2024年</h3>
+                <!-- 第14回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-14')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第14回：非侵襲的MRIバイオマーカーによるGlymphatic system機能の評価</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：鎌形康司(順天堂大学医学部)</li>
+                        <li><strong>日時</strong>：2025年3月10日（月）10:00-11:30 JST</li>
+                        <li><strong>場所</strong>：Zoom</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-14">
+                        <p>概要：本講演では、脳のクリアランスシステムであるGlymphatic system機能評価の有望な手法として非侵襲的MRI技術の最新の進展について概説する。特にGlymphatic
+                            systemの主要な導管となる血管周囲腔のimaging技術について焦点を当てる。3D-T1WI/T2WIを元にして先進的な3Dイメージング技術を用いることで血管周囲腔構造の詳細な可視化する手法や、拡散テンソルによって血管周囲腔方向の水拡散性の評価する手法を用いることで非侵襲的にGlymphatic
+                            system機能を反映した指標が得られることが期待されている。さらに、本講演では、血管周囲腔に関連したMRI指標の変化とさまざまな病理学的状態との関連性についても概説する。特に、アルツハイマー病などの神経変性疾患との関連性に注目し、これまでの研究で明らかになった知見を紹介する。また、本分野の研究における課題として、大規模コホート研究の必要性、マルチモーダルイメージングの統合、標準化された解析手法の確立に焦点を当てる。本講演を通じて、MRIによる血管周囲腔イメージングを活用したGlymphatic
+                            systemの理解と、Glymphatic system機能障害に関連する中枢神経系疾患の新たな診断および治療戦略の開発への道を拓くことを目指す。</p>
+                    </div>
+                </article>
 
-        <!-- 第12回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-12')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第12回：数理モデルを用いたウイルスと感染症の理解</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：<a href="https://shoyaiwanami.com/" target="_blank" rel="noopener">岩波翔也</a>(名古屋大学)</li>
-                <li><strong>日時</strong>：2024年12月10日（火）15:00-16:30 JST</li>
-                <li><strong>場所</strong>：Hybrid(名古屋大学)+Zoom</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-12">
-                <p>概要：ウイルスは宿主に感染すると、標的細胞に侵入し、宿主細胞のゲノム複製、転写、翻訳の仕組みを利用して増殖する。新たに形成されたウイルス粒子は感染細胞から放出され、他の細胞に感染することで、個体内で伝播しながら増殖する。ウイルス感染症は、ウイルス感染を起点とする免疫反応などの異常によって引き起こされるため、個体内でのウイルス増殖過程を理解することは、治療標的の探索や感染様式の解明において重要である。我々は、宿主個体内でのウイルス感染動態を数理モデルで記述し、培養細胞を用いた感染実験や、感染個体内での細胞数やウイルス量の時間変化を解析することで、その増殖および伝播の特性を明らかにしてきた。本講演では、これまでの研究成果を紹介するとともに、病原体の伝播が引き起こす疾患を理解し制御するために、数理モデルがどのように貢献できるかを議論したい。</p>
-                <p>参考文献：</p>
-                <ul>
-                  <li>Iwanami et al., Should a viral genome stay in the host cell or leave? A quantitative dynamics study of how hepatitis C virus deals with this dilemma. PLOS Biology, 2020. <a href="https://doi.org/10.1371/journal.pbio.3000562" target="_blank" rel="noopener">https://doi.org/10.1371/journal.pbio.3000562</a></li>
-                  <li>Iwanami, Ejima et al., Detection of significant antiviral drug effects on COVID-19 with reasonable sample sizes in randomized controlled trials: A modeling study. PLOS Medicine, 2021. <a href="https://doi.org/10.1371/journal.pmed.1003660" target="_blank" rel="noopener">https://doi.org/10.1371/journal.pmed.1003660</a></li>
-                  <li>岩見ほか, ウイルス感染の数理モデルとシミュレーション―データを定量的に理解する―. 共立出版, 2024. ISBN: 9784320115538. <a href="https://www.kyoritsu-pub.co.jp/book/b10044853.html" target="_blank" rel="noopener">https://www.kyoritsu-pub.co.jp/book/b10044853.html</a></li>
-                </ul>
-            </div>
-        </article>
+                <!-- 第6回 Study Group -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-study-6')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第6回 Study Group：AMED脳統合公募資料を読む</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：中江健（自然科学研究機構 ExCELLS）</li>
+                        <li><strong>日時</strong>：2025年2月12日（月）18:00-19:00</li>
+                        <li><strong>場所</strong>：オンライン(zoom)</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-study-6">
+                        <p>概要: 脳統合の新規公募が始まりましたが、僕が公募要領を読む会を2/12の18時から始めたいと思います。<br>
+                            <a href="https://www.amed.go.jp/koubo/15/01/1501B_00131.html" target="_blank"
+                                rel="noopener">https://www.amed.go.jp/koubo/15/01/1501B_00131.html</a><br>
+                            公開されている情報から何が求められているのかを分析してみます(当たる保証はありませんが笑)。
+                        </p>
+                    </div>
+                </article>
 
-        <!-- 第11回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-11')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第11回：タウ・ネットワークマッピングによる病変と症状をつなぐ回路の同定と霊長類モデルの遺伝学的回路操作による因果性検証</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：平林 敏行(量子科学技術研究開発機構)</li>
-                <li><strong>日時</strong>：2024年11月12日（火）13:00-14:30 JST</li>
-                <li><strong>場所</strong>：Zoom</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-11">
-                <p>概要：神経変性疾患において、脳内に蓄積した異常タンパク質を検出する高感度PETプローブの開発により、病変部位を個々の患者レベルで同定できるようになってきた。これによってわかってきたのは、同じ症状を呈する患者間でも病変部位は千差万別で、病変部位と症状の関係が単純には説明できないということである。このギャップを埋めることは病態回路の理解と疾患克服に不可欠だが、決定的な解決法は未だに提示されていない。<br><br>
-                近年、タウオパチーと同様に病変部位が多様な脳卒中において、病変部位情報を健常群の大規模な安静時脳機能結合データと組み合わせ、症状発現の障害回路「コア・ネットワークl」を導出するLesion Network Mapping（LNM) が提案され、注目されている。しかし、コア・ネットワーク障害の実在や症状との因果性は示されておらず、病態回路の理解と治療法開発への障壁となっていた。<br><br>
-                本講演では、タウオパチー患者群のタウPETデータにLNMを応用するタウ・ネットワークマッピングを開発し、特定症状のコア・ネットワークを同定した我々の研究について、幾つかの具体例を紹介すると共に、霊長類モデルの遺伝学的回路操作 (Hirabayashi et al., <em>Nat. Commun.</em> 2024; <em>Neuron</em>. 2021) でそれらの結果を検証し、患者群へのニューロモジュレーション治療につなげる今後の研究について議論したい。</p>
-            </div>
-        </article>
+                <!-- 第13回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-13')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第13回：パーキンソン病における脳萎縮パターンに基づく異なるサブタイプの同定</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：坂戸勇介、澤本伸克（京都大学大学院 医学研究科）</li>
+                        <li><strong>日時</strong>：2025年1月17日（金）14:30-16:00 JST</li>
+                        <li><strong>場所</strong>：Zoom</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-13">
+                        <p>概要：パーキンソン病は、運動緩慢・筋強剛・静止時振戦などの運動症状に加え、認知機能低下・自律神経症状・精神症状など様々な非運動症状を呈するが、それらの組み合わせや進行速度には大きな多様性がある。これまで、発症年齢や優位な運動症状に基づいたPDのサブタイプ分類が試みられてきたが、その病理学的な背景は明らかにされていない。最近、疾患進行モデルとクラスタリング手法を統合した機械学習アルゴリズム”Subtype
+                            and Stage Inference (SuStaIn)”が提案された(Young, et al. Nat Commun.
+                            2018)。この手法を遺伝性前頭側頭型認知症の脳MRI構造画像・横断データに適用して脳萎縮の空間的および時間的な進行パターンを推定することで、遺伝子型に基づくサブタイプが同定できることが示された。我々はパーキンソン病にSuStaInを適用し、脳萎縮の空間的および時間的な進行パターンに基づいて3つの異なるサブタイプを同定し、それぞれの臨床的特徴の違いを明らかにした(Sakato
+                            et al. Brain. 2024)。本講演では、この研究をご紹介すると共に、今後の研究の展開についても議論したい。</p>
+                    </div>
+                </article>
 
-        <!-- 第10回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-10')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第10回：Neurodegenerative diseases: nice collaboration stories between biologists and mathematicians leading to a better understanding of prion and Alzheimer’s diseases</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：Laurent Pujo-Menjouet (Universite Claude Bernard Lyon s1)</li>
-                <li><strong>日時</strong>：July, 24th, 2024 14:00-15:30 JST</li>
-                <li><strong>場所</strong>：Zoom + Hiroshima University</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-10">
-                <p>概要：Through the past two decades, a great collaboration started between biologist and mathematicians to understand the complex dynamics of neurodegenerative diseases. During this presentation, we will dive into a short overview of the prion and Alzheimer’s disease models and
-                show how mathematics have been helping to bring light to some unexplained observations. We will deal with size structured differential equations with polymerization and fragmentation terms (of Smoluchowski type), some hybrid models (continuous in time, discrete in size, of Becker-Döring type)). Finally we will add some diffusion terms to describe the spread of the disease in the brain, and the effect of stress and inflammatory processes.</p>
-            </div>
-        </article>
+                <!-- 2024年 -->
+                <h3 id="year-2024" class="year-heading">2024年</h3>
 
-        <!-- 第9回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-9')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第9回：頭蓋内脳波ビッグデータから何がわかるか</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：柳澤琢史(大阪大学)</li>
-                <li><strong>日時</strong>：2024年7月17日（水）13:00-14:30</li>
-                <li><strong>場所</strong>：Zoom</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-9">
-                <p>概要：てんかん外科治療において、頭蓋内脳波は治療方針を決定するための重要な検査である。特にてんかん発作時の頭蓋内脳波から、てんかんの焦点を同定することで、難治性てんかんを治療することが期待される。一方、発作間欠期の頭蓋内脳波は、様々な脳機能を調べるためにも活用される。我々は、頭蓋内脳波計測を10−15日間程度連続して行う中で、患者の動きや視聴覚内容、心拍や活動量、思考内容を同時計測している。既に100名以上の患者について、病室で過ごす間の状態と頭蓋内脳波のビッグデータを得ている。このデータから、ヒトの思考状態と関連する脳活動を同定し（Iwata et al., Nat. Comm., 2024）、てんかん発作時の脳波特徴を明らかにしてきた（Yamamoto et al., JNE, 2021）。頭蓋内脳波計測から、てんかんやヒトの高次機能について何を明らかにできるか議論する。</p>
-            </div>
-        </article>
+                <!-- 第12回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-12')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第12回：数理モデルを用いたウイルスと感染症の理解</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：<a href="https://shoyaiwanami.com/" target="_blank"
+                                rel="noopener">岩波翔也</a>(名古屋大学)</li>
+                        <li><strong>日時</strong>：2024年12月10日（火）15:00-16:30 JST</li>
+                        <li><strong>場所</strong>：Hybrid(名古屋大学)+Zoom</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-12">
+                        <p>概要：ウイルスは宿主に感染すると、標的細胞に侵入し、宿主細胞のゲノム複製、転写、翻訳の仕組みを利用して増殖する。新たに形成されたウイルス粒子は感染細胞から放出され、他の細胞に感染することで、個体内で伝播しながら増殖する。ウイルス感染症は、ウイルス感染を起点とする免疫反応などの異常によって引き起こされるため、個体内でのウイルス増殖過程を理解することは、治療標的の探索や感染様式の解明において重要である。我々は、宿主個体内でのウイルス感染動態を数理モデルで記述し、培養細胞を用いた感染実験や、感染個体内での細胞数やウイルス量の時間変化を解析することで、その増殖および伝播の特性を明らかにしてきた。本講演では、これまでの研究成果を紹介するとともに、病原体の伝播が引き起こす疾患を理解し制御するために、数理モデルがどのように貢献できるかを議論したい。
+                        </p>
+                        <p>参考文献：</p>
+                        <ul>
+                            <li>Iwanami et al., Should a viral genome stay in the host cell or leave? A quantitative
+                                dynamics study of how hepatitis C virus deals with this dilemma. PLOS Biology, 2020. <a
+                                    href="https://doi.org/10.1371/journal.pbio.3000562" target="_blank"
+                                    rel="noopener">https://doi.org/10.1371/journal.pbio.3000562</a></li>
+                            <li>Iwanami, Ejima et al., Detection of significant antiviral drug effects on COVID-19 with
+                                reasonable sample sizes in randomized controlled trials: A modeling study. PLOS
+                                Medicine, 2021. <a href="https://doi.org/10.1371/journal.pmed.1003660" target="_blank"
+                                    rel="noopener">https://doi.org/10.1371/journal.pmed.1003660</a></li>
+                            <li>岩見ほか, ウイルス感染の数理モデルとシミュレーション―データを定量的に理解する―. 共立出版, 2024. ISBN: 9784320115538. <a
+                                    href="https://www.kyoritsu-pub.co.jp/book/b10044853.html" target="_blank"
+                                    rel="noopener">https://www.kyoritsu-pub.co.jp/book/b10044853.html</a></li>
+                        </ul>
+                    </div>
+                </article>
 
-        <!-- 1st Workshop -->
-        <article class="seminar-card" onclick="window.open('https://sites.google.com/view/compneurology/', '_blank')">
-            <div class="seminar-header" role="button">
-                <h3 class="seminar-title">1st Workshop on Computational Neurology</h3>
-                <span class="toggle-icon">↗</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>詳細</strong>：Comp Neurology (外部サイト)</li>
-            </ul>
-        </article>
+                <!-- 第11回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-11')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第11回：タウ・ネットワークマッピングによる病変と症状をつなぐ回路の同定と霊長類モデルの遺伝学的回路操作による因果性検証</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：平林 敏行(量子科学技術研究開発機構)</li>
+                        <li><strong>日時</strong>：2024年11月12日（火）13:00-14:30 JST</li>
+                        <li><strong>場所</strong>：Zoom</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-11">
+                        <p>概要：神経変性疾患において、脳内に蓄積した異常タンパク質を検出する高感度PETプローブの開発により、病変部位を個々の患者レベルで同定できるようになってきた。これによってわかってきたのは、同じ症状を呈する患者間でも病変部位は千差万別で、病変部位と症状の関係が単純には説明できないということである。このギャップを埋めることは病態回路の理解と疾患克服に不可欠だが、決定的な解決法は未だに提示されていない。<br><br>
+                            近年、タウオパチーと同様に病変部位が多様な脳卒中において、病変部位情報を健常群の大規模な安静時脳機能結合データと組み合わせ、症状発現の障害回路「コア・ネットワークl」を導出するLesion
+                            Network Mapping（LNM)
+                            が提案され、注目されている。しかし、コア・ネットワーク障害の実在や症状との因果性は示されておらず、病態回路の理解と治療法開発への障壁となっていた。<br><br>
+                            本講演では、タウオパチー患者群のタウPETデータにLNMを応用するタウ・ネットワークマッピングを開発し、特定症状のコア・ネットワークを同定した我々の研究について、幾つかの具体例を紹介すると共に、霊長類モデルの遺伝学的回路操作
+                            (Hirabayashi et al., <em>Nat. Commun.</em> 2024; <em>Neuron</em>. 2021)
+                            でそれらの結果を検証し、患者群へのニューロモジュレーション治療につなげる今後の研究について議論したい。</p>
+                    </div>
+                </article>
 
-        <!-- 第8回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-8')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第8回：生物学的相分離の駆動・制御・破綻</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：森 英一朗(奈良県立医科大学)</li>
-                <li><strong>日時</strong>：2024年4月23日（火）15:00-16:30</li>
-                <li><strong>場所</strong>：Zoom</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-8">
-                <p>概要：タンパク質や核酸などの生体分子が膜に囲まれていないオルガネラを形成する過程を、相分離と呼ばれる物理化学法則で読み解く取り組みが2010年代に活発に行われた。こうした生物学的な相分離は、アミノ酸の組成に偏りのある低複雑性配列（low-complexity regionまたはLCドメイン）により駆動されることが明らかになってきた。また、LCドメインは、天然に構造を持たないことから、天然変性タンパク質・天然変性領域（intrinsically disordered protein/regionまたはIDP/IDR）と呼ばれる。Fused-in-sarcoma（FUS）は、非常に研究が盛んに行われている相分離研究のモデル分子であり、肉腫の染色体転座で発見されたことからこのような名称となっている。FUS自体は、生理的にはRNA結合因子として機能しており、相分離状態を駆動するLCドメインや、制御する相分離シャペロン（Kapβ2）などの作用機序も明らかになりつつある。さらには、相分離を破綻させることでタンパク質などの凝集を惹起し、神経難病などの疾患発症につながる可能性についても知られるようになってきた。本講演では、生物学的相分離の駆動・制御・破綻について、最近の研究成果について紹介したい。</p>
-            </div>
-        </article>
+                <!-- 第10回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-10')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第10回：Neurodegenerative diseases: nice collaboration stories between
+                            biologists and mathematicians leading to a better understanding of prion and Alzheimer’s
+                            diseases</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：Laurent Pujo-Menjouet (Universite Claude Bernard Lyon s1)</li>
+                        <li><strong>日時</strong>：July, 24th, 2024 14:00-15:30 JST</li>
+                        <li><strong>場所</strong>：Zoom + Hiroshima University</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-10">
+                        <p>概要：Through the past two decades, a great collaboration started between biologist and
+                            mathematicians to understand the complex dynamics of neurodegenerative diseases. During this
+                            presentation, we will dive into a short overview of the prion and Alzheimer’s disease models
+                            and
+                            show how mathematics have been helping to bring light to some unexplained observations. We
+                            will deal with size structured differential equations with polymerization and fragmentation
+                            terms (of Smoluchowski type), some hybrid models (continuous in time, discrete in size, of
+                            Becker-Döring type)). Finally we will add some diffusion terms to describe the spread of the
+                            disease in the brain, and the effect of stress and inflammatory processes.</p>
+                    </div>
+                </article>
 
-        <!-- 第7回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-7')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第7回：分子シミュレーションで見るアミロイドベータペプチドの凝集初期過程</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：伊藤 暁（ExCELLS）</li>
-                <li><strong>日時</strong>：2024年3月21日（木）15:30-17:00</li>
-                <li><strong>場所</strong>：Zoom</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-7">
-                <p>概要：アルツハイマー病を引き起こす原因の一つとして、アミロイドベータペプチド（Aβ）が凝集して形成するオリゴマーあるいは不溶性のアミロイド線維が考えれらている。固体NMRやクライオ電子顕微鏡を用いた実験によりアミロイド線維の立体構造が明らかになっていが、これらの構造がどのように形成されるのか、その形成過程は未解明のままである。そこで、我々は分子シミュレーションを用いて、この解明に取り組んでいる。最近の我々の研究により、Aβのアミロイド線維形成の初期過程に重要な役割を果たすアミノ酸残基を特定することに成功した。また、細胞膜表面や水溶液表面のような親水性/疎水性界面でアミロイド線維形成が促進されることが知られている。分子シミュレーションを用いることで、界面でのアミロイド線維形成に関する新たな知見を得ることにも成功した。本発表では、これらの研究について紹介する。</p>
-            </div>
-        </article>
+                <!-- 第9回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-9')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第9回：頭蓋内脳波ビッグデータから何がわかるか</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：柳澤琢史(大阪大学)</li>
+                        <li><strong>日時</strong>：2024年7月17日（水）13:00-14:30</li>
+                        <li><strong>場所</strong>：Zoom</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-9">
+                        <p>概要：てんかん外科治療において、頭蓋内脳波は治療方針を決定するための重要な検査である。特にてんかん発作時の頭蓋内脳波から、てんかんの焦点を同定することで、難治性てんかんを治療することが期待される。一方、発作間欠期の頭蓋内脳波は、様々な脳機能を調べるためにも活用される。我々は、頭蓋内脳波計測を10−15日間程度連続して行う中で、患者の動きや視聴覚内容、心拍や活動量、思考内容を同時計測している。既に100名以上の患者について、病室で過ごす間の状態と頭蓋内脳波のビッグデータを得ている。このデータから、ヒトの思考状態と関連する脳活動を同定し（Iwata
+                            et al., Nat. Comm., 2024）、てんかん発作時の脳波特徴を明らかにしてきた（Yamamoto et al., JNE,
+                            2021）。頭蓋内脳波計測から、てんかんやヒトの高次機能について何を明らかにできるか議論する。</p>
+                    </div>
+                </article>
 
-        <!-- 第6回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-6')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第6回：創薬R&amp;DにおけるデジタルトランスフォーメーションとQuantitative Systems Pharmacology</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：齊藤 隆太（田辺三菱製薬株式会社）</li>
-                <li><strong>日時</strong>：2024年1月15日（月）15:00-16:30</li>
-                <li><strong>場所</strong>：Zoom</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-6">
-                <p>概要：医薬品の研究開発における低い生産性を改善するため，デジタルトランスフォーメーション（DX）の必要性が高まっている．すなわち，DXによるデータ駆動型創薬へのプロセス変革が創薬R&amp;Dの多様なプロセスを高精度化・高速化させ，さらに不確実性の高い創薬の意思決定を科学的に支援することにより創薬の成功確度を高め，画期的な新薬を効率的に創製できるようになると期待されている．創薬は多くの研究プロセスの集合体であるため，一つの課題解決が劇的に生産性に貢献するというケースは稀である．従って，創薬におけるDX施策は複合的に効果をもたらすように複数の打ち手を同時に進める必要がある．そのため，プロセス全体を見た時のボトルネックの解消，組み合わせによるプロセス最適化，水平展開できる技術課題といった俯瞰的なあるいは多目的な視点を意識した課題設定が重要である．<br><br>
-                創薬における数理モデルの活用は，医薬品の研究開発における主要な課題の一つである有効性・安全性の臨床予測精度を高めるために，この20年間で著しく発展してきた技術分野の一つである．医薬品に関する数理モデルを用いた研究領域またはその技術は近年ではQuantitative Systems Pharmacology (QSP) と呼ばれている．2016年に欧州製薬連合EFPIAから提唱されたModel-informed drug discovery and development (MID3) のWhite paperが発表された (CPT Pharmacometrics Syst Pharmacol. 2016; 5: 93-122.)．QSPはこのMID3フレームワークの中心的技術であり，創薬の様々な局面での定量的で科学的な意思決定を支援する有力なツールである．QSPは薬剤・疾患のメカニズムに基づいた現象の理解に向いており，ターゲット分子の推定，vitro-vivo- clinical間のトランスレーショナルリサーチ，他剤との差異化，臨床試験デザインの最適化，臨床データの解釈などで多くの成果が報告されている．<br><br>
-                本発表では，田辺三菱製薬におけるQSPの活用事例として，抗トロンビン薬，副腎毒性評価，催不整脈性評価，薬物誘発性肝障害，SGLT2阻害薬などの研究内容を紹介し，QSPによる臨床予測の現状と将来展望について議論する．</p>
-            </div>
-        </article>
+                <!-- 1st Workshop -->
+                <article class="seminar-card"
+                    onclick="window.open('https://sites.google.com/view/compneurology/', '_blank')">
+                    <div class="seminar-header" role="button">
+                        <h3 class="seminar-title">1st Workshop on Computational Neurology</h3>
+                        <span class="toggle-icon">↗</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>詳細</strong>：Comp Neurology (外部サイト)</li>
+                    </ul>
+                </article>
 
-        <!-- 2023年 -->
-        <h3 id="year-2023" class="year-heading">2023年</h3>
+                <!-- 第8回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-8')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第8回：生物学的相分離の駆動・制御・破綻</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：森 英一朗(奈良県立医科大学)</li>
+                        <li><strong>日時</strong>：2024年4月23日（火）15:00-16:30</li>
+                        <li><strong>場所</strong>：Zoom</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-8">
+                        <p>概要：タンパク質や核酸などの生体分子が膜に囲まれていないオルガネラを形成する過程を、相分離と呼ばれる物理化学法則で読み解く取り組みが2010年代に活発に行われた。こうした生物学的な相分離は、アミノ酸の組成に偏りのある低複雑性配列（low-complexity
+                            regionまたはLCドメイン）により駆動されることが明らかになってきた。また、LCドメインは、天然に構造を持たないことから、天然変性タンパク質・天然変性領域（intrinsically
+                            disordered
+                            protein/regionまたはIDP/IDR）と呼ばれる。Fused-in-sarcoma（FUS）は、非常に研究が盛んに行われている相分離研究のモデル分子であり、肉腫の染色体転座で発見されたことからこのような名称となっている。FUS自体は、生理的にはRNA結合因子として機能しており、相分離状態を駆動するLCドメインや、制御する相分離シャペロン（Kapβ2）などの作用機序も明らかになりつつある。さらには、相分離を破綻させることでタンパク質などの凝集を惹起し、神経難病などの疾患発症につながる可能性についても知られるようになってきた。本講演では、生物学的相分離の駆動・制御・破綻について、最近の研究成果について紹介したい。
+                        </p>
+                    </div>
+                </article>
 
-        <!-- 第5回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-5')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第5回：Connectome-based models of neurodegenerative disease</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：Jacob Vogel（Lund University）</li>
-                <li><strong>日時</strong>：2024年1月24日（水）17:30-19:00（延期後）</li>
-                <li><strong>場所</strong>：Zoom</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-5">
-                <p>Lund Universityでアルツハイマー病のPETやMRIの解析を中心に研究されているJacob W. Vogel先生に発表していただくことになりました。神経のコネクトームにそって神経変性疾患の異常タンパク質の伝播がおこるという仮説に関して中心的に研究されており、最近、このテーマに関してNature review Neuroscience(<a href="https://www.nature.com/articles/s41583-023-00731-8" target="_blank" rel="noopener">https://www.nature.com/articles/s41583-023-00731-8</a>)やNature medicine(<a href="https://www.nature.com/articles/s41591-021-01309-6" target="_blank" rel="noopener">https://www.nature.com/articles/s41591-021-01309-6</a>)に出版されており、お話をお聞きしたいと考えていました。よければ、ぜひ参加していただければと思います。</p>
-                <p>概要：Neurodegenerative diseases involve accumulation of aberrant proteins in the brain, leading to brain damage and progressive cognitive and behavioral dysfunction. Many gaps exist in our understanding of how these diseases initiate and how they progress through the brain. However, evidence has accumulated supporting the hypothesis that aberrant proteins can be transported using the brain’s intrinsic network architecture — in other words, using the brain’s natural communication pathways. This theory forms the basis of connectome-based computational models, which combine real human data and theoretical disease mechanisms to simulate the progression of neurodegenerative diseases through the brain. In this talk, I will first review work leading to the development of connectome-based models, and work from my lab and others that have used these models to test hypothetical modes of disease progression. Second, I will discuss the future and potential of connectome-based models to achieve clinically useful individual-level predictions, as well as to generate novel biological insights into disease progression. Along the way, I will highlight recent work by my lab and others that is already moving the needle toward these lofty goals.</p>
-            </div>
-        </article>
+                <!-- 第7回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-7')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第7回：分子シミュレーションで見るアミロイドベータペプチドの凝集初期過程</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：伊藤 暁（ExCELLS）</li>
+                        <li><strong>日時</strong>：2024年3月21日（木）15:30-17:00</li>
+                        <li><strong>場所</strong>：Zoom</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-7">
+                        <p>概要：アルツハイマー病を引き起こす原因の一つとして、アミロイドベータペプチド（Aβ）が凝集して形成するオリゴマーあるいは不溶性のアミロイド線維が考えれらている。固体NMRやクライオ電子顕微鏡を用いた実験によりアミロイド線維の立体構造が明らかになっていが、これらの構造がどのように形成されるのか、その形成過程は未解明のままである。そこで、我々は分子シミュレーションを用いて、この解明に取り組んでいる。最近の我々の研究により、Aβのアミロイド線維形成の初期過程に重要な役割を果たすアミノ酸残基を特定することに成功した。また、細胞膜表面や水溶液表面のような親水性/疎水性界面でアミロイド線維形成が促進されることが知られている。分子シミュレーションを用いることで、界面でのアミロイド線維形成に関する新たな知見を得ることにも成功した。本発表では、これらの研究について紹介する。
+                        </p>
+                    </div>
+                </article>
 
-        <!-- 第4回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-4')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第4回：深層学習を用いた姿勢推定技術の実応用による神経</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：<a href="https://researchmap.jp/d101" target="_blank" rel="noopener">佐藤謙一郎</a>（東京大学）</li>
-                <li><strong>日時</strong>：2023年10月12日（木）17:30-19:00</li>
-                <li><strong>場所</strong>：オンライン（zoom）</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-4">
-                <p>概要: パーキンソン病など運動症状を呈する神経疾患の診断・治療においては神経学的所見の診察が重要であるが、この判定は脳神経内科医をはじめとする医師による半定量的な判断が主体となっている。専用機器を用いて神経所見を様々な側面から定量的に測定することは技術的には可能であるが、手間も時間も費用もかかるため日常診療において行われることはまずない。また脳神経内科診療においては入院患者の歩容・状態を家庭用ビデオカメラで記録しておく機会が度々あるが、専用機器を併用していないこともあり実際にデータ活用に供されることもほとんどなかった。<br>
-                我々は、深層学習による2次元姿勢推定ライブラリをこのビデオ録画された動画に適用することで神経所見を抽出し、定量的評価に活用できないかと考えた。結果として、歩行の正面像から歩行cadenceを抽出し、またすくみ足の程度を抽出した。また同様にLeg agility所見におけるリズム不整の程度を抽出した。特別な測定機器を用いることなく複雑な神経所見を定量的に表現・抽出しうる、しかも臨床で実際に簡便にデータ取得可能な手法であるという意義があると考えられる。適用可能な条件という点での制限や、他疾患への応用の可能性等についても考察する。</p>
-                <p>Ref：<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223549" target="_blank" rel="noopener">https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223549</a></p>
-            </div>
-        </article>
+                <!-- 第6回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-6')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第6回：創薬R&amp;DにおけるデジタルトランスフォーメーションとQuantitative Systems Pharmacology
+                        </h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：齊藤 隆太（田辺三菱製薬株式会社）</li>
+                        <li><strong>日時</strong>：2024年1月15日（月）15:00-16:30</li>
+                        <li><strong>場所</strong>：Zoom</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-6">
+                        <p>概要：医薬品の研究開発における低い生産性を改善するため，デジタルトランスフォーメーション（DX）の必要性が高まっている．すなわち，DXによるデータ駆動型創薬へのプロセス変革が創薬R&amp;Dの多様なプロセスを高精度化・高速化させ，さらに不確実性の高い創薬の意思決定を科学的に支援することにより創薬の成功確度を高め，画期的な新薬を効率的に創製できるようになると期待されている．創薬は多くの研究プロセスの集合体であるため，一つの課題解決が劇的に生産性に貢献するというケースは稀である．従って，創薬におけるDX施策は複合的に効果をもたらすように複数の打ち手を同時に進める必要がある．そのため，プロセス全体を見た時のボトルネックの解消，組み合わせによるプロセス最適化，水平展開できる技術課題といった俯瞰的なあるいは多目的な視点を意識した課題設定が重要である．<br><br>
+                            創薬における数理モデルの活用は，医薬品の研究開発における主要な課題の一つである有効性・安全性の臨床予測精度を高めるために，この20年間で著しく発展してきた技術分野の一つである．医薬品に関する数理モデルを用いた研究領域またはその技術は近年ではQuantitative
+                            Systems Pharmacology (QSP) と呼ばれている．2016年に欧州製薬連合EFPIAから提唱されたModel-informed drug discovery and
+                            development (MID3) のWhite paperが発表された (CPT Pharmacometrics Syst Pharmacol. 2016; 5:
+                            93-122.)．QSPはこのMID3フレームワークの中心的技術であり，創薬の様々な局面での定量的で科学的な意思決定を支援する有力なツールである．QSPは薬剤・疾患のメカニズムに基づいた現象の理解に向いており，ターゲット分子の推定，vitro-vivo-
+                            clinical間のトランスレーショナルリサーチ，他剤との差異化，臨床試験デザインの最適化，臨床データの解釈などで多くの成果が報告されている．<br><br>
+                            本発表では，田辺三菱製薬におけるQSPの活用事例として，抗トロンビン薬，副腎毒性評価，催不整脈性評価，薬物誘発性肝障害，SGLT2阻害薬などの研究内容を紹介し，QSPによる臨床予測の現状と将来展望について議論する．
+                        </p>
+                    </div>
+                </article>
 
-        <!-- 第3回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-3')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第3回：Sleep spindles: a mechanistic biomarker for cognitive dysfunction in encephalopathy</h3>
-                <span class="toggle-icon">＋</span>
+                <!-- 2023年 -->
+                <h3 id="year-2023" class="year-heading">2023年</h3>
+
+                <!-- 第5回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-5')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第5回：Connectome-based models of neurodegenerative disease</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：Jacob Vogel（Lund University）</li>
+                        <li><strong>日時</strong>：2024年1月24日（水）17:30-19:00（延期後）</li>
+                        <li><strong>場所</strong>：Zoom</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-5">
+                        <p>Lund Universityでアルツハイマー病のPETやMRIの解析を中心に研究されているJacob W.
+                            Vogel先生に発表していただくことになりました。神経のコネクトームにそって神経変性疾患の異常タンパク質の伝播がおこるという仮説に関して中心的に研究されており、最近、このテーマに関してNature
+                            review Neuroscience(<a href="https://www.nature.com/articles/s41583-023-00731-8"
+                                target="_blank"
+                                rel="noopener">https://www.nature.com/articles/s41583-023-00731-8</a>)やNature
+                            medicine(<a href="https://www.nature.com/articles/s41591-021-01309-6" target="_blank"
+                                rel="noopener">https://www.nature.com/articles/s41591-021-01309-6</a>)に出版されており、お話をお聞きしたいと考えていました。よければ、ぜひ参加していただければと思います。
+                        </p>
+                        <p>概要：Neurodegenerative diseases involve accumulation of aberrant proteins in the brain, leading
+                            to brain damage and progressive cognitive and behavioral dysfunction. Many gaps exist in our
+                            understanding of how these diseases initiate and how they progress through the brain.
+                            However, evidence has accumulated supporting the hypothesis that aberrant proteins can be
+                            transported using the brain’s intrinsic network architecture — in other words, using the
+                            brain’s natural communication pathways. This theory forms the basis of connectome-based
+                            computational models, which combine real human data and theoretical disease mechanisms to
+                            simulate the progression of neurodegenerative diseases through the brain. In this talk, I
+                            will first review work leading to the development of connectome-based models, and work from
+                            my lab and others that have used these models to test hypothetical modes of disease
+                            progression. Second, I will discuss the future and potential of connectome-based models to
+                            achieve clinically useful individual-level predictions, as well as to generate novel
+                            biological insights into disease progression. Along the way, I will highlight recent work by
+                            my lab and others that is already moving the needle toward these lofty goals.</p>
+                    </div>
+                </article>
+
+                <!-- 第4回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-4')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第4回：深層学習を用いた姿勢推定技術の実応用による神経</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：<a href="https://researchmap.jp/d101" target="_blank"
+                                rel="noopener">佐藤謙一郎</a>（東京大学）</li>
+                        <li><strong>日時</strong>：2023年10月12日（木）17:30-19:00</li>
+                        <li><strong>場所</strong>：オンライン（zoom）</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-4">
+                        <p>概要:
+                            パーキンソン病など運動症状を呈する神経疾患の診断・治療においては神経学的所見の診察が重要であるが、この判定は脳神経内科医をはじめとする医師による半定量的な判断が主体となっている。専用機器を用いて神経所見を様々な側面から定量的に測定することは技術的には可能であるが、手間も時間も費用もかかるため日常診療において行われることはまずない。また脳神経内科診療においては入院患者の歩容・状態を家庭用ビデオカメラで記録しておく機会が度々あるが、専用機器を併用していないこともあり実際にデータ活用に供されることもほとんどなかった。<br>
+                            我々は、深層学習による2次元姿勢推定ライブラリをこのビデオ録画された動画に適用することで神経所見を抽出し、定量的評価に活用できないかと考えた。結果として、歩行の正面像から歩行cadenceを抽出し、またすくみ足の程度を抽出した。また同様にLeg
+                            agility所見におけるリズム不整の程度を抽出した。特別な測定機器を用いることなく複雑な神経所見を定量的に表現・抽出しうる、しかも臨床で実際に簡便にデータ取得可能な手法であるという意義があると考えられる。適用可能な条件という点での制限や、他疾患への応用の可能性等についても考察する。
+                        </p>
+                        <p>Ref：<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223549"
+                                target="_blank"
+                                rel="noopener">https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223549</a>
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 第3回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-3')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第3回：Sleep spindles: a mechanistic biomarker for cognitive dysfunction
+                            in encephalopathy</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：Catherina Chu（ハーバード大学）</li>
+                        <li><strong>日時</strong>：2023年7月28日（金）9:30-11:00</li>
+                        <li><strong>場所</strong>：ハイブリッド（zoom＋京都大学 楽友会館）</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-3">
+                        <p>臨床研究家としてデータサイエンスを駆使しててんかん研究を行っている、Catherine Chuさんに京大学とzoomのハイブリッドでの講演をしていただく予定です。Salon de 脳
+                            international と共催となります。</p>
+                        <p>概要：In epileptic encephalopathies, epileptic activity contributes to progressive cognitive
+                            dysfunction, but the mechanism is not well understood. Several epileptic encephalopathies
+                            share the trait of pathological spike-wave activation during non-rapid eye movement sleep
+                            (EE-SWAS), a state normally dominated by physiological sleep spindles, sleep oscillations
+                            known to coordinate offline memory consolidation. We find that sleep spindles predict IQ and
+                            sleep dependent memory in epilepsy, are disrupted by epileptic spikes that propagate to the
+                            thalamus, and can be increased by both pharmacologic interventions and non-invasive
+                            stimulation. Better understanding the circuits that support and disrupt these physiological
+                            and pathological oscillations will open opportunities to address cognitive symptoms in
+                            epilepsy and other neurologic and psychiatric disorders.</p>
+                        <p><strong>Related papers:</strong><br>
+                            <a href="https://www.biorxiv.org/content/10.1101/2023.04.17.537191v1" target="_blank"
+                                rel="noopener">https://www.biorxiv.org/content/10.1101/2023.04.17.537191v1</a><br>
+                            <a href="https://www.biorxiv.org/content/10.1101/2023.04.22.537937v1" target="_blank"
+                                rel="noopener">https://www.biorxiv.org/content/10.1101/2023.04.22.537937v1</a>
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 第2回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-2')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第2回：The brain as a complex dynamical system</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：<a href="http://www.benfulcher.com/" target="_blank" rel="noopener">Ben
+                                D. Fulcher</a>（シドニー大学）</li>
+                        <li><strong>日時</strong>：2023年6月23日（金）15:00-17:00</li>
+                        <li><strong>場所</strong>：ハイブリッド（zoom＋広島大学 東広島キャンパス）</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-2">
+                        <p>最近Natureに掲載されたGeometric constraints on human brain functionなど脳のダイナミクスの解析法を中心に活躍されている、Ben D.
+                            Fulcherさんに広島大学とzoomのハイブリッドでの講演をしていただく予定です。</p>
+                        <p>概要：Like many systems in the world around us, the brain’s is a physical system with complex
+                            activity patterns that evolve through time and can be measured in the form of multivariate
+                            time series. We now have unprecedented data on brain structure, including gene-expression
+                            atlas data with high spatial resolution and whole-brain coverage, as well as intricate
+                            recordings of the brain’s activity dynamics. What representations of the brain allow us to
+                            find informative patterns in these data that clarify how the brain works in health and
+                            disease? In this talk I will introduce different ways of treating the brain as a complex
+                            dynamical system, including a discrete network representation (a connectome) and a physical
+                            representation (in terms of spatially embedded gradients and distributed modes). I will also
+                            provide an overview of related methods that we have developed for quantifying brain
+                            dynamics, including time-series patterns of specific brain areas, as well as pairwise, and
+                            distributed coupling patterns (implemented in our <em>hctsa</em> and <em>pyspi</em> software
+                            packages). I will make reference to some specific recent applications, including inferring
+                            biomarkers of psychiatric disease, extracting data-driven representations of sleep dynamics,
+                            quantifying the effects of brain stimulation, and characterizing resting-state EEG and fMRI
+                            data.</p>
+                        <p><strong>Key Refs:</strong></p>
+                        <ul>
+                            <li>Fulcher &amp; Jones (2017). <em>hctsa</em>: A computational framework for automated
+                                time-series phenotyping using massive feature extraction. <em>Cell Systems</em>. <a
+                                    href="http://www.cell.com/article/S2405471217304386/fulltext" target="_blank"
+                                    rel="noopener">link</a></li>
+                            <li>Cliff et al. (2022). Unifying Pairwise Interactions in Complex Dynamics. <em>arXiv</em>.
+                                <a href="http://arxiv.org/abs/2201.11941" target="_blank" rel="noopener">link</a></li>
+                            <li>Fulcher et al. (2019). Multimodal gradients across mouse cortex. <em>PNAS</em>. <a
+                                    href="http://www.pnas.org/lookup/doi/10.1073/pnas.1814144116" target="_blank"
+                                    rel="noopener">link</a></li>
+                            <li>Pang et al. (2023). Geometric constraints on human brain function. <em>Nature</em>. <a
+                                    href="https://www.nature.com/articles/s41586-023-06098-1" target="_blank"
+                                    rel="noopener">link</a></li>
+                        </ul>
+                        <p><a href="https://www.notion.so/2-Computational-Neurology-Club-AI-summary-8f8673bfa5de4113b50535cb9fda2966?pvs=21"
+                                target="_blank" rel="noopener">第2回Computational Neurology Club AI summary</a></p>
+                    </div>
+                </article>
+
+                <!-- 第1回 -->
+                <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-1')">
+                    <div class="seminar-header" role="button" aria-expanded="false">
+                        <h3 class="seminar-title">第1回：パーキンソン病の振動的神経活動と振戦に関する脳-身体シミュレーション</h3>
+                        <span class="toggle-icon">＋</span>
+                    </div>
+                    <ul class="seminar-info-list">
+                        <li><strong>講演者</strong>：<a href="https://researchmap.jp/jun_igarashi" target="_blank"
+                                rel="noopener">五十嵐潤</a>（理化学研究所）</li>
+                        <li><strong>日時</strong>：2023年6月8日（木）15:00-16:30</li>
+                        <li><strong>場所</strong>：オンライン（zoom）</li>
+                    </ul>
+                    <div class="seminar-abstract" id="abstract-1">
+                        <p>日本のスーパーコンピュータ「富嶽」で全脳シミュレーションを行っている五十嵐先生に登壇していただくことになりました。</p>
+                        <p><a href="https://www.r-ccs.riken.jp/newsletter/201810/interview.html" target="_blank"
+                                rel="noopener">ヒト脳理解に向けてのスタートライン ポスト「京」で目指す全脳規模シミュレーション | 計算科学の世界</a></p>
+                        <p>概要：パーキンソン病(PD)は、黒質緻密部の神経変性に伴うドーパミン減少が原因で起きる神経変性疾患である。PDでは、無動、固縮、振戦などの運動症状の発生が多く見られる。PD患者は世界で数百万人いるといわれ、人類的な課題となっている。PD状態では、大脳基底核、視床、大脳皮質で特徴的な振動的神経活動が発生し、振戦時には末梢の筋電位に振動的な信号が現れる。これらの振動的神経活動がドーパミンの減少と関連脳部位の相互作用によって発生するしくみはよくわかっていない。我々は、大脳基底核、視床、大脳皮質の神経回路モデルと身体モデルの連成シミュレーションを行い、振戦の発生する機構を調べた。その結果、ドーパミン減少で発生すると想定される結合強度や活動度の変化によって、大脳基底核では強いベータ振動が発生し、視床では振戦の周波数に近い、同期したカルシウムバースト発火が発生した。これらの結果から、ドーパミン減少が大脳基底核、視床で振動的神経活動を引き起こし、その振動的神経活動が大脳皮質・脊髄を伝わり末梢で振戦を起こすことが示唆される。最後に、PD状態と健常状態の振動現象を考察し、神経疾患と情報処理機能における振動的神経活動の役割について考察する。
+                        </p>
+                        <p><strong>AI議事録:</strong> <a
+                                href="https://www.notion.so/1-Computational-Neurology-AI-32728db535474d18b28188b3a4c2967e?pvs=21"
+                                target="_blank" rel="noopener">第1回Computational Neurology研究会AI議事録</a></p>
+                        <p><strong>ChatGPTとの対話とTwittterでの立ち上げの経緯</strong><br>
+                            <a href="https://twitter.com/ken_nakae754/status/1632739358435581953?s=20" target="_blank"
+                                rel="noopener">https://twitter.com/ken_nakae754/status/1632739358435581953?s=20</a>
+                        </p>
+                    </div>
+                </article>
+
             </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：Catherina Chu（ハーバード大学）</li>
-                <li><strong>日時</strong>：2023年7月28日（金）9:30-11:00</li>
-                <li><strong>場所</strong>：ハイブリッド（zoom＋京都大学 楽友会館）</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-3">
-                <p>臨床研究家としてデータサイエンスを駆使しててんかん研究を行っている、Catherine Chuさんに京大学とzoomのハイブリッドでの講演をしていただく予定です。Salon de 脳 international と共催となります。</p>
-                <p>概要：In epileptic encephalopathies, epileptic activity contributes to progressive cognitive dysfunction, but the mechanism is not well understood. Several epileptic encephalopathies share the trait of pathological spike-wave activation during non-rapid eye movement sleep (EE-SWAS), a state normally dominated by physiological sleep spindles, sleep oscillations known to coordinate offline memory consolidation. We find that sleep spindles predict IQ and sleep dependent memory in epilepsy, are disrupted by epileptic spikes that propagate to the thalamus, and can be increased by both pharmacologic interventions and non-invasive stimulation. Better understanding the circuits that support and disrupt these physiological and pathological oscillations will open opportunities to address cognitive symptoms in epilepsy and other neurologic and psychiatric disorders.</p>
-                <p><strong>Related papers:</strong><br>
-                  <a href="https://www.biorxiv.org/content/10.1101/2023.04.17.537191v1" target="_blank" rel="noopener">https://www.biorxiv.org/content/10.1101/2023.04.17.537191v1</a><br>
-                  <a href="https://www.biorxiv.org/content/10.1101/2023.04.22.537937v1" target="_blank" rel="noopener">https://www.biorxiv.org/content/10.1101/2023.04.22.537937v1</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <p class="footer-text">
+                    本研究会に関するお問い合わせは、各オーガナイザーの所属機関を通じてご連絡ください。
                 </p>
             </div>
-        </article>
-
-        <!-- 第2回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-2')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第2回：The brain as a complex dynamical system</h3>
-                <span class="toggle-icon">＋</span>
+            <div class="footer-right">
+                <p class="footer-meta">
+                    &copy; Computational Neurology Club
+                </p>
             </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：<a href="http://www.benfulcher.com/" target="_blank" rel="noopener">Ben D. Fulcher</a>（シドニー大学）</li>
-                <li><strong>日時</strong>：2023年6月23日（金）15:00-17:00</li>
-                <li><strong>場所</strong>：ハイブリッド（zoom＋広島大学 東広島キャンパス）</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-2">
-                <p>最近Natureに掲載されたGeometric constraints on human brain functionなど脳のダイナミクスの解析法を中心に活躍されている、Ben D. Fulcherさんに広島大学とzoomのハイブリッドでの講演をしていただく予定です。</p>
-                <p>概要：Like many systems in the world around us, the brain’s is a physical system with complex activity patterns that evolve through time and can be measured in the form of multivariate time series. We now have unprecedented data on brain structure, including gene-expression atlas data with high spatial resolution and whole-brain coverage, as well as intricate recordings of the brain’s activity dynamics. What representations of the brain allow us to find informative patterns in these data that clarify how the brain works in health and disease? In this talk I will introduce different ways of treating the brain as a complex dynamical system, including a discrete network representation (a connectome) and a physical representation (in terms of spatially embedded gradients and distributed modes). I will also provide an overview of related methods that we have developed for quantifying brain dynamics, including time-series patterns of specific brain areas, as well as pairwise, and distributed coupling patterns (implemented in our <em>hctsa</em> and <em>pyspi</em> software packages). I will make reference to some specific recent applications, including inferring biomarkers of psychiatric disease, extracting data-driven representations of sleep dynamics, quantifying the effects of brain stimulation, and characterizing resting-state EEG and fMRI data.</p>
-                <p><strong>Key Refs:</strong></p>
-                <ul>
-                  <li>Fulcher &amp; Jones (2017). <em>hctsa</em>: A computational framework for automated time-series phenotyping using massive feature extraction. <em>Cell Systems</em>. <a href="http://www.cell.com/article/S2405471217304386/fulltext" target="_blank" rel="noopener">link</a></li>
-                  <li>Cliff et al. (2022). Unifying Pairwise Interactions in Complex Dynamics. <em>arXiv</em>. <a href="http://arxiv.org/abs/2201.11941" target="_blank" rel="noopener">link</a></li>
-                  <li>Fulcher et al. (2019). Multimodal gradients across mouse cortex. <em>PNAS</em>. <a href="http://www.pnas.org/lookup/doi/10.1073/pnas.1814144116" target="_blank" rel="noopener">link</a></li>
-                  <li>Pang et al. (2023). Geometric constraints on human brain function. <em>Nature</em>. <a href="https://www.nature.com/articles/s41586-023-06098-1" target="_blank" rel="noopener">link</a></li>
-                </ul>
-                <p><a href="https://www.notion.so/2-Computational-Neurology-Club-AI-summary-8f8673bfa5de4113b50535cb9fda2966?pvs=21" target="_blank" rel="noopener">第2回Computational Neurology Club AI summary</a></p>
-            </div>
-        </article>
+        </div>
+    </footer>
 
-        <!-- 第1回 -->
-        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-1')">
-            <div class="seminar-header" role="button" aria-expanded="false">
-                <h3 class="seminar-title">第1回：パーキンソン病の振動的神経活動と振戦に関する脳-身体シミュレーション</h3>
-                <span class="toggle-icon">＋</span>
-            </div>
-            <ul class="seminar-info-list">
-                <li><strong>講演者</strong>：<a href="https://researchmap.jp/jun_igarashi" target="_blank" rel="noopener">五十嵐潤</a>（理化学研究所）</li>
-                <li><strong>日時</strong>：2023年6月8日（木）15:00-16:30</li>
-                <li><strong>場所</strong>：オンライン（zoom）</li>
-            </ul>
-            <div class="seminar-abstract" id="abstract-1">
-                <p>日本のスーパーコンピュータ「富嶽」で全脳シミュレーションを行っている五十嵐先生に登壇していただくことになりました。</p>
-                <p><a href="https://www.r-ccs.riken.jp/newsletter/201810/interview.html" target="_blank" rel="noopener">ヒト脳理解に向けてのスタートライン ポスト「京」で目指す全脳規模シミュレーション | 計算科学の世界</a></p>
-                <p>概要：パーキンソン病(PD)は、黒質緻密部の神経変性に伴うドーパミン減少が原因で起きる神経変性疾患である。PDでは、無動、固縮、振戦などの運動症状の発生が多く見られる。PD患者は世界で数百万人いるといわれ、人類的な課題となっている。PD状態では、大脳基底核、視床、大脳皮質で特徴的な振動的神経活動が発生し、振戦時には末梢の筋電位に振動的な信号が現れる。これらの振動的神経活動がドーパミンの減少と関連脳部位の相互作用によって発生するしくみはよくわかっていない。我々は、大脳基底核、視床、大脳皮質の神経回路モデルと身体モデルの連成シミュレーションを行い、振戦の発生する機構を調べた。その結果、ドーパミン減少で発生すると想定される結合強度や活動度の変化によって、大脳基底核では強いベータ振動が発生し、視床では振戦の周波数に近い、同期したカルシウムバースト発火が発生した。これらの結果から、ドーパミン減少が大脳基底核、視床で振動的神経活動を引き起こし、その振動的神経活動が大脳皮質・脊髄を伝わり末梢で振戦を起こすことが示唆される。最後に、PD状態と健常状態の振動現象を考察し、神経疾患と情報処理機能における振動的神経活動の役割について考察する。</p>
-                <p><strong>AI議事録:</strong> <a href="https://www.notion.so/1-Computational-Neurology-AI-32728db535474d18b28188b3a4c2967e?pvs=21" target="_blank" rel="noopener">第1回Computational Neurology研究会AI議事録</a></p>
-                <p><strong>ChatGPTとの対話とTwittterでの立ち上げの経緯</strong><br>
-                  <a href="https://twitter.com/ken_nakae754/status/1632739358435581953?s=20" target="_blank" rel="noopener">https://twitter.com/ken_nakae754/status/1632739358435581953?s=20</a></p>
-            </div>
-        </article>
+    <script>
+        // ハンバーガーメニューのトグル機能
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('main-nav');
 
-      </div>
-    </section>
-  </main>
-  
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <p class="footer-text">
-          本研究会に関するお問い合わせは、各オーガナイザーの所属機関を通じてご連絡ください。
-        </p>
-      </div>
-      <div class="footer-right">
-        <p class="footer-meta">
-          &copy; Computational Neurology Club
-        </p>
-      </div>
-    </div>
-  </footer>
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('is-open');
+                navMenu.classList.toggle('is-open');
+            });
 
-  <script>
-    // ハンバーガーメニューのトグル機能
-    document.addEventListener('DOMContentLoaded', () => {
-      const navToggle = document.getElementById('nav-toggle');
-      const navMenu = document.getElementById('main-nav');
-      
-      navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('is-open');
-        navMenu.classList.toggle('is-open');
-      });
-      
-      // メニュー内のリンクがクリックされた時にメニューを閉じる
-      navMenu.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
-              if (navMenu.classList.contains('is-open')) {
-                navToggle.classList.remove('is-open');
-                navMenu.classList.remove('is-open');
-              }
-          });
-      });
-    });
+            // メニュー内のリンクがクリックされた時にメニューを閉じる
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('is-open')) {
+                        navToggle.classList.remove('is-open');
+                        navMenu.classList.remove('is-open');
+                    }
+                });
+            });
+        });
 
-    // アコーディオンのトグル機能
-    function toggleAbstract(cardElement, abstractId) {
-      if (!abstractId) return; // リンクのみのカード対策
-      const abstract = document.getElementById(abstractId);
-      const header = cardElement.querySelector('.seminar-header');
-      
-      // クラスの付け外しで開閉を制御
-      abstract.classList.toggle('open');
-      header.classList.toggle('open');
-      
-      // ARIA属性の更新
-      const isExpanded = header.getAttribute('aria-expanded') === 'true';
-      header.setAttribute('aria-expanded', !isExpanded);
-    }
-  </script>
+        // アコーディオンのトグル機能
+        function toggleAbstract(cardElement, abstractId) {
+            if (!abstractId) return; // リンクのみのカード対策
+            const abstract = document.getElementById(abstractId);
+            const header = cardElement.querySelector('.seminar-header');
+
+            // クラスの付け外しで開閉を制御
+            abstract.classList.toggle('open');
+            header.classList.toggle('open');
+
+            // ARIA属性の更新
+            const isExpanded = header.getAttribute('aria-expanded') === 'true';
+            header.setAttribute('aria-expanded', !isExpanded);
+        }
+    </script>
 </body>
+
 </html>
