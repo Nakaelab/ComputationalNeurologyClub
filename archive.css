@@ -1,53 +1,134 @@
-/*
- * archive.css
- * Computational Neurology Club - 過去のセミナー一覧ページ専用スタイル
- * (PC・スマホ完全対応版)
- */
+/* ===================================== */
+/* 0. 過去ページ専用 背景装飾 */
+/* ===================================== */
+.archive-page {
+  position: relative;
+  overflow-x: hidden;
+  background-color: #020617;
+  /* さらに深い紺 */
+  background-image:
+    /* 極薄のグリッド */
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* 浮遊する光の塊 */
+.archive-page::before,
+.archive-page::after {
+  content: "";
+  position: fixed;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(120px);
+  opacity: 0.15;
+}
+
+.archive-page::before {
+  top: -200px;
+  right: -200px;
+  background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+  animation: float 20s infinite alternate ease-in-out;
+}
+
+.archive-page::after {
+  bottom: -200px;
+  left: -200px;
+  background: radial-gradient(circle, #8b5cf6 0%, transparent 70%);
+  animation: float 25s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-100px, 50px) scale(1.1);
+  }
+
+  100% {
+    transform: translate(50px, -50px) scale(0.9);
+  }
+}
+
+/* 背景をより深く見せるためのオーバーレイ */
+.archive-page main {
+  position: relative;
+  z-index: 1;
+}
 
 /* ===================================== */
 /* 1. 年別索引（TOC） */
 /* ===================================== */
-.archive-toc {
+/* ===================================== */
+/* 1. 年度切り替えタブ (Segmented Control) */
+/* ===================================== */
+.archive-tabs-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
   margin-bottom: 60px;
-  padding: 16px 24px;
+}
+
+.archive-tabs {
+  position: relative;
+  display: flex;
   background: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 6px;
+  border-radius: 99px;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-radius: 99px;
-  border: 1px solid var(--border-subtle);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.archive-toc a {
-  display: inline-flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  padding: 10px 24px !important; /* 左右均等 */
-  width: auto !important;
-  min-width: 0 !important;
-  
-  /* 以下、見た目の設定 */
-  font-weight: 600;
+.tab-btn {
+  position: relative;
+  padding: 10px 32px;
   font-size: 14px;
-  border-radius: 99px;
+  font-weight: 700;
   color: var(--text-muted);
-  background-color: transparent;
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
-  text-decoration: none !important;
-  line-height: 1 !important;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
-.archive-toc a:hover {
+.tab-btn.active {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-slider {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  height: calc(100% - 12px);
+  background: var(--gradient-primary);
+  border-radius: 99px;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* ===================================== */
+/* 2. コンテンツ表示制御 */
+/* ===================================== */
+.year-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.year-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ===================================== */
@@ -63,7 +144,8 @@
   align-items: center;
   gap: 16px;
   padding-left: 8px;
-  width: 100%; /* 幅を確保 */
+  width: 100%;
+  /* 幅を確保 */
 }
 
 .year-heading::after {
@@ -122,7 +204,8 @@
 /* PC用のタイトルサイズ */
 .seminar-title {
   margin: 0;
-  font-size: 18px; /* PCでは大きく */
+  font-size: 18px;
+  /* PCでは大きく */
   font-weight: 600;
   color: var(--text);
   line-height: 1.4;
@@ -165,17 +248,18 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: center; /* 縦位置中央揃え */
+  align-items: center;
+  /* 縦位置中央揃え */
   gap: 20px;
   font-size: 13px;
   color: var(--text-muted);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s ease;
-  
+
   /* 重要：PCでは flex-direction: row (横並び) がデフォルトです */
 }
 
-.seminar-header.open + .seminar-info-list {
+.seminar-header.open+.seminar-info-list {
   border-bottom-color: var(--border-subtle);
 }
 
@@ -231,8 +315,10 @@
 
   /* リストを縦並びにする（スマホのみ！） */
   .seminar-info-list {
-    flex-direction: column; /* 縦並び */
-    align-items: flex-start; /* 左寄せ */
+    flex-direction: column;
+    /* 縦並び */
+    align-items: flex-start;
+    /* 左寄せ */
     gap: 8px;
     padding: 0 16px 16px;
   }
@@ -255,78 +341,14 @@
   position: relative;
   overflow: hidden;
   padding: 40px 0;
-}.archive-toc
+}
 
 .header-content {
   position: relative;
   z-index: 2;
 }
 
-/* ===================================== */
-/* 1. 年別索引（TOC）完全修正版 */
-/* ===================================== */
-
-/* ボタンを入れる「外側の枠」 */
+/* 元のTOCリンクを抹消 */
 .archive-toc {
-  display: flex;             /* 横並びにする */
-  justify-content: center;   /* 真ん中に寄せる */
-  align-items: center;       /* 上下も真ん中 */
-  gap: 8px;                  /* ボタン同士の隙間 */
-  
-  /* 枠のデザイン */
-  background: rgba(17, 24, 39, 0.8);
-  border: 1px solid var(--border-subtle);
-  border-radius: 99px;       /* 楕円形にする */
-  padding: 6px;              /* 枠の内側の余白 */
-  
-  /* 位置の調整 */
-  margin: 0 auto 60px;       /* 画面中央配置 + 下に余白 */
-  width: fit-content;        /* 中身に合わせた幅にする */
-}
-
-/* 「2025年」などのボタン本体 */
-.archive-toc a {
-  display: block;            /* 形を整える */
-  padding: 8px 24px;         /* ボタンの大きさ（上下8px, 左右24px） */
-  
-  /* 文字のデザイン */
-  color: var(--text-muted);  /* グレー */
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;     /* 下線を消す */
-  line-height: 1;            /* 文字の高さズレを防ぐ */
-  
-  /* 角丸と背景 */
-  border-radius: 99px;
-  background: transparent;   /* 通常は背景なし */
-  border: 1px solid transparent; /* 枠線のズレ防止 */
-  transition: all 0.3s ease;
-}
-
-/* マウスを乗せた時 */
-.archive-toc a:hover {
-  color: #fff;               /* 文字を白く */
-  background: rgba(255, 255, 255, 0.1); /* 背景を薄く光らせる */
-}
-
-/* ★以前の「強制リセット」が悪さをしないように、念のため無効化 */
-.archive-toc a::before,
-.archive-toc a::after {
-  content: none;
-  display: none;
-}
-.archive-toc a img,
-.archive-toc a svg {
-  display: none;
-}
-
-/* 1. 中身が空っぽのリンク（文字がないボタン）を消す */
-.archive-toc a:empty {
-  display: none !important;
-}
-
-/* 2. もし空じゃなくても「Googleフォーム」や「Officeフォーム」へのリンクなら消す */
-/* （2025などの数字は消えずに、横の変なリンクだけ消えます） */
-.archive-toc a[href*="forms"] {
   display: none !important;
 }

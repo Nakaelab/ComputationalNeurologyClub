@@ -40,9 +40,7 @@
         <a href="archive.html">過去のセミナー</a>
         <a href="#organizers">オーガナイザー</a>
         <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=g7JUf-0iPEqpRHX3VeWDBuUgYim7RQ9FtolDVhQvkeJUQUdHRDlSTEJDVEc0SFM5MFNEVlZPUkRVMC4u"
-          class="nav-btn-join" target="_blank">
-          CNCに参加登録する
-        </a>
+          target="_blank">参加登録</a>
       </nav>
     </div>
   </header>
@@ -51,38 +49,64 @@
     <section class="hero">
       <div class="hero-overlay"></div>
 
-      <div class="container hero-inner">
+      <div class="container">
+        <div class="hero-content-wrapper">
+          <div class="hero-inner">
+            <!-- 左：テキスト -->
+            <div class="hero-text">
+              <h1>
+                Computational Neurology<br />
+                Club
+              </h1>
+              <p>
+                計算論的手法を用いて、アルツハイマー病・パーキンソン病・てんかんなど 神経内科疾患の病態理解と臨床応用をめざすコミュニティです。<br />
+                2ヶ月に1回のオンラインセミナーを通じて、学生・研究者・臨床家が分野を越えて議論する場を提供します。
+              </p>
+            </div>
 
-        <!-- 左：テキスト -->
-        <div class="hero-text">
-          <h1>Computational Neurology Club</h1>
-          <p>
-            計算論的手法を用いて、
-            <span class="no-break-long">
-              アルツハイマー病・パーキンソン病・てんかんなど
-            </span>
-            神経内科疾患の病態理解と臨床応用をめざすコミュニティです。
-          </p>
-          <p class="hero-sub">
-            2ヶ月に1回のオンラインセミナーを通じて、<br />
-            学生・研究者・臨床家が分野を越えて議論する場を提供します。
-          </p>
+            <!-- 右：脳画像 -->
+            <div class="hero-image">
+              <img src="image/brain-hero.png" alt="Brain visualization" class="hero-img" />
+            </div>
+          </div>
 
-          <div class="hero-actions">
+          <!-- センターCTA & フロー -->
+          <div class="hero-cta-center">
+            <div class="cta-tag">Registration</div>
+            <p class="cta-main-text">研究者・学生・臨床家の皆様の参加をお待ちしています。<br />案内および会員登録はこちらから。</p>
             <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=g7JUf-0iPEqpRHX3VeWDBuUgYim7RQ9FtolDVhQvkeJUQUdHRDlSTEJDVEc0SFM5MFNEVlZPUkRVMC4u"
-              class="btn special" target="_blank">
-              CNCに参加登録する
+              target="_blank" class="btn-studio">
+              CNC 参加登録フォーム
             </a>
-            <a href="#next" class="btn primary">次回セミナー情報を見る</a>
-            <a href="archive.html" class="btn ghost">過去セミナーをみる</a>
+
+            <!-- 登録後の流れ -->
+            <div class="registration-flow-integrated">
+              <div class="flow-integrated-header">
+                <span class="flow-label-en">Registration Process</span>
+                <p class="flow-integrated-title">参加登録からセミナー当日までの流れ</p>
+              </div>
+              <div class="participation-flow">
+                <div class="flow-item">
+                  <span class="flow-step">STEP 01</span>
+                  <span class="flow-text">参加登録</span>
+                  <span class="flow-subtext">専用フォームから登録</span>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-item">
+                  <span class="flow-step">STEP 02</span>
+                  <span class="flow-text">案内メールを受信</span>
+                  <span class="flow-subtext">Zoom URLが届きます</span>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-item">
+                  <span class="flow-step">STEP 03</span>
+                  <span class="flow-text">当日アクセス</span>
+                  <span class="flow-subtext">時間になったら入室</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- 右：脳画像 -->
-        <div class="hero-image">
-          <img src="image/brain-hero.png" alt="Brain Image">
-        </div>
-
       </div>
     </section>
 
@@ -91,19 +115,15 @@
     <!-- 次回セミナー -->
     <section id="next" class="section">
       <div class="container">
+
         <div class="section-header">
           <h2>第20回 Computational Neurology Club Seminar</h2>
           <p>次回開催予定のセミナー情報</p>
         </div>
-
-        <div class="event-layout">
+        <div class="event-single-layout">
           <div class="event-main">
-            <div class="tag-row">
-              <span class="tag">オンライン</span>
-              <span class="tag">Functional Connectivity</span>
-              <span class="tag">Connector Hubs</span>
-              <span class="tag">Neuroimaging</span>
-            </div>
+
+            <span class="talk-label">Talk Title</span>
             <h3 class="event-title">
               Connector hubs and their involvement in neurological and psychiatric disorders
             </h3>
@@ -113,7 +133,7 @@
                 <dt>講演者</dt>
                 <dd>
                   <a href="https://profs.provost.nagoya-u.ac.jp/html/100007168_ja.html" target="_blank" rel="noopener"
-                    style="font-size: 1.1rem; display: block; margin-bottom: 4px;">
+                    style="font-size: 1.1rem; font-weight: 700; display: block; margin-bottom: 4px;">
                     BAGARINAO Epifanio Jr Tila
                   </a>
                   <span style="font-size: 0.9rem; color: var(--text-muted); display: block;">名古屋大学 脳とこころの研究センター</span>
@@ -121,11 +141,17 @@
               </div>
               <div>
                 <dt>日時</dt>
-                <dd>2026年1月30日（金）16:00–17:30 JST</dd>
+                <dd>
+                  <span class="date-highlight">2026年1月30日（金）</span>
+                  <span class="time-highlight">16:00–17:30 JST</span>
+                </dd>
               </div>
               <div>
                 <dt>開催形式</dt>
-                <dd>オンライン（Zoom）</dd>
+                <dd>
+                  オンライン<br />
+                  <span style="font-size: 0.9rem; color: var(--text-muted);">(Zoom)</span>
+                </dd>
               </div>
             </dl>
 
@@ -186,74 +212,83 @@
             </div>
           </div>
 
-          <aside class="event-side">
-            <div class="side-card">
-              <h4>こんな方におすすめ</h4>
-              <ul>
-                <li>神経・精神疾患のネットワーク解析に興味のある方</li>
-                <li>安静時fMRIを用いたコネクトーム解析に関心のある研究者・学生</li>
-                <li>画像統計によるバイオマーカー開発や疾患分類を目指す方</li>
-              </ul>
-            </div>
-            <div class="side-card">
-              <h4>参加方法</h4>
-              <ol>
-                <li>上記フォームより事前登録</li>
-                <li>登録完了メールに記載の Zoom URL を確認</li>
-                <li>開催時間になりましたらアクセスしてください</li>
-              </ol>
-            </div>
-          </aside>
+
         </div>
       </div>
     </section>
 
 
+    <section class="section archive-stats">
+      <div class="container">
+        <div class="archive-bar">
+          <div class="bar-stats">
+            <div class="stat-item">
+              <span class="stat-number">20</span>
+              <span class="stat-label">Seminars</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24</span>
+              <span class="stat-label">Speakers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Connections</span>
+            </div>
+          </div>
+          <div class="bar-divider"></div>
+          <a href="archive.html" class="bar-link">
+            Explore Insights from the Archive <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- About -->
-    <section id="about" class="section section-alt">
+    <section id="about" class="section about-section">
       <div class="container">
         <div class="section-header">
           <h2>About</h2>
-          <p>計算論的神経内科学という新しい分野の立ち上げを目指して</p>
         </div>
-        <div class="two-column">
-          <div class="column">
+        <div class="about-content">
+          <div class="about-text">
+            <p class="lead">
+              Computational Neurology研究会は、計算論的な立場から神経内科疾患を体系化し、新たな学問領域として確立することを目指しています。
+            </p>
             <p>
-              計算論的神経科学（Computational Neuroscience）は数理的アプローチを用いて脳や心を研究する分野です。
-              計算論的精神医学（Computational Psychiatry）は、この中で統合失調症などの精神医学を扱う領域で、
-              <a href="https://cpsyjournal.org/?utm_source=chatgpt.com">
-                同名の国際雑誌（Computational Psychiatry） </a>が刊行され近年国際的にも認められる分野となっています。
-              一方で、脳や心の疾患ですがアルツハイマー病やパーキンソン病といった神経変性疾患、
-              てんかんや脳卒中など神経内科学(Neurology)に属する疾患に関して、
-              計算論的な立場からまとまった分野としての取り扱いがなされていません。
+              計算論的神経科学（Computational Neuroscience）は数理的アプローチを用いて脳や心を研究する分野です。計算論的精神医学（Computational
+              Psychiatry）は、この中で統合失調症などの精神医学を扱う領域で、同名の国際雑誌（Computational Psychiatry）が刊行され近年国際的にも認められる分野となっています。
+            </p>
             <p>
-              Computational Neurology研究会ではこれらの疾患に対する新たな分野を立ち上げることを目指しています。
-              具体的な方向性としては、2ヶ月に1回の開催で日本における関心を調査し、コミュニティを作成することを目標にしています。
-              学生、研究者の参加を歓迎します。原則的にオンラインでの開催を行う予定です。
+              一方で、アルツハイマー病やパーキンソン病といった神経変性疾患、てんかんや脳卒中など神経内科学に属する疾患に関しては、まだ計算論的な立場からの体系化が十分ではありません。
+            </p>
+            <p>
+              本研究会では、2ヶ月に1回の開催を通じて日本における関心を調査し、強固なコミュニティを作成することを目標にしています。学生、研究者の参加を歓迎します。
             </p>
           </div>
-          <div class="column">
-            <div class="info-card">
-              <h3>共催</h3>
-              <ul>
-                　　　　 <li>
-                  <a href="https://braidyn-bc.jp/" target="_blank" rel="noopener noreferrer">
-                    日本学術振興会 学術変革領域A「行動変容生物学」
-                  </a>
-                </li>
-              </ul>
+
+          <div class="details-grid">
+            <div class="detail-item">
+              <h3>Co-host / 共催</h3>
+              <div class="detail-content">
+                <a href="https://braidyn-bc.jp/" target="_blank" rel="noopener noreferrer">
+                  日本学術振興会 学術変革領域A「行動変容生物学」
+                </a>
+              </div>
             </div>
-            <div class="info-card">
-              <h3>開催概要</h3>
-              <ul>
-                <li>形式：オンライン（Zoom）またはハイブリット</li>
-                <li>頻度：2ヶ月に1回を目安に開催</li>
-                <li>言語：日本語（一部講演により英語の可能性あり）</li>
-              </ul>
+            <div class="detail-item">
+              <h3>Format / 形式</h3>
+              <div class="detail-content">オンライン（Zoom）またはハイブリッド</div>
+            </div>
+            <div class="detail-item">
+              <h3>Frequency / 頻度</h3>
+              <div class="detail-content">2ヶ月に1回を目安に開催</div>
+            </div>
+            <div class="detail-item">
+              <h3>Language / 言語</h3>
+              <div class="detail-content">日本語（一部講演により英語の可能性あり）</div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
