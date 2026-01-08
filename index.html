@@ -70,17 +70,30 @@
             </div>
           </div>
 
-          <!-- センターCTA -->
-          <div class="hero-cta-center">
-            <div class="cta-tag">Registration</div>
-            <p class="cta-main-text">研究者・学生・臨床家の皆様の参加をお待ちしています。<br />案内および会員登録はこちらから。</p>
-            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=g7JUf-0iPEqpRHX3VeWDBuUgYim7RQ9FtolDVhQvkeJUQUdHRDlSTEJDVEc0SFM5MFNEVlZPUkRVMC4u"
-              target="_blank" class="btn-studio">
-              CNC 参加登録フォーム
-            </a>
+          <div class="hero-actions-unit">
+            <!-- Primary Action: Registration -->
+            <div class="main-cta-area">
+              <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=g7JUf-0iPEqpRHX3VeWDBuUgYim7RQ9FtolDVhQvkeJUQUdHRDlSTEJDVEc0SFM5MFNEVlZPUkRVMC4u"
+                target="_blank" class="btn-premium-register">
+                <span class="btn-inner">
+                  <span class="btn-en">Join Community</span>
+                  <span class="btn-jp">CNCに参加登録する</span>
+                </span>
+                <div class="btn-shimmer"></div>
+              </a>
+            </div>
+
+            <!-- Secondary Navigation -->
+            <div class="hero-secondary-nav">
+              <a href="#next" class="hero-nav-item">
+                <span class="nav-icon">○</span> Next Seminar
+              </a>
+              <a href="archive.html" class="hero-nav-item">
+                <span class="nav-icon">○</span> Archive
+              </a>
+            </div>
           </div>
         </div>
-      </div>
     </section>
 
 
@@ -88,133 +101,128 @@
     <!-- 次回セミナー -->
     <section id="next" class="section">
       <div class="container">
-
         <div class="section-header">
-          <h2>第20回 Computational Neurology Club Seminar</h2>
-          <p>次回開催予定のセミナー情報</p>
+          <h2>Upcoming Seminars</h2>
+          <p>次回のセミナー情報</p>
         </div>
-        <div class="event-single-layout">
-          <div class="event-main">
 
-            <span class="talk-label">Talk Title</span>
-            <h3 class="event-title">
-              Connector hubs and their involvement in neurological and psychiatric disorders
-            </h3>
+        <div class="upcoming-events-grid">
+          <!-- 第20回 セミナー -->
+          <div class="event-card-compact">
+            <div class="event-card-header">
+              <span class="seminar-number">第20回</span>
+              <span class="talk-label">Talk Title</span>
+              <h3 class="event-title-compact">
+                BrainODE: Longitudinal Brain Shape Modeling and Prediction using Neural ODEs
+              </h3>
+            </div>
 
-            <dl class="event-detail">
-              <div>
-                <dt>講演者</dt>
-                <dd>
-                  <a href="https://profs.provost.nagoya-u.ac.jp/html/100007168_ja.html" target="_blank" rel="noopener"
-                    style="font-size: 1.1rem; font-weight: 700; display: block; margin-bottom: 4px;">
-                    BAGARINAO Epifanio Jr Tila
-                  </a>
-                  <span style="font-size: 0.9rem; color: var(--text-muted); display: block;">名古屋大学 脳とこころの研究センター</span>
-                </dd>
+            <div class="event-card-body">
+              <dl class="event-detail-mini">
+                <div class="detail-row">
+                  <dt>講演者</dt>
+                  <dd>
+                    <span class="speaker-name">Wonjung Park</span>
+                    <span class="speaker-aff">KAIST, Ph.D. Student</span>
+                  </dd>
+                </div>
+                <div class="detail-row">
+                  <dt>日時</dt>
+                  <dd>
+                    <span class="date-text">2026年1月22日（木）</span>
+                    <span class="time-text">15:00–16:30 JST</span>
+                  </dd>
+                </div>
+                <div class="detail-row">
+                  <dt>会場</dt>
+                  <dd>オンライン (Zoom)</dd>
+                </div>
+              </dl>
+
+              <div class="event-abstract-compact">
+                <p>
+                  This talk presents BrainODE, a novel framework for the longitudinal modeling and prediction of brain
+                  structures—specifically the hippocampus and lateral ventricles. As these structures serve as
+                  structural biomarkers for neurodegenerative diseases, accurately predicting their deformation is vital
+                  for early intervention. Our methodology leverages Neural Ordinary Differential Equations (NeuralODEs)
+                  to learn the instantaneous deformation of brain shapes as a function of age and cognitive status. By
+                  training on longitudinal datasets in mesh representation, BrainODE effectively captures medical priors
+                  that reflect how aging and cognitive status drive morphological changes. We anticipate this technique
+                  offers a promising path toward the early detection and personalized tracking of neurodegenerative
+                  progression.
+                </p>
               </div>
-              <div>
-                <dt>日時</dt>
-                <dd>
-                  <span class="date-highlight">2026年1月30日（金）</span>
-                  <span class="time-highlight">16:00–17:30 JST</span>
-                </dd>
-              </div>
-              <div>
-                <dt>開催形式</dt>
-                <dd>
-                  オンライン<br />
-                  <span style="font-size: 0.9rem; color: var(--text-muted);">(Zoom)</span>
-                </dd>
-              </div>
-            </dl>
-
-            <div class="event-abstract">
-              <p>
-                Connector hubs are specialized brain regions characterized by their extensive connectivity across
-                multiple brain networks. When these hubs are impaired, disruptions can cascade across multiple networks,
-                potentially contributing to diverse neurological and psychiatric disorders. In this seminar, I will
-                discuss our research on the role of connector hubs in such conditions. First, I will introduce a network
-                metric called functional connectivity overlap ratio (FCOR) that we recently developed which leverages
-                resting-state functional MRI data to identify connector hubs and characterize their alterations. I will
-                then demonstrate the application of this metric in identifying connector hubs in healthy brains [1-3],
-                drawing on data from our aging cohort study. Next, I will present findings on connector hub alterations
-                across several disorders, including Parkinson’s disease [4], essential tremor [5], schizophrenia [6],
-                and major depressive disorder, among others. Finally, I will also present possible application on the
-                use of the FCOR profiles of affected hub regions as neuroimaging biomarkers for classifying patients
-                with these disorders from controls.
-              </p>
-
-              <h4
-                style="margin-top: 2rem; font-size: 1.1rem; color: #fff; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                REFERENCES</h4>
-              <ul
-                style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted); list-style: none; padding-left: 0;">
-                <li style="margin-bottom: 0.75rem; padding-left: 1.2rem; position: relative;">
-                  <span style="position: absolute; left: 0; color: var(--accent);">[1]</span>
-                  Epifanio Bagarinao, Hirohisa Watanabe, Satoshi Maesawa, et. al., Identifying the brain's connector
-                  hubs at the voxel level using functional connectivity overlap ratio, <em>Neuroimage</em> 222 (2020)
-                  117241
-                </li>
-                <li style="margin-bottom: 0.75rem; padding-left: 1.2rem; position: relative;">
-                  <span style="position: absolute; left: 0; color: var(--accent);">[2]</span>
-                  Kazuya Kawabata, Epifanio Bagarinao, Hirohisa Watanabe, et. al., Bridging large-scale cortical
-                  networks: Integrative and function-specific hubs in the thalamus, <em>iScience</em> 24 (2021) 103106
-                </li>
-                <li style="margin-bottom: 0.75rem; padding-left: 1.2rem; position: relative;">
-                  <span style="position: absolute; left: 0; color: var(--accent);">[3]</span>
-                  Kazuya Kawabata, Epifanio Bagarinao, Hirohisa Watanabe, et. al., Functional connector hubs in the
-                  cerebellum, <em>Neuroimage</em> 257 (2022) 119263
-                </li>
-                <li style="margin-bottom: 0.75rem; padding-left: 1.2rem; position: relative;">
-                  <span style="position: absolute; left: 0; color: var(--accent);">[4]</span>
-                  Epifanio Bagarinao, Kazuya Kawabata, Hirohisa Watanabe, et. al., Connectivity impairment of cerebellar
-                  and sensorimotor connector hubs in Parkinson’s disease, <em>Brain Communications</em> 4 (2022) fcac214
-                </li>
-                <li style="margin-bottom: 0.75rem; padding-left: 1.2rem; position: relative;">
-                  <span style="position: absolute; left: 0; color: var(--accent);">[5]</span>
-                  Epifanio Bagarinao, Satoshi Maesawa, Sachiko Kato, et. al., Cerebellar and thalamic connector hubs
-                  facilitate the involvement of visual and cognitive networks in essential tremor, <em>Parkinsonism &
-                    Related Disorders</em> 121 (2024) 106034
-                </li>
-                <li style="margin-bottom: 0.75rem; padding-left: 1.2rem; position: relative;">
-                  <span style="position: absolute; left: 0; color: var(--accent);">[6]</span>
-                  Maeri Yamamoto, Epifanio Bagarinao, Masanori Shimamoto, et. al., Involvement of cerebellar and
-                  subcortical connector hubs in schizophrenia, <em>NeuroImage: Clinical</em> 35 (2022) 103140
-                </li>
-              </ul>
             </div>
           </div>
 
+          <!-- 第21回 セミナー -->
+          <div class="event-card-compact">
+            <div class="event-card-header">
+              <span class="seminar-number">第21回</span>
+              <span class="talk-label">Talk Title</span>
+              <h3 class="event-title-compact">
+                Connector hubs and their involvement in neurological and psychiatric disorders
+              </h3>
+            </div>
 
+            <div class="event-card-body">
+              <dl class="event-detail-mini">
+                <div class="detail-row">
+                  <dt>講演者</dt>
+                  <dd>
+                    <a href="https://profs.provost.nagoya-u.ac.jp/html/100007168_ja.html" target="_blank" rel="noopener"
+                      class="speaker-link">
+                      BAGARINAO Epifanio Jr Tila
+                    </a>
+                    <span class="speaker-aff">名古屋大学 脳とこころの研究センター</span>
+                  </dd>
+                </div>
+                <div class="detail-row">
+                  <dt>日時</dt>
+                  <dd>
+                    <span class="date-text">2026年1月30日（金）</span>
+                    <span class="time-text">16:00–17:30 JST</span>
+                  </dd>
+                </div>
+                <div class="detail-row">
+                  <dt>会場</dt>
+                  <dd>オンライン (Zoom)</dd>
+                </div>
+              </dl>
+
+              <div class="event-abstract-compact">
+                <p>
+                  Connector hubs are specialized brain regions characterized by their extensive connectivity across
+                  multiple brain networks. When these hubs are impaired, disruptions can cascade across multiple
+                  networks, potentially contributing to diverse neurological and psychiatric disorders. In this seminar,
+                  I will discuss our research on the role of connector hubs in such conditions. First, I will introduce
+                  a network metric called functional connectivity overlap ratio (FCOR) that we recently developed which
+                  leverages resting-state functional MRI data to identify connector hubs and characterize their
+                  alterations. I will then demonstrate the application of this metric in identifying connector hubs in
+                  healthy brains [1-3], drawing on data from our aging cohort study. Next, I will present findings on
+                  connector hub alterations across several disorders, including Parkinson’s disease [4], essential
+                  tremor [5], schizophrenia [6], and major depressive disorder, among others. Finally, I will also
+                  present possible application on the use of the FCOR profiles of affected hub regions as neuroimaging
+                  biomarkers for classifying patients with these disorders from controls.
+                </p>
+
+                <h4 class="ref-title">REFERENCES</h4>
+                <ul class="ref-list">
+                  <li><span>[1]</span> Epifanio Bagarinao, et al., <em>Neuroimage</em> 222 (2020) 117241</li>
+                  <li><span>[2]</span> Kazuya Kawabata, et al., <em>iScience</em> 24 (2021) 103106</li>
+                  <li><span>[3]</span> Kazuya Kawabata, et al., <em>Neuroimage</em> 257 (2022) 119263</li>
+                  <li><span>[4]</span> Epifanio Bagarinao, et al., <em>Brain Communications</em> 4 (2022) fcac214</li>
+                  <li><span>[5]</span> Epifanio Bagarinao, et al., <em>Parkinsonism & Related Disorders</em> 121 (2024)
+                    106034</li>
+                  <li><span>[6]</span> Maeri Yamamoto, et al., <em>NeuroImage: Clinical</em> 35 (2022) 103140</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-
-    <section class="section archive-stats">
-      <div class="container">
-        <div class="archive-bar">
-          <div class="bar-stats">
-            <div class="stat-item">
-              <span class="stat-number">20</span>
-              <span class="stat-label">Seminars</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">24</span>
-              <span class="stat-label">Speakers</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">∞</span>
-              <span class="stat-label">Connections</span>
-            </div>
-          </div>
-          <div class="bar-divider"></div>
-          <a href="archive.html" class="bar-link">
-            Explore Insights from the Archive <span class="arrow">→</span>
-          </a>
-        </div>
-      </div>
-    </section>
 
     <!-- About -->
     <section id="about" class="section about-section">
@@ -229,7 +237,8 @@
             </p>
             <p>
               計算論的神経科学（Computational Neuroscience）は数理的アプローチを用いて脳や心を研究する分野です。計算論的精神医学（Computational
-              Psychiatry）は、この中で統合失調症などの精神医学を扱う領域で、同名の国際雑誌（Computational Psychiatry）が刊行され近年国際的にも認められる分野となっています。
+              Psychiatry）は、この中で統合失調症などの精神医学を扱う領域で、同名の国際雑誌（<a href="https://cpsyjournal.org/" target="_blank"
+                rel="noopener noreferrer">Computational Psychiatry</a>）が刊行され近年国際的にも認められる分野となっています。
             </p>
             <p>
               一方で、アルツハイマー病やパーキンソン病といった神経変性疾患、てんかんや脳卒中など神経内科学に属する疾患に関しては、まだ計算論的な立場からの体系化が十分ではありません。
