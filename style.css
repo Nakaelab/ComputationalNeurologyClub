@@ -193,8 +193,14 @@ img {
 /* ========= 繝偵・繝ｭ繝ｼ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ ========= */
 .hero {
   position: relative;
-  padding: 80px 0 20px;
+  padding: 100px 0 60px;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0 60px;
+  }
 }
 
 /* 閭梧勹陬・｣ｾ */
@@ -268,10 +274,9 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 40px;
   width: 100%;
-  gap: 24px;
-  /* 隙間を詰めて一体感を出す */
+  gap: 32px;
 }
 
 .main-cta-area {
@@ -617,8 +622,8 @@ img {
 /* 繧ｹ繝槭・逕ｨ */
 @media (max-width: 768px) {
   .section {
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 80px;
   }
 }
 
@@ -1376,27 +1381,23 @@ img {
 
 @media (max-width: 840px) {
   .hero-inner {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
     gap: 40px;
+  }
+
+  .hero-image {
+    justify-content: center;
+    order: 2;
+  }
+
+  .hero-text {
+    order: 1;
   }
 
   .hero-text p {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 16px;
-    padding: 0 20px;
-    /* Add some padding to prevent full edge-to-edge */
-  }
-
-  .hero-actions .btn {
-    width: 100%;
-    justify-content: center;
   }
 
   .event-layout {
@@ -1476,19 +1477,30 @@ img {
 
 /* 繝懊ち繝ｳ險ｭ螳壹・繝ｪ繧ｻ繝・ヨ縺ｨ謨ｴ逅・*/
 @media (max-width: 768px) {
-  .hero-inner {
+  .btn-premium-register {
+    padding: 18px 40px;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .hero-actions-unit {
+    margin-top: 30px;
+    gap: 20px;
+  }
+
+  .hero-secondary-nav {
     flex-direction: column;
-    text-align: center;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
   }
 
-  .hero-actions {
+  .hero-nav-item {
+    width: 100%;
     justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero-image {
-    justify-content: center;
-    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
 
