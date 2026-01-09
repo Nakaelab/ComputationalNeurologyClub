@@ -285,19 +285,85 @@ img {
   z-index: 2;
 }
 
-.btn-premium-register {
+.hero-actions-console {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.console-btn {
   position: relative;
-  display: block;
-  background: #fff;
-  padding: 20px 60px;
-  /* 少しコンパクトに */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 24px 20px;
   border-radius: 20px;
   text-decoration: none;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  min-height: 100px;
+}
+
+.console-btn.primary {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.6);
   box-shadow:
-    0 20px 40px -10px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
+    0 0 30px rgba(59, 130, 246, 0.1),
+    inset 0 0 25px rgba(59, 130, 246, 0.15);
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.1), inset 0 0 15px rgba(59, 130, 246, 0.1);
+  }
+
+  50% {
+    border-color: rgba(59, 130, 246, 0.9);
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.3), inset 0 0 30px rgba(59, 130, 246, 0.2);
+  }
+}
+
+.console-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.console-btn:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.console-btn.primary:hover {
+  background: rgba(59, 130, 246, 0.18);
+  border-color: #3b82f6;
+  box-shadow:
+    0 20px 60px -10px rgba(59, 130, 246, 0.5),
+    0 0 30px rgba(59, 130, 246, 0.3);
+  transform: translateY(-6px) scale(1.02);
+}
+
+.console-btn:hover::before {
+  opacity: 1;
 }
 
 .btn-inner {
@@ -310,19 +376,21 @@ img {
 }
 
 .btn-en {
-  font-size: 18px;
-  font-weight: 800;
-  color: #030712;
+  font-size: 19px;
+  font-weight: 700;
+  color: #fff;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.15em;
   line-height: 1;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
 .btn-jp {
-  font-size: 10px;
-  font-weight: 700;
-  color: rgba(3, 7, 18, 0.5);
-  letter-spacing: 0.05em;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-top: 4px;
 }
 
 .btn-shimmer {
@@ -361,43 +429,9 @@ img {
   }
 }
 
-/* Secondary Navigation - グルーピングを強化 */
+/* Secondary Navigation - Not used in the new console layout but kept for safety if needed elsewhere */
 .hero-secondary-nav {
-  display: flex;
-  gap: 8px;
-  /* リンクを近づける */
-  align-items: center;
-  padding: 4px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-}
-
-.hero-nav-item {
-  font-size: 12px;
-  font-weight: 600;
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border-radius: 100px;
-  opacity: 0.6;
-  letter-spacing: 0.05em;
-  transition: all 0.3s ease;
-}
-
-.nav-icon {
-  font-size: 8px;
-  color: var(--accent);
-}
-
-.hero-nav-item:hover {
-  opacity: 1;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--accent);
+  display: none;
 }
 
 /* ホバーエフェクト */
@@ -1476,31 +1510,46 @@ img {
 /* .nav-btn-join { ... } */
 
 /* 繝懊ち繝ｳ險ｭ螳壹・繝ｪ繧ｻ繝・ヨ縺ｨ謨ｴ逅・*/
-@media (max-width: 768px) {
-  .btn-premium-register {
-    padding: 18px 40px;
-    width: 100%;
-    max-width: 340px;
+@media (max-width: 840px) {
+  .hero-actions-console {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 40px;
+    padding: 0 20px;
   }
 
-  .hero-actions-unit {
-    margin-top: 30px;
-    gap: 20px;
+  .console-btn {
+    flex: 1 1 calc(50% - 10px);
+    /* 2x2 grid initial style */
+    min-width: 140px;
+    padding: 20px 10px;
+    min-height: 80px;
+    border-radius: 16px;
   }
 
-  .hero-secondary-nav {
+  /* Make the primary button full width if needed, or keep all equal */
+  .console-btn.primary {
+    flex: 1 1 100%;
+  }
+
+  .btn-en {
+    font-size: 15px;
+    letter-spacing: 0.05em;
+  }
+
+  .btn-jp {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions-console {
     flex-direction: column;
-    gap: 4px;
-    background: transparent;
-    border: none;
-    backdrop-filter: none;
   }
 
-  .hero-nav-item {
+  .console-btn {
+    flex: 1 1 auto;
     width: 100%;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
 
