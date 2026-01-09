@@ -1,16 +1,16 @@
-﻿/* ========= 蜈ｱ騾夲ｼ夊牡繧・ｽｱ縺ｪ縺ｩ縺ｮ螟画焚 ========= */
+/* ========= 共通：色や影などの変数 ========= */
 :root {
-  /* 繧医ｊ豺ｱ縺ｿ縺ｮ縺ゅｋ閭梧勹濶ｲ */
+  /* より深みのある背景色 */
   --bg: #030712;
   --bg-alt: #0f172a;
   --card: #111827;
 
-  /* 繧｢繧ｯ繧ｻ繝ｳ繝医き繝ｩ繝ｼ: 魄ｮ繧・°縺輔→遏･諤ｧ繧呈─縺倥ｋ髱・*/
+  /* アクセントカラー: 鮮やかさと知性を感じる青*/
   --accent: #3b82f6;
   --accent-glow: rgba(59, 130, 246, 0.5);
   --accent-soft: rgba(59, 130, 246, 0.1);
 
-  /* 繝・く繧ｹ繝医き繝ｩ繝ｼ */
+  /* テキストカラー */
   --text: #f8fafc;
   --text-muted: #94a3b8;
 
@@ -19,16 +19,16 @@
   --radius-lg: 16px;
   --radius-xl: 24px;
 
-  /* 遶倶ｽ捺─繧貞・縺吶す繝｣繝峨え */
+  /* 立体感を出すシャドウ */
   --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
   --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.15);
 
-  /* 繧ｰ繝ｩ繝・・繧ｷ繝ｧ繝ｳ */
+  /* グラデーション */
   --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
   --gradient-dark: linear-gradient(to bottom, #0f172a, #030712);
 }
 
-/* ========= 繝ｪ繧ｻ繝・ヨ & 蝓ｺ譛ｬ險ｭ螳・========= */
+/* ========= リセット & 基本設定========= */
 *,
 *::before,
 *::after {
@@ -48,7 +48,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* --- 繝ｪ繝ｳ繧ｯ --- */
+/* --- リンク --- */
 a {
   color: #60a5fa;
   text-decoration: none;
@@ -71,7 +71,6 @@ img {
   padding: 0 24px;
 }
 
-/* ========= 繝倥ャ繝繝ｼ & 繝翫ン ========= */
 .site-header {
   position: sticky;
   top: 0;
@@ -128,7 +127,7 @@ img {
   white-space: nowrap;
 }
 
-/* PC 繝翫ン */
+/* PC ナビ */
 .nav {
   display: flex;
   align-items: center;
@@ -166,7 +165,7 @@ img {
   width: 100%;
 }
 
-/* 繝倥ャ繝繝ｼ蟆ら畑 繧ｹ繧ｿ繧､繝ｪ繝・す繝･繝懊ち繝ｳ */
+
 .nav-btn-stylish {
   padding: 8px 20px;
   background: var(--gradient-primary);
@@ -186,11 +185,11 @@ img {
 
 .nav-btn-stylish::after {
   display: none !important;
-  /* 荳狗ｷ壹・蜃ｺ縺輔↑縺・*/
+  /* 下線は出さない*/
 }
 
 
-/* ========= 繝偵・繝ｭ繝ｼ繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ ========= */
+/* ========= ヒーローセクション ========= */
 .hero {
   position: relative;
   padding: 100px 0 60px;
@@ -203,7 +202,7 @@ img {
   }
 }
 
-/* 閭梧勹陬・｣ｾ */
+/* 背景装飾 */
 .hero::before {
   content: "";
   position: absolute;
@@ -259,7 +258,7 @@ img {
 }
 
 
-/* ========= 繝・じ繧､繝翫・繧ｺ繝ｻ繧ｹ繧ｿ繧ｸ繧ｪ CTA ========= */
+/* ========= デザイナーズ・スタジオ CTA ========= */
 
 .hero-content-wrapper {
   display: flex;
@@ -267,7 +266,7 @@ img {
   gap: 30px;
 }
 
-/* ========= 繝励Ξ繝溘い繝繝ｻ繧ｹ繧ｿ繧ｸ繧ｪ繝ｻ繧ｳ繝ｳ繝昴ず繧ｷ繝ｧ繝ｳ CTA ========= */
+/* ========= プレミアム・スタジオ・コンポジション CTA ========= */
 
 /* ========= Designer's Editorial Console CTA ========= */
 .hero-actions-unit {
@@ -577,7 +576,7 @@ img {
 }
 
 
-/* 邨ｱ蜷医＆繧後◆繝輔Ο繝ｼ縺ｮ繧ｹ繧ｿ繧､繝ｫ */
+/* 統合されたフローのスタイル */
 .registration-flow-integrated {
   width: 100%;
   margin-top: 48px;
@@ -609,12 +608,12 @@ img {
   letter-spacing: 0.05em;
 }
 
-/* 莉･蜑阪・繝懊ち繝ｳ繧呈柑豸・*/
+/* 以前のボタンを抹消*/
 .hero-actions {
   display: none;
 }
 
-/* 繧ｹ繝槭・縺ｮ譎ゅ・繝懊ち繝ｳ縺檎ｸｦ縺ｫ荳ｦ縺ｶ縺ｮ縺ｧ縲√・繝ｼ繧ｸ繝ｳ隱ｿ謨ｴ・域里蟄呂SS縺ｧ gap 縺悟柑縺・※縺・ｌ縺ｰ荳崎ｦ√〒縺吶′蠢ｵ縺ｮ縺溘ａ・・*/
+/* スマホの時のボタンが縦に並ぶので、マージン調整（既存CSSで gap が効いていれば不要ですが念のため）*/
 @media (max-width: 640px) {
   .hero-actions {
     flex-direction: column;
@@ -630,30 +629,27 @@ img {
 }
 
 .hero-image {
-  /* 蠢・ｦ√↓蠢懊§縺ｦ菴咲ｽｮ隱ｿ謨ｴ */
+  /* 必要に応じて位置調整 */
   position: relative;
   z-index: 1;
 }
 
 .hero-image img {
-  /* 逕ｻ蜒上・蜻ｨ蝗ｲ・育音縺ｫ蝗幃嚆・峨ｒ縺ｵ繧上▲縺ｨ縺ｼ縺九＠縺ｦ閭梧勹縺ｫ鬥ｴ譟薙∪縺帙ｋ */
+  /* 画像の周囲（特に四隅）をふわっとぼかして背景に馴染ませる */
   -webkit-mask-image: radial-gradient(closest-side, black 60%, transparent 100%);
   mask-image: radial-gradient(closest-side, black 60%, transparent 100%);
 
-  /* 繧ゅ＠縲悟ｷｦ荳翫阪□縺代ｒ繧ゅ▲縺ｨ蠑ｷ縺乗ｶ医＠縺溘＞蝣ｴ蜷医・縲∽ｸ翫・2陦後ｒ豸医＠縺ｦ莉･荳九ｒ菴ｿ縺｣縺ｦ縺上□縺輔＞ */
-  /* -webkit-mask-image: linear-gradient(135deg, transparent 0%, black 25%); */
-  /* mask-image: linear-gradient(135deg, transparent 0%, black 25%); */
-}
+  
 
-/* ========= 繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ蜈ｱ騾夊ｨｭ螳・========= */
+/* ========= セクション共通設定========= */
 .section {
   padding-top: 40px;
-  /* 荳翫・菴咏區 */
+  /* 上の余白 */
   padding-bottom: 60px;
-  /* 荳九・菴咏區 */
+  /* 下の余白 */
 }
 
-/* 繧ｹ繝槭・逕ｨ */
+/* スマホ用 */
 @media (max-width: 768px) {
   .section {
     padding-top: 60px;
@@ -697,7 +693,7 @@ img {
   border-radius: 4px;
 }
 
-/* ========= 谺｡蝗槭そ繝溘リ繝ｼ ========= */
+/* ========= 次回セミナー ========= */
 .participation-flow {
   width: 100%;
   display: flex;
@@ -706,7 +702,7 @@ img {
   position: relative;
 }
 
-/* 縺ｻ縺ｮ縺九↑蜈峨・陬・｣ｾ */
+/* ほのかな光の装飾 */
 .participation-flow::before {
   content: "";
   position: absolute;
@@ -1053,7 +1049,7 @@ img {
   color: var(--text-muted);
 }
 
-/* 繧ｵ繧､繝峨き繝ｼ繝・*/
+/* サイドカード*/
 .side-card {
   background: var(--card);
   border: 1px solid var(--border-subtle);
@@ -1230,7 +1226,7 @@ img {
   opacity: 0.9;
 }
 
-/* 繧ｹ繝槭・隱ｿ謨ｴ */
+/* スマホ調整 */
 @media (max-width: 480px) {
   .about-section {
     padding: 60px 0;
@@ -1269,71 +1265,70 @@ img {
   gap: 24px;
 }
 
-/* 笘・ｿｮ豁｣: 繧ｫ繝ｼ繝牙・菴薙′繝ｪ繝ｳ繧ｯ縺ｫ縺ｪ繧九◆繧√｝adding-bottom縺ｨposition:relative繧定ｿｽ蜉 */
-.organizer-card {
-  /* 繧ｫ繝ｼ繝牙・菴薙′繝ｪ繝ｳ繧ｯ縺ｮ縺溘ａ<a>繧ｿ繧ｰ縺ｧ縺吶′縲√Ξ繧､繧｢繧ｦ繝医・flex-box縺ｧ隱ｿ謨ｴ */
+
+  /* カード全体がリンクのため<a>タグですが、レイアウトはflex-boxで調整 */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* 繝・く繧ｹ繝医ｒ蟾ｦ蟇・○縺ｫ縺吶ｋ縺溘ａ */
+  /* テキストを左寄せにするため */
   background: var(--card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
 
-  /* 荳九↓ResearchMap繝ｪ繝ｳ繧ｯ繧帝・鄂ｮ縺吶ｋ縺溘ａ縺ｮ菴咏區繧堤｢ｺ菫・*/
+  /* 下にResearchMapリンクを配置するための余白を確保*/
   padding: 24px;
   padding-bottom: 60px;
-  /* 繝ｪ繝ｳ繧ｯ繧帝・鄂ｮ縺吶ｋ繧ｹ繝壹・繧ｹ */
+  /* リンクを配置するスペース */
 
   text-decoration: none;
-  /* 繝ｪ繝ｳ繧ｯ縺ｮ荳狗ｷ壹ｒ豸医☆ */
+  /* リンクの下線を消す */
   transition: all 0.3s ease;
 
-  /* ResearchMap繧､繝ｳ繧ｸ繧ｱ繝ｼ繧ｿ繝ｼ縺ｮ邨ｶ蟇ｾ驟咲ｽｮ縺ｮ蝓ｺ貅悶↓縺吶ｋ */
+  /* ResearchMapインジケーターの絶対配置の基準にする */
   position: relative;
   overflow: hidden;
 }
 
 .organizer-card:hover {
   transform: translateY(-5px);
-  /* 繝帙ヰ繝ｼ譎ゅ↓髱偵＞蠅・阜邱壹→蠖ｱ縺ｧ蠑ｷ隱ｿ */
+  /* ホバー時に青い境界線と影で強調 */
   border-color: rgba(59, 130, 246, 0.4);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .organizer-main {
-  /* 蜷榊燕縺ｨ謇螻槭′蜈･繧九Γ繧､繝ｳ繧ｨ繝ｪ繧｢ */
+
   flex-grow: 1;
 }
 
-/* 笘・ｿｮ豁｣: <a>繧ｿ繧ｰ縺ｫ縺ｪ縺｣縺ｦ繧ょ錐蜑阪・濶ｲ繧堤區縺ｫ菫昴▽ */
+
 .organizer-main h3 {
   font-size: 16px;
-  /* 繧ｵ繧､繧ｺ邯ｭ謖・*/
+  /* サイズ維持*/
   margin: 0 0 4px;
   color: #fff;
 }
 
-/* 笘・ｿｮ豁｣: <a>繧ｿ繧ｰ縺ｫ縺ｪ縺｣縺ｦ繧よ園螻槭・濶ｲ繧偵げ繝ｬ繝ｼ縺ｫ菫昴▽ */
+/* 修正: <a>タグになっても所属の色をグレーに保つ */
 .org-affiliation {
   font-size: 12px;
-  /* 繧ｵ繧､繧ｺ邯ｭ謖・*/
+  /* サイズ維持*/
   color: var(--text-muted);
   margin: 0;
 }
 
 /* ==================================== */
-/* 笘・眠隕剰ｿｽ蜉: ResearchMap 繧､繝ｳ繧ｸ繧ｱ繝ｼ繧ｿ繝ｼ縺ｮ繧ｹ繧ｿ繧､繝ｫ */
+/* 新規追加: ResearchMap インジケーターのスタイル */
 /* ==================================== */
 .research-indicator {
-  /* 笘・＃隕∵悍縺ｮ豌ｴ濶ｲ縺ｨ蟆上＆縺・枚蟄励し繧､繧ｺ繧帝←逕ｨ */
+  /* ご要望の水色と小さい文字サイズを適用 */
   color: #60a5fa;
-  /* 譏弱ｋ縺・ｰｴ濶ｲ */
+  /* 明るい水色 */
   font-size: 13px;
-  /* 蟆上＆縺・し繧､繧ｺ */
+  /* 小さいサイズ */
   font-weight: 500;
 
-  /* 繧ｫ繝ｼ繝峨・譫蜀・ｷｦ荳九↓邨ｶ蟇ｾ驟咲ｽｮ */
+  /* カードの枠内左下に絶対配置 */
   position: absolute;
   bottom: 24px;
   left: 24px;
@@ -1342,13 +1337,13 @@ img {
   transition: color 0.2s ease;
 }
 
-/* 笘・眠隕剰ｿｽ蜉: 繧ｫ繝ｼ繝峨↓繝帙ヰ繝ｼ縺励◆縺ｨ縺阪・繧､繝ｳ繧ｸ繧ｱ繝ｼ繧ｿ繝ｼ縺ｮ濶ｲ螟牙喧 */
+/* 新規追加: カードにホバーしたときのインジケーターの色変化 */
 .organizer-card:hover .research-indicator {
   color: #93c5fd;
-  /* 繝帙ヰ繝ｼ譎ゅ・譏弱ｋ縺・ｰｴ濶ｲ */
+  /* ホバー時の明るい水色 */
 }
 
-/* ========= 繝輔ャ繧ｿ繝ｼ ========= */
+/* ========= フッター ========= */
 .site-footer {
   border-top: 1px solid var(--border-subtle);
   padding: 40px 0;
@@ -1363,7 +1358,7 @@ img {
   align-items: center;
 }
 
-/* ========= 繝ｬ繧ｹ繝昴Φ繧ｷ繝・========= */
+/* ========= レスポンシブ========= */
 .nav-toggle {
   display: none;
   background: none;
@@ -1472,27 +1467,27 @@ img {
   }
 }
 
-/* ========== 縺薙％縺九ｉ荳九・縲￣C繧貞性繧縲後☆縺ｹ縺ｦ縺ｮ逕ｻ髱｢縲阪〒譛牙柑縺ｫ縺吶ｋ險ｭ螳・========== */
+
 .seminar-title {
-  /* 譁・ｭ励し繧､繧ｺ・・3px縺ｯ蟆上＆縺吶℃繧九・縺ｧ16px縺・7px縺ｫ縺励∪縺・*/
+  /* 文字サイズ：13pxは小さすぎるので16px〜17pxにします*/
   font-size: 16px;
-  /* 陦碁俣 */
+  /* 行間 */
   line-height: 1.7;
   font-weight: 700;
   color: #fff;
-  /* 笘・㍾隕・ｼ壽枚蟄励・髢馴囈繧貞ｰ代＠隧ｰ繧√※縲・陦後↓蜿弱∪繧翫ｄ縺吶￥縺吶ｋ */
+  /* 重要：文字の間隔を少し詰めて、1行に収まりやすくする */
   letter-spacing: -0.05em;
-  /* 蜿ｳ縺ｮ菴咏區繧偵↑縺上＠縺ｦ繧ｹ繝壹・繧ｹ遒ｺ菫・*/
+  /* 右の余白をなくしてスペース確保*/
   padding-right: 0;
-  /* 縲後※縲阪′荳九↓關ｽ縺｡縺ｪ縺・ｈ縺・∝ｼｷ蛻ｶ逧・↓謾ｹ陦後Ν繝ｼ繝ｫ繧帝←逕ｨ */
+  
   word-break: break-all;
 }
 
-/* ========== 繧ｹ繝槭・縺ｮ譎ゅ□縺代・險ｭ螳・========== */
+/* ========== スマホの時だけの設定========== */
 @media (max-width: 768px) {
   .seminar-title {
     font-size: 15px;
-    /* 繧ｹ繝槭・縺ｧ縺ｯ蟆代＠蟆上＆縺・*/
+    /* スマホでは少し小さい*/
     line-height: 1.4;
   }
 }
@@ -1502,14 +1497,14 @@ img {
   color: var(--text-muted);
   margin-bottom: 32px;
   max-width: 540px;
-  /* 笘・ｿｽ蜉縺吶ｋCSS */
+  /* 追加するCSS */
   line-break: strict;
 }
 
-/* 笆ｼ 蝓ｺ譛ｬ縺ｮ繝懊ち繝ｳ險ｭ螳夲ｼ・C繝ｻ繧ｹ繝槭・蜈ｱ騾夲ｼ・- 荳崎ｦ√↓縺ｪ縺｣縺溘◆繧√さ繝｡繝ｳ繝医い繧ｦ繝医∪縺溘・蜑企勁 */
+
 /* .nav-btn-join { ... } */
 
-/* 繝懊ち繝ｳ險ｭ螳壹・繝ｪ繧ｻ繝・ヨ縺ｨ謨ｴ逅・*/
+/* ボタン設定のリセットと整理*/
 @media (max-width: 840px) {
   .hero-actions-console {
     display: flex !important;
