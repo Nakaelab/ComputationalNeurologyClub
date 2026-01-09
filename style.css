@@ -198,7 +198,8 @@ img {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 60px 0 20px;
+    padding: 60px 0 0;
+    /* 下の余白を完全になくす */
   }
 }
 
@@ -664,8 +665,9 @@ img {
 /* スマホ用 */
 @media (max-width: 768px) {
   .section {
-    padding-top: 30px;
-    padding-bottom: 60px;
+    padding-top: 10px;
+    /* 上の余白を最小限に */
+    padding-bottom: 50px;
   }
 }
 
@@ -690,6 +692,13 @@ img {
   color: var(--text-muted);
   font-size: 14px;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 24px;
+    /* スマホでは見出しの下の余白も半分に */
+  }
 }
 
 .section-tag {
@@ -1162,6 +1171,8 @@ img {
   max-width: 100%;
   text-align: left;
   margin-bottom: 24px;
+  word-break: break-word;
+  /* 英語の長い単語などで崩れないように */
 }
 
 .details-grid {
@@ -1252,21 +1263,31 @@ img {
 @media (max-width: 768px) {
   .about-text .lead {
     font-size: 18px;
+    margin-bottom: 24px;
+    text-align: left;
+    /* 中央寄せよりも左寄せの方が1行の幅を有効に使える */
+  }
+
+  .about-text {
+    padding: 32px 20px;
+    /* 内側の余白を大幅に減らして文字の入る幅を広げる */
+    border-radius: 24px;
+    margin-bottom: 40px;
+  }
+
+  .about-text p:not(.lead) {
+    font-size: 14px;
+    /* 文字を少し小さくして1行に入る文字数を増やす */
+    line-height: 1.7;
   }
 
   .about-section::before {
-    font-size: 120px;
+    font-size: 80px;
+    /* 背景文字を小さくして邪魔にならないようにする */
   }
 
-  .details-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 12px;
-    margin-top: 40px;
-  }
-
-  .detail-item {
-    padding: 24px 20px;
+  .about-section {
+    padding: 60px 0;
   }
 }
 
