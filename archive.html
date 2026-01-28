@@ -62,7 +62,8 @@
 
                 <div class="archive-tabs-container">
                     <div class="archive-tabs">
-                        <button class="tab-btn active" data-year="2025">2025</button>
+                        <button class="tab-btn active" data-year="2026">2026</button>
+                        <button class="tab-btn" data-year="2025">2025</button>
                         <button class="tab-btn" data-year="2024">2024</button>
                         <button class="tab-btn" data-year="2023">2023</button>
                         <div class="tab-slider"></div>
@@ -70,8 +71,46 @@
                 </div>
 
                 <div id="archive-content">
+                    <!-- 2026年 -->
+                    <div class="year-content active" id="content-2026">
+                        <h3 class="year-heading">2026年</h3>
+
+                        <!-- 第20回 -->
+                        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-20')">
+                            <div class="seminar-header" role="button" aria-expanded="false">
+                                <h3 class="seminar-title">第20回：BrainODE: Longitudinal Brain Shape Modeling and
+                                    Prediction using Neural ODEs</h3>
+                                <span class="toggle-icon">＋</span>
+                            </div>
+                            <ul class="seminar-info-list">
+                                <li><strong>講演者</strong>：Wonjung Park (KAIST, Ph.D. Student)</li>
+                                <li><strong>日時</strong>：2026年1月22日（木）15:00–16:30 JST</li>
+                                <li><strong>場所</strong>：オンライン (Zoom)</li>
+                            </ul>
+                            <div class="seminar-abstract" id="abstract-20">
+                                <p>概要：This talk presents BrainODE, a novel framework for the longitudinal modeling and
+                                    prediction of brain
+                                    structures—specifically the hippocampus and lateral ventricles. As these structures
+                                    serve as
+                                    structural biomarkers for neurodegenerative diseases, accurately predicting their
+                                    deformation is vital
+                                    for early intervention. Our methodology leverages Neural Ordinary Differential
+                                    Equations (NeuralODEs)
+                                    to learn the instantaneous deformation of brain shapes as a function of age and
+                                    cognitive status. By
+                                    training on longitudinal datasets in mesh representation, BrainODE effectively
+                                    captures medical priors
+                                    that reflect how aging and cognitive status drive morphological changes. We
+                                    anticipate this technique
+                                    offers a promising path toward the early detection and personalized tracking of
+                                    neurodegenerative
+                                    progression.</p>
+                            </div>
+                        </article>
+                    </div>
+
                     <!-- 2025年 -->
-                    <div class="year-content active" id="content-2025">
+                    <div class="year-content" id="content-2025">
                         <h3 class="year-heading">2025年</h3>
 
                         <!-- 第19回 -->
