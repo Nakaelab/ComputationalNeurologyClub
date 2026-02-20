@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nakaelab.github.io/ComputationalNeurologyClub/sitemap.xml
