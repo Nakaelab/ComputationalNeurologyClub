@@ -1797,6 +1797,24 @@ img {
   text-shadow: none !important;
 }
 
+.featured-badge-purple {
+  display: inline-block;
+  background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%); /* violet to magenta */
+  color: #fff !important;
+  font-weight: 800;
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  border: none;
+  text-transform: none;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
 /* Key Logistics Info Box */
 .symposium-key-info {
   display: flex;
