@@ -1747,24 +1747,24 @@ img {
 
 /* ========= Featured Event Card (Conference Symposia, etc.) ========= */
 .event-card-featured {
-  border: 1px solid rgba(139, 92, 246, 0.35) !important; /* higher contrast border */
-  border-top: 4px solid #8b5cf6 !important; /* premium thick top border accent */
-  background: radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.06), transparent 50%), rgba(17, 24, 39, 0.95) !important;
+  border: 1px solid rgba(59, 130, 246, 0.35) !important; /* higher contrast blue border */
+  border-top: 4px solid #3b82f6 !important; /* premium thick blue top border accent */
+  background: radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.06), transparent 50%), rgba(17, 24, 39, 0.95) !important;
   box-shadow: 
     0 30px 60px -15px rgba(0, 0, 0, 0.6), 
-    0 0 30px rgba(139, 92, 246, 0.1) !important;
+    0 0 30px rgba(59, 130, 246, 0.1) !important;
 }
 
 .event-card-featured:hover {
-  border-color: rgba(139, 92, 246, 0.6) !important;
+  border-color: rgba(59, 130, 246, 0.6) !important;
   box-shadow: 
     0 40px 80px -20px rgba(0, 0, 0, 0.7), 
-    0 0 45px rgba(139, 92, 246, 0.2) !important;
+    0 0 45px rgba(59, 130, 246, 0.2) !important;
 }
 
 .featured-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
   color: #fff !important;
   font-weight: 800;
   padding: 6px 16px;
@@ -1774,10 +1774,27 @@ img {
   border: none;
   text-transform: none;
   margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
   -webkit-background-clip: initial !important;
   -webkit-text-fill-color: initial !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.secondary-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted) !important;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-transform: none;
+  margin-bottom: 16px;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  text-shadow: none !important;
 }
 
 /* Key Logistics Info Box */
