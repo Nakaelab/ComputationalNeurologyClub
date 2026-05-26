@@ -852,14 +852,18 @@ img {
 }
 
 .seminar-number {
-  display: block;
+  display: inline-block;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 800;
   color: var(--accent);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  padding: 4px 12px;
+  border-radius: 6px;
 }
 
 .talk-label {
@@ -903,12 +907,12 @@ img {
 }
 
 .detail-row dt {
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--accent);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  opacity: 0.7;
+  letter-spacing: 0.05em;
+  opacity: 1;
 }
 
 .detail-row dd {
@@ -949,6 +953,9 @@ img {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
   transition: all 0.3s ease;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .event-card-compact:hover .event-abstract-compact {
@@ -1735,5 +1742,202 @@ img {
 
   .action-card {
     padding: 24px;
+  }
+}
+
+/* ========= Featured Event Card (Conference Symposia, etc.) ========= */
+.event-card-featured {
+  border: 1px solid rgba(139, 92, 246, 0.35) !important; /* higher contrast border */
+  border-top: 4px solid #8b5cf6 !important; /* premium thick top border accent */
+  background: radial-gradient(circle at 100% 0%, rgba(139, 92, 246, 0.06), transparent 50%), rgba(17, 24, 39, 0.95) !important;
+  box-shadow: 
+    0 30px 60px -15px rgba(0, 0, 0, 0.6), 
+    0 0 30px rgba(139, 92, 246, 0.1) !important;
+}
+
+.event-card-featured:hover {
+  border-color: rgba(139, 92, 246, 0.6) !important;
+  box-shadow: 
+    0 40px 80px -20px rgba(0, 0, 0, 0.7), 
+    0 0 45px rgba(139, 92, 246, 0.2) !important;
+}
+
+.featured-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  color: #fff !important;
+  font-weight: 800;
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  border: none;
+  text-transform: none;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Key Logistics Info Box */
+.symposium-key-info {
+  display: flex;
+  background: rgba(139, 92, 246, 0.03);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 36px;
+  gap: 24px;
+  align-items: center;
+}
+
+.info-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #a78bfa; /* violet accent */
+}
+
+.info-value {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.time-text-highlight {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.sub-venue-text {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+  display: block;
+  margin-top: 2px;
+}
+
+.info-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(139, 92, 246, 0.2);
+}
+
+.symp-official-link {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(96, 165, 250, 0.15);
+}
+
+.symp-official-link:hover {
+  color: #93c5fd;
+  border-bottom-color: #93c5fd;
+}
+
+/* People Layout & Groupings */
+.symposium-people-section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.people-group-section {
+  width: 100%;
+}
+
+.speakers-group {
+  margin-top: 12px;
+  padding-top: 28px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.group-heading-title {
+  margin: 0 0 16px 0;
+}
+
+.heading-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+.organizer-tag {
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.speaker-tag {
+  background: rgba(167, 139, 250, 0.1);
+  color: #c084fc;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.people-inline-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.person-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.speaker-name-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.venue-link {
+  color: #60a5fa;
+  border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.venue-link:hover {
+  color: #93c5fd;
+  border-bottom-color: #93c5fd;
+}
+
+@media (max-width: 768px) {
+  .symposium-key-info {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px;
+  }
+  .info-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .people-inline-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
