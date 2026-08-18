@@ -89,18 +89,22 @@
                         <h3 class="year-heading">2026年</h3>
 
                         <!-- NEURO2026 シンポジウム -->
-                        <div class="event-card-compact" style="margin-bottom: 24px;">
-                            <div class="event-card-header">
-                                <span class="seminar-number featured-badge-purple">NEURO2026 シンポジウム</span>
-                                <span class="talk-label">Symposium (4S07m)</span>
-                                <h3 class="event-title-compact">
-                                    Computational Neurology：脳内異常タンパク質伝播の理論と実験
+                        <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-neuro2026')">
+                            <div class="seminar-header" role="button" aria-expanded="false">
+                                <h3 class="seminar-title">
+                                    <span class="featured-badge-purple" style="font-size:12px; padding:2px 8px; border-radius:4px; margin-right:8px; display:inline-block;">NEURO2026</span>
+                                    NEURO2026 シンポジウム (4S07m)：Computational Neurology：脳内異常タンパク質伝播の理論と実験
                                 </h3>
+                                <span class="toggle-icon">＋</span>
                             </div>
-
-                            <div class="event-card-body">
+                            <ul class="seminar-info-list">
+                                <li><strong>日時</strong>：2026年8月2日（日）8:45–10:45 JST</li>
+                                <li><strong>場所</strong>：第7会場（神戸国際会議場 5階 502）</li>
+                                <li><strong>リンク</strong>：<a href="https://neuro2026.jnss.org/program.html#p06" target="_blank" rel="noopener" onclick="event.stopPropagation();">公式プログラム詳細 →</a></li>
+                            </ul>
+                            <div class="seminar-abstract" id="abstract-neuro2026">
                                 <!-- Key Logistics Info Box -->
-                                <div class="symposium-key-info">
+                                <div class="symposium-key-info" style="margin-bottom: 20px;">
                                     <div class="info-block">
                                         <span class="info-label">日時 / Date & Time</span>
                                         <span class="info-value highlighted-date">
@@ -120,7 +124,7 @@
                                     <div class="info-block">
                                         <span class="info-label">リンク / Link</span>
                                         <span class="info-value">
-                                            <a href="https://neuro2026.jnss.org/program.html#p06" target="_blank" rel="noopener" class="symp-official-link">
+                                            <a href="https://neuro2026.jnss.org/program.html#p06" target="_blank" rel="noopener" class="symp-official-link" onclick="event.stopPropagation();">
                                                 公式プログラム詳細 →
                                             </a>
                                         </span>
@@ -128,17 +132,17 @@
                                 </div>
 
                                 <!-- People Section -->
-                                <div class="symposium-people-section">
+                                <div class="symposium-people-section" style="margin-bottom: 20px;">
                                     <!-- Organizers -->
                                     <div class="people-group-section organizers-group">
                                         <h4 class="group-heading-title"><span class="heading-tag organizer-tag">Organizers / 企画</span></h4>
                                         <div class="people-inline-list">
                                             <div class="person-item">
-                                                <a href="https://researchmap.jp/yuichiro.yada" target="_blank" rel="noopener" class="speaker-link">矢田 祐一郎</a>
+                                                <a href="https://researchmap.jp/yuichiro.yada" target="_blank" rel="noopener" class="speaker-link" onclick="event.stopPropagation();">矢田 祐一郎</a>
                                                 <span class="speaker-aff">Department of Data-driven Biology, Graduate School of Medicine, Nagoya University</span>
                                             </div>
                                             <div class="person-item">
-                                                <a href="https://researchmap.jp/7000009439" target="_blank" rel="noopener" class="speaker-link">近藤 洋平</a>
+                                                <a href="https://researchmap.jp/7000009439" target="_blank" rel="noopener" class="speaker-link" onclick="event.stopPropagation();">近藤 洋平</a>
                                                 <span class="speaker-aff">Laboratory of Data-driven Biology, Center for One Medicine Innovative Translational Research (COMIT), Nagoya University</span>
                                             </div>
                                         </div>
@@ -157,7 +161,7 @@
                                                 <span class="speaker-aff">DeMON Lab, Department of Clinical Sciences Malmö, SciLifeLab, Lund University</span>
                                             </div>
                                             <div class="person-item">
-                                                <a href="https://researchmap.jp/7000009439" target="_blank" rel="noopener" class="speaker-link">近藤 洋平</a>
+                                                <a href="https://researchmap.jp/7000009439" target="_blank" rel="noopener" class="speaker-link" onclick="event.stopPropagation();">近藤 洋平</a>
                                                 <span class="speaker-aff">Laboratory of Data-driven Biology, Center for One Medicine Innovative Translational Research (COMIT), Nagoya University</span>
                                             </div>
                                             <div class="person-item">
@@ -165,7 +169,7 @@
                                                 <span class="speaker-aff">University Claude Bernard Lyon 1</span>
                                             </div>
                                             <div class="person-item">
-                                                <a href="https://researchmap.jp/ken.nakae" target="_blank" rel="noopener" class="speaker-link">中江 健</a>
+                                                <a href="https://researchmap.jp/ken.nakae" target="_blank" rel="noopener" class="speaker-link" onclick="event.stopPropagation();">中江 健</a>
                                                 <span class="speaker-aff">Faculty of Engineering, Division of Engineering Human and Artificial Intelligent Systems, University of Fukui</span>
                                             </div>
                                         </div>
@@ -179,7 +183,7 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
                         <!-- 第24回 -->
                         <article class="seminar-card" onclick="toggleAbstract(this, 'abstract-24')">
