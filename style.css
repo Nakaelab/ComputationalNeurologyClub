@@ -1976,3 +1976,358 @@ img {
     gap: 12px;
   }
 }
+
+/* ========= 学会誌特集号（Special Issue）洗練・高視認性デザイン ========= */
+.special-issue-section {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.si-clean-card {
+  max-width: 880px;
+  margin: 0 auto;
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-top: 4px solid #3b82f6;
+  border-radius: 24px;
+  padding: 40px 44px;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 35px rgba(59, 130, 246, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.si-clean-card::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12), transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.si-header-block {
+  margin-bottom: 24px;
+}
+
+.si-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.si-badge-pill {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 99px;
+  letter-spacing: 0.05em;
+}
+
+.si-badge-outline {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.si-card-title {
+  font-size: 23px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.45;
+  margin: 0 0 16px 0;
+}
+
+.si-card-lead {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #e2e8f0;
+  margin: 0 0 24px 0;
+}
+
+.si-card-lead strong {
+  color: #ffffff;
+}
+
+.si-button-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.si-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 99px;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.4);
+  transition: all 0.25s ease;
+}
+
+.si-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.6);
+  filter: brightness(1.1);
+}
+
+.si-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #f1f5f9 !important;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 99px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.25s ease;
+}
+
+.si-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  color: #ffffff !important;
+}
+
+/* 区切り線 */
+.si-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 28px 0 24px;
+}
+
+/* 論文一覧エリア */
+.si-papers-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.si-papers-section-title::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 16px;
+  background: #3b82f6;
+  border-radius: 2px;
+}
+
+.si-paper-list-clean {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.si-paper-item-clean {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.si-paper-item-clean:hover {
+  background: rgba(59, 130, 246, 0.06);
+  border-color: rgba(59, 130, 246, 0.25);
+  transform: translateX(4px);
+}
+
+.si-item-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #60a5fa;
+  min-width: 24px;
+  padding-top: 2px;
+}
+
+.si-item-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.si-item-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.55;
+  margin-bottom: 4px;
+}
+
+.si-item-sub {
+  font-size: 12.5px;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+
+.si-item-author-row {
+  font-size: 13px;
+  color: #93c5fd;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.si-item-author-row strong {
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+.si-item-aff {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.si-title-sub-sp {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #60a5fa;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.sp-br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sp-br {
+    display: inline;
+  }
+
+  .special-issue-section {
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+
+  .si-clean-card {
+    padding: 22px 14px;
+    border-radius: 18px;
+    border-top-width: 3px;
+  }
+
+  .si-badge-group {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .si-badge-pill {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+
+  .si-badge-outline {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .si-title-sub-sp {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  .si-card-title {
+    font-size: 16.5px;
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+
+  .si-card-lead {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .si-button-group {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .si-btn-primary, .si-btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 14px;
+    font-size: 13px;
+    box-sizing: border-box;
+  }
+
+  .si-divider {
+    margin: 18px 0 16px;
+  }
+
+  .si-papers-section-title {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .si-paper-list-clean {
+    gap: 8px;
+  }
+
+  .si-paper-item-clean {
+    padding: 12px 10px;
+    gap: 10px;
+    border-radius: 10px;
+  }
+
+  .si-item-num {
+    font-size: 12px;
+    min-width: 18px;
+    padding-top: 1px;
+  }
+
+  .si-item-title {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+
+  .si-item-sub {
+    font-size: 11px;
+    line-height: 1.45;
+    margin-bottom: 4px;
+  }
+
+  .si-item-author-row {
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .si-item-aff {
+    font-size: 11px;
+  }
+}
